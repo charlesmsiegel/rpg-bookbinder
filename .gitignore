@@ -1,0 +1,12 @@
+__pycache__/
+*.pyc
+node_modules/
+.worktrees/
+.obsidian/
+.conda/
+.vscode/
+.superpowers/
+generated_images/
+references/**
+!references/README.md
+.claude/settings.local.json

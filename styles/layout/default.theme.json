@@ -1,0 +1,5 @@
+{
+  "colors": { "body": "1A1A1A", "accent1": "37474F", "accent2": "546E7A", "gold": "B0A16B", "sidebarBg": "263238", "white": "FFFFFF", "altRow": "F4F4F2" },
+  "fonts": { "body": "Georgia", "heading": "Book Antiqua", "toc": "Book Antiqua", "header": "Book Antiqua", "sidebar": "Calibri" },
+  "page": { "w": 12240, "h": 15840, "ml": 1080, "mr": 1080, "mt": 1267, "mb": 1440 }
+}

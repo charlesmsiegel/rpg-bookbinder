@@ -1,0 +1,28 @@
+{
+  "mcpServers": {
+    "kb": {
+      "command": "python",
+      "args": ["mcp_servers/kb.py"]
+    },
+    "mechanics": {
+      "command": "python",
+      "args": ["mcp_servers/mechanics.py"]
+    },
+    "references": {
+      "command": "python",
+      "args": ["mcp_servers/references.py"]
+    },
+    "content": {
+      "command": "python",
+      "args": ["mcp_servers/content.py"]
+    },
+    "project": {
+      "command": "python",
+      "args": ["mcp_servers/project.py"]
+    },
+    "art": {
+      "command": "python",
+      "args": ["mcp_servers/art.py"]
+    }
+  }
+}

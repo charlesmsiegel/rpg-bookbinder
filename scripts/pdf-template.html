@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8"/>
+<title>$title$</title>
+<style>
+@page {
+  size: 8.5in 11in;
+  margin: 0.88in 0.94in 1.00in 0.75in;
+  @bottom-center { content: counter(page); font-family: "Georgia", "Book Antiqua", serif; font-size: 9pt; color: #1A1A1A; }
+}
+@page :first { @bottom-center { content: none; } margin-top: 3in; }
+
+body {
+  font-family: "Georgia", "Book Antiqua", serif;
+  font-size: 11pt;
+  color: #1A1A1A;
+  line-height: 3.0;
+  text-align: justify;
+  orphans: 3;
+  widows: 3;
+}
+
+h1 {
+  font-family: "Book Antiqua", "Palatino Linotype", Palatino, serif;
+  font-size: 28pt;
+  font-weight: bold;
+  color: #37474F;
+  page-break-before: always;
+  margin-top: 0.5in;
+  margin-bottom: 0.15in;
+}
+
+h2 {
+  font-family: "Book Antiqua", "Palatino Linotype", Palatino, serif;
+  font-size: 24pt;
+  font-weight: normal;
+  color: #37474F;
+  text-align: center;
+  border-bottom: 0.5pt solid #37474F;
+  padding-bottom: 4pt;
+  margin-top: 0.4in;
+  margin-bottom: 0.1in;
+  page-break-after: avoid;
+}
+
+h3 {
+  font-family: "Book Antiqua", "Palatino Linotype", Palatino, serif;
+  font-size: 18pt;
+  font-weight: normal;
+  color: #546E7A;
+  margin-top: 0.3in;
+  margin-bottom: 0.08in;
+  page-break-after: avoid;
+}
+
+h4 {
+  font-family: "Book Antiqua", "Palatino Linotype", Palatino, serif;
+  font-size: 14pt;
+  font-weight: normal;
+  color: #546E7A;
+  margin-top: 0.2in;
+  margin-bottom: 0.06in;
+  page-break-after: avoid;
+}
+
+p { text-indent: 0.13in; margin: 5pt 0; }
+h1 + p, h2 + p, h3 + p, h4 + p { text-indent: 0; }
+
+blockquote {
+  background: #263238;
+  color: #FFFFFF;
+  font-family: Calibri, "Segoe UI", sans-serif;
+  font-size: 10pt;
+  padding: 0.15in 0.2in;
+  margin: 0.15in 0;
+  border: none;
+  border-radius: 2pt;
+}
+blockquote p { text-indent: 0; color: #FFFFFF; }
+blockquote strong { color: #B0A16B; }
+
+table { width: 100%; border-collapse: collapse; margin: 0.1in 0; font-size: 10pt; }
+thead tr { background: #546E7A; color: #FFFFFF; }
+thead th { padding: 4pt 6pt; font-weight: bold; border: 0.5pt solid #1A1A1A; color: #FFFFFF; }
+tbody td { padding: 4pt 6pt; border: 0.5pt solid #1A1A1A; }
+tbody tr:nth-child(even) { background: #F4F4F2; }
+tbody tr:nth-child(odd) { background: #FFFFFF; }
+
+hr { border: none; border-bottom: 0.25pt solid #546E7A; margin: 12pt 0; }
+
+ul { padding-left: 0.35in; }
+li { margin: 2pt 0; }
+li::marker { color: #546E7A; }
+
+em { font-style: italic; }
+strong { color: #546E7A; }
+a { color: #1A1A1A; text-decoration: none; }
+
+/* Cover image — first image in document */
+body > p:first-child img,
+body > figure:first-child img {
+  display: block;
+  max-width: 100%;
+  max-height: 9in;
+  margin: 0 auto;
+  page-break-after: always;
+}
+img { max-width: 100%; height: auto; }
+
+#TOC { page-break-after: always; }
+#TOC ul { list-style: none; padding-left: 0; }
+#TOC li { margin: 4pt 0; }
+#TOC a { color: #37474F; font-family: "Book Antiqua", "Palatino Linotype", Palatino, serif; font-size: 12pt; }
+#TOC ul ul a { font-family: "Georgia", "Book Antiqua", serif; font-size: 11pt; color: #1A1A1A; }
+#TOC ul ul { padding-left: 0.2in; }
+</style>
+</head>
+<body>
+$if(toc)$
+<nav id="TOC">
+<h2 style="text-align:center; border:none;">Table of Contents</h2>
+$toc$
+</nav>
+$endif$
+$body$
+</body>
+</html>

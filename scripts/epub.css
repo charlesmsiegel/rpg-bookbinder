@@ -1,0 +1,158 @@
+/* Bookbinder default styles — EPUB stylesheet */
+
+body {
+  font-family: "Georgia", "Book Antiqua", serif;
+  font-size: 1em;
+  color: #1A1A1A;
+  line-height: 1.4;
+}
+
+h1 {
+  font-family: "Book Antiqua", "Palatino Linotype", Palatino, serif;
+  font-size: 1.8em;
+  font-weight: bold;
+  color: #37474F;
+  margin-top: 2em;
+  margin-bottom: 0.4em;
+  page-break-before: always;
+}
+
+h2 {
+  font-family: "Book Antiqua", "Palatino Linotype", Palatino, serif;
+  font-size: 1.5em;
+  font-weight: normal;
+  color: #37474F;
+  text-align: center;
+  border-bottom: 1px solid #37474F;
+  padding-bottom: 0.2em;
+  margin-top: 1.5em;
+  margin-bottom: 0.4em;
+}
+
+h3 {
+  font-family: "Book Antiqua", "Palatino Linotype", Palatino, serif;
+  font-size: 1.2em;
+  font-weight: normal;
+  color: #546E7A;
+  margin-top: 1.2em;
+  margin-bottom: 0.3em;
+}
+
+h4 {
+  font-family: "Book Antiqua", "Palatino Linotype", Palatino, serif;
+  font-size: 1.05em;
+  font-weight: normal;
+  color: #546E7A;
+  margin-top: 1em;
+  margin-bottom: 0.2em;
+}
+
+p {
+  text-indent: 0.2em;
+  margin: 0.3em 0;
+  text-align: justify;
+}
+
+h1 + p, h2 + p, h3 + p, h4 + p {
+  text-indent: 0;
+}
+
+blockquote {
+  background-color: #263238;
+  color: #FFFFFF;
+  font-family: Calibri, "Segoe UI", Helvetica, sans-serif;
+  font-size: 0.9em;
+  padding: 0.8em 1em;
+  margin: 0.8em 0;
+  border: none;
+  border-radius: 3px;
+}
+
+blockquote p {
+  text-indent: 0;
+  color: #FFFFFF;
+}
+
+blockquote strong {
+  color: #B0A16B;
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+  margin: 0.5em 0;
+  font-size: 0.9em;
+}
+
+thead tr {
+  background-color: #546E7A;
+  color: #FFFFFF;
+}
+
+thead th {
+  padding: 0.3em 0.4em;
+  font-weight: bold;
+  border: 1px solid #1A1A1A;
+  color: #FFFFFF;
+}
+
+tbody td {
+  padding: 0.3em 0.4em;
+  border: 1px solid #1A1A1A;
+}
+
+tbody tr:nth-child(even) {
+  background-color: #F4F4F2;
+}
+
+hr {
+  border: none;
+  border-bottom: 1px solid #546E7A;
+  margin: 1em 0;
+}
+
+ul {
+  padding-left: 1.5em;
+}
+
+li {
+  margin: 0.1em 0;
+}
+
+em {
+  font-style: italic;
+}
+
+strong {
+  color: #546E7A;
+}
+
+a {
+  color: #37474F;
+  text-decoration: none;
+}
+
+/* TOC styling */
+nav#toc ol {
+  list-style: none;
+  padding-left: 0;
+}
+
+nav#toc li {
+  margin: 0.2em 0;
+}
+
+nav#toc a {
+  color: #37474F;
+  font-family: "Book Antiqua", "Palatino Linotype", Palatino, serif;
+}
+
+nav#toc ol ol {
+  padding-left: 1em;
+}
+
+nav#toc ol ol a {
+  font-family: "Georgia", "Book Antiqua", serif;
+  color: #1A1A1A;
+  font-size: 0.95em;
+}
