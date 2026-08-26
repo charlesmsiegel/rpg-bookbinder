@@ -317,3 +317,19 @@ Three Sparkle. Five Shine.
 That is a complete character in a game where nothing on the sheet ever goes up,
 and it is enough, because the part of your Star that grows is the part written
 in other people's handwriting.
+
+## A note for the Showrunner
+
+You make a Star too — not one you play, but one you hold.
+
+While the table builds, write down the one thing each player said that made
+the room go quiet. The Refrain that landed, the Bond that made somebody sit
+back, the phrase that got said twice because the first time was too quiet.
+Those five notes are your session plan. Every one of them is a promise you can
+keep in the first hour, and keeping them is most of what running this game is.
+
+You should also be the one who insists on the parts people want to skip. Make
+them say the phrases out loud. Make them do Bonds face to face rather than
+writing quietly. Ask the follow-up question when a Refrain comes out vague.
+Nobody at the table will push for the sincere version except you, and the
+sincere version is the one they came for.
