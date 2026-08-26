@@ -67,8 +67,28 @@ nothing may be raised above **+2** at creation, and nothing may be lowered below
 |---|---|
 | Under the Difficulty | **Miss.** It doesn't work, and the GM makes a move (below). |
 | Meets it, or beats it by 1–2 | **Mixed.** It works, but it costs — Shine, Sparkle, exposure, or time. |
-| Beats it by 3–5 | **Hit.** Clean. |
-| Beats it by 6 or more | **Flourish.** Clean, and something extra: a Sparkle back, a Gloom clock rolled back a tick, or a moment that becomes true forever. |
+| Beats it by 3 or more | **Hit.** Clean. |
+| **Both kept dice show 6** (on any success) | **Flourish.** Clean, and something extra: a Sparkle back, a Gloom clock rolled back a tick, or a moment that becomes true forever. |
+
+**Flourish is double sixes, not a margin.** A fixed margin cannot work here, and the
+first two revisions of this spec both got it wrong. Two kept d6 cap at 12 and the
+maximum Trait is +3, so an ordinary roll tops out at **15**; even the combined form
+(best Trait +1) reaches only **16**. Any margin band wide enough to feel special at
+Difficulty 6 is unreachable at Difficulty 12 — a permanently dead band at the top of
+a ladder the book presents as universal.
+
+Double sixes fixes this and pays a dividend: because you keep the best two dice,
+**more backers make Flourishes likelier**, verified by enumeration —
+
+| Backers | Dice | Flourish chance |
+|---|---|---|
+| 0 | 2d6 keep 2 | 2.78% |
+| 1 | 3d6 keep 2 | 7.41% |
+| 2 | 4d6 keep 2 | 13.19% |
+| 3 | 5d6 keep 2 | 19.62% |
+
+Friendship is what makes the spectacular possible, not merely the reliable. That is
+the whole game in one row of numbers.
 
 A miss never stalls the scene. The GM's move on a miss always changes the
 situation. If a Gloom clock is in play, the default move is to advance it. If none
@@ -76,12 +96,9 @@ is — an early Verse, an ordinary-life scene — the GM instead **starts** one,
 reveals that one has been quietly filling all along. A miss can be the moment the
 problem arrives; that is a feature, and the GM chapter says so.
 
-**Ceiling note — must be validated in §9.2.** An untransformed `2d6+3` tops out at
-15. Against Difficulty 12 that is a maximum margin of +3, so a Dazzling task can
-be Hit but never Flourished without backing dice or transformation bonuses. This
-is intended — Dazzling should require help — but the bands above are a *starting
-proposal*. If `calculate_sum_probability` shows the ladder produces dead bands or
-a Flourish rate near zero at realistic Trait values, the band widths change.
+**Dazzling stays hard.** A Hit at Difficulty 12 needs a 15 — Trait +3 and both
+dice sixes. The ordinary Dazzling success is therefore Mixed: you do the impossible
+thing, and it costs you. That is the intended feel.
 
 ### 2.3 Sparkle — the personal resource
 
@@ -90,9 +107,10 @@ Sparkle is PRISM's Willpower/Quintessence analog. It is **personal**, not shared
 - Pool starts at **3**, rising to a maximum of **5** through advancement.
 - **Spend 1** to: power a solo transformation; reroll one die; ignore one point of
   Shine loss; fuel a finisher.
-- **Refresh** by living up to your **Refrain** — your one-line creed. When your
-  Refrain costs you something in a scene, you take Sparkle back. Full refresh at
-  an Encore scene.
+- **Refresh**: when your **Refrain** costs you something in a scene, take back
+  **1 Sparkle**, once per scene, never above your maximum. Full refresh at an
+  Encore scene. The amount is fixed so tables don't drift into wildly different
+  economies off the same trigger.
 
 Sparkle is the thing you spend on yourself. It is deliberately *not* the
 friendship lever.
@@ -117,7 +135,10 @@ diminishing returns, no ceiling break.
 **Backing costs the backer.** Choose one when you back:
 - Lose 1 Shine, or
 - Spend 1 Sparkle, or
-- Give up your own next action in the scene, or
+- Give up your own next action — **only if you actually have one pending**. If the
+  scene ends before you would have acted, the forfeit carries into the next scene.
+  You may not choose this option after your last action of a scene; pick another
+  cost. A cost you were never going to pay is not a cost.
 - Expose something — a secret, a weakness, a feeling you'd rather not say aloud.
 
 A backer who has an unspent **Bond** with the roller may **spend the Bond**
@@ -188,18 +209,31 @@ the scene — the boxes arrive filled, not empty. Available any time you can spe
 The book instructs the table to give a solo morph *airtime* — the transforming
 player narrates, uninterrupted, and nobody rolls during it.
 
-**Early morphs are allowed, and they cost the Bridge.** A player may morph during a
-Verse or Chorus. When they do, that morph *is* the Bridge — the scene's key change
-has been spent early, and the GM moves the Number into its Big Finish from there.
-The Bridge is a structural position, not a clock time, so §4.4's rule is about where
-the key change *falls*, never about forbidding a player from reaching for it.
+**Early morphs are allowed once there is something to morph *at*.** From the moment
+the problem is on the table — which is the end of the Verse at the latest — a player
+may morph whenever they like, and that morph *is* the Bridge: the key change has been
+spent early and the GM moves the Number toward its Big Finish from there. If no Gloom
+clock is running yet, the morph starts one; a transformation is itself a declaration
+that something is wrong.
+
+Before the problem arrives, in the ordinary-life opening, a morph is not a structural
+beat at all — it's flavor. Someone showing off in the kitchen. It costs the Sparkle,
+it looks fantastic, and it moves nothing. The Bridge is a position in the Number, not
+a clock time, so this rule is about where the key change *falls*, never about
+forbidding a player from reaching for it.
 
 ### 4.2 Synchronized morph
 The whole team, together, on the shared command word the players invent in session
 one. Costs **1 Sparkle, paid in full by any single character** — cheaper for the team
 than each member morphing solo, deliberately. Sparkle is never split or fractional;
-one person pays, and the whole team transforms. Unlocks each character's Radiance *plus* the team's
-shared abilities (formation moves, chained backing, group finishers).
+one person pays, and the whole team transforms. Unlocks each character's Radiance
+*plus* the team's shared abilities (formation moves, chained backing, group
+finishers).
+
+**It ends when the Number does** — when the Gloom clock that prompted it resolves,
+or at the Encore, whichever comes first. Without this, one Sparkle in the first
+session would buy a permanently transformed team, bypassing both the recurring cost
+and the Bridge structure entirely.
 
 ### 4.3 Combined form
 Available **only after a synchronized morph**, and **only when a Gloom clock is at
@@ -316,6 +350,11 @@ whose punchline is that the game is silly.
   (`/plan-project` Step 8a) and the consistency-checker pass — which is what those
   artifacts are for.
 - `art.active_generator` → `"ideogram-v4"` (see §9.4)
+- **`art.generators["ideogram-v4"].sizes` must be added** — the shipped profile has
+  no `sizes` map, and `.claude/commands/art-direction.md` (line 75) requires every
+  manifest entry to take its dimensions from it rather than inventing them. Add
+  `portrait`, `landscape`, `column`, and `full_page` at Ideogram-appropriate
+  resolutions.
 - `art.density_words_per_illustration` → `1500`. At 25,000 words that is ~17 art
   slots — appropriate for a visually-forward book, where the default 2,250
   (~11 slots) would read as sparse.
@@ -422,6 +461,34 @@ portraits. This is recoverable — the prompt manifest is model-agnostic text, s
 those slots can be re-rendered through another backend later without rewriting the
 book. The manifest flags which slots are character splashes for exactly that reason.
 
+**Caveat on "already exists".** The `ideogram-v4` profile's prompting rules are
+complete, but its `workflow_file` points at `styles/art/example.workflow.json`,
+whose own `_readme` calls it a template to replace — it has no model loader, no
+decoder, and no image-output node. Rendering through this backend will require a
+real workflow exported from ComfyUI via *Save (API Format)*. That is out of scope
+here (we generate no images), but it is a prerequisite for anyone who later picks
+the manifest up, and the manifest must say so rather than implying the backend is
+ready to run.
+
+### 9.5 Drafting prompts must be corrected too
+
+The additive MCP function is not sufficient on its own. Two shipped prompts still
+route PRISM's balance work to the wrong probability model, and would have the
+drafting agent validate a sum-based `2d6+Trait` game with a World-of-Darkness
+success-counting tool:
+
+- `.claude/commands/first-draft.md` **line 41** directs dice math to
+  `calculate_dice_probability` / `calculate_extended_action`.
+- `.claude/agents/book-creation/mechanics-designer.md` **line 111** recommends
+  `calculate_dice_probability` for balance testing, and **line 78** mandates
+  dice-pool success thresholds ("Simple=1, Complex=3-5, Extreme=10+") that have no
+  meaning in PRISM.
+
+Both must point at `calculate_sum_probability`, and the success-threshold guidance
+must be replaced with PRISM's Difficulty bands. Leaving this out would let the
+rulebook's own mechanics get validated against a model the spec elsewhere says
+cannot express the game.
+
 ---
 
 ## 10. Pipeline Plan
@@ -436,8 +503,15 @@ Run in order, with the standard quality gate between each:
 | 3 | `/architect-review prism` | Architectural commentary |
 | 4 | `/second-draft prism` | `draft_02.md` — comment integration + copy edit |
 | 5 | `/final-draft prism` | `final_draft.md` — consistency, final review |
-| 5.5 | `/art-direction prism` (deferred mode) | **Prompt manifest only — no images**, Ideogram 4 profile |
 | 6 | `/compile prism` | Assembled manuscript + exports |
+
+**Art direction is not a separate phase.** `/final-draft` already invokes
+`/art-direction` at its Step 2 (`.claude/commands/final-draft.md`, line 50), so
+adding a standalone Phase 5.5 — as this spec's previous revision did — would plan
+every image twice. `update_art_manifest` appends entries without deduplicating, so
+the second pass would leave duplicate records and compilation could place or
+attribute the same artwork repeatedly. The art-direction step inside Phase 5 runs in
+deferred mode; that is the only invocation.
 
 **No images are generated**, since no image models are available in this
 environment. But `/art-direction` is **not skipped outright** — it runs in its
@@ -486,5 +560,5 @@ subagents, per the session's configuration.
   The deferred prompt manifest is in scope; the images it describes are not.
 - Any supplement beyond the core book.
 - Reworking Bookbinder's existing MCP servers beyond the single additive function
-  in §9.2.
+  in §9.2, and beyond the two drafting-prompt corrections in §9.5.
 - A knowledge base — PRISM's canon is small enough to live in `references/prism/`.
