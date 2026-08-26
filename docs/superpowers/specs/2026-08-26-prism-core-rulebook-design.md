@@ -53,13 +53,10 @@ themselves. The game's thesis and its math are the same statement.
 - **Craft** — cleverness, making, fixing, knowing
 - **Cool** — composure, style, reading a room, keeping it together
 
-Starting spread: one **+2**, two **+1**, one **+0**. **+3** is reachable only
-through advancement, never at creation.
-
-**The Refrain trade**: once at creation, you may lower one Trait by 1 to raise
-another by 1, if your Refrain justifies the trade in a sentence. Both bounds hold —
-nothing may be raised above **+2** at creation, and nothing may be lowered below
-**+0**. Traits are never negative.
+Starting spread is fixed: one **+2**, two **+1**, one **+0**. **+3** is reachable
+only through advancement, never at creation. There is no trade or point-buy — every
+character starts from the same shape and is distinguished by Refrain, Signature,
+Bonds, and Radiance rather than by arithmetic.
 
 ### 2.2 Outcome ladder
 
