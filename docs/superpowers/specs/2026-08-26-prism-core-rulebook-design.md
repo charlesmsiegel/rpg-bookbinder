@@ -12,6 +12,13 @@ through the Bookbinder pipeline (Phases 0–6, excluding art generation).
 PRISM is a sugarpop fantasy tabletop RPG about transformation — alone and together —
 against a spreading dullness called the Gloom.
 
+It is set in **the modern world you actually live in**, plus one other layer. The
+everyday is exactly itself: your town, the library losing its funding, the river
+nobody cleans. Alongside it is **the Spectrum**, the same places in howling
+airbrushed rainbow, where that neglect has a body and can be hit. You cross over by
+**refracting**, which is also how you morph, and what you win over there changes
+things back here.
+
 Its tonal touchstones are My Little Pony, Barbie, magical-girl anime, Super
 Sentai / Power Rangers, the Lisa Frank airbrush aesthetic, and the unembarrassed
 major-key pop of ABBA and Aqua. It is sincere rather than ironic. It is bright,
@@ -29,7 +36,10 @@ themselves. The game's thesis and its math are the same statement.
 ### What it is not
 
 - Not a combat-first game. Nobody dies. Damage is dimming, not injury.
-- Not a setting bible. Setting is a sketch and a color grammar, not a canon.
+- Not a setting bible. The setting is the reader's own town plus one other layer;
+  the chapter teaches a conversion procedure, not a canon.
+- Not a masquerade game. There is no secret society, no chosen bloodline, and
+  nothing to hide from.
 - Not a parody. The genre is played straight.
 
 ---
@@ -243,12 +253,66 @@ session would buy a permanently transformed team, bypassing both the recurring c
 and the Bridge structure entirely.
 
 ### 4.3 Combined Form
-Available **only after a Synchronized Morph**, and **only when a Gloom clock is at
-one tick from full**. The team fuses: one sheet, one Trait array (best of each,
-+1), one pooled Shine, one enormous finisher. Lasts until the clock resolves.
+The team fuses: one sheet, one Trait array (best of each, +1), one pooled Shine,
+one enormous finisher. Lasts until the Gloom clock resolves.
 
-Deliberately rare. The book is explicit that a campaign might see it three times,
-and that this is correct.
+**The gate is the Chord.** Three conditions, all required:
+
+1. The team has made a **Synchronized Morph**.
+2. **The Chord is full** (below).
+3. You are in the **Big Finish**.
+
+#### The Chord
+
+Every Star is a note. **You sound your note** the first time in a Number that you:
+
+- **back another Star** at a cost, or
+- have your **Refrain** cost you something, or
+- are **pulled back from Dimmed** by someone reaching you.
+
+One mark per Star, so the track is exactly the size of the team. The Chord is full
+when **every note is sounding** — and the Combined Form is unavailable until it is.
+
+**Why a chord and not a unison.** A unison is everyone on the same note; a chord is
+distinct notes sounding together. That is the same principle as the fixed Trait
+spread in §2.1 — the team combines *because* its members are shaped differently,
+not despite it.
+
+#### Why this gate does what we want
+
+The design goal is a Combined Form that players feel they are **working toward**,
+with real agency, that is nonetheless **near-certain by the climax**. The Chord
+delivers all three:
+
+- **It cannot fill early.** It requires that *every* Star has had a moment, which
+  naturally takes most of a Number. No amount of luck accelerates it.
+- **It is player-driven, not GM-granted.** Each player owns their own note and can
+  go and get it deliberately. Nothing is being handed out.
+- **It is near-certain by the Big Finish**, because backing is the core mechanic
+  and the triggers are things players do constantly. Modelled over a session with
+  four Stars, by the chance that all four have marked via backing alone:
+
+| Backs this share of opportunities | 10 chances each | 15 | 20 |
+|---|---|---|---|
+| 15% | 41.6% | 69.4% | 85.4% |
+| 20% | 63.5% | 86.7% | 95.5% |
+| 30% | 89.2% | 98.1% | 99.7% |
+| 40% | 97.6% | 99.8% | ~100% |
+
+  The Refrain and Dimmed-rescue triggers are *additional* paths on top of this, and
+  any player who simply decides to sound their note can do so on purpose. Real play
+  sits at the bottom of that table or below it.
+
+- **The failure case is the correct one.** A table where people genuinely never
+  help each other does not get the Combined Form — and should not. The gate is only
+  demanding of groups who aren't playing the game.
+- **It produces the right table behaviour.** The group becomes mechanically
+  motivated to make sure the quiet player gets a spotlight moment, because the
+  Chord will not complete without them. A rule that makes a table turn toward
+  whoever has been silent is doing more work than any dice modifier could.
+
+**The Combined Form requires that nobody has been left out.** That is the whole
+thesis of the game, stated as a trigger condition.
 
 ### 4.4 Placement in the scene
 Transformation belongs at the **Bridge** (§5) — during the action, escalating into
@@ -274,21 +338,61 @@ Numbers, not inside one.
 
 ---
 
-## 6. Setting — deliberately thin
+## 6. Setting — your town, and the Spectrum
 
-Setting is roughly 2,500 words and functions as a color grammar plus a starter kit,
-not a gazetteer. It covers:
+**The setting is the modern world you actually live in, plus one other layer.**
 
-- **The Gloom** — what it is, how it spreads, what it wants (nothing; that's the
-  horror of it), and what it leaves behind.
-- **Rainbow cosmology** — light, refraction, and color as the setting's physics.
-  The title concept: one light, many colors, and neither is complete alone.
-- **Four or five sketched places**, each a paragraph and a hook, chosen to be
-  visually maximal in the Lisa Frank register — airbrushed, hyper-saturated,
-  impossible animals, chrome and neon and leopard print.
-- **Explicit instructions for building your own**, with the sketched places as
-  worked examples. The chapter's stance is that the reader's setting is the real
-  one.
+Everyday life is exactly itself: your town, your job, your school, the library
+that's losing its funding, the river nobody cleans, the bus route they cancelled,
+the neighbour nobody checks on. No masquerade, no secret academy, no chosen
+bloodline. Just the ordinary business of things being allowed to go grey.
+
+Underneath — or alongside, or one turn to the left — is **the Spectrum**: the same
+places rendered in howling airbrushed rainbow. Chrome and neon and leopard print,
+impossible animals, gradient skies, glitter that behaves like weather. What is a
+funding shortfall in the everyday is, in the Spectrum, a **monster made of the
+exact shape of that neglect** — and it can be found, named, and hit. On robot
+unicorns.
+
+**Crossing over is called refracting**, which is also how you morph: you refract
+into the Spectrum and you arrive transformed. One act, not two. It happens at the
+Bridge.
+
+### 6.1 Why this framing earns its place
+
+- **It gives the Gloom a referent.** The Gloom was already defined as what happens
+  when something stops being cared about. Now that has an address: disinvestment,
+  burnout, apathy, a place losing its colour. The metaphor stops being a metaphor
+  and becomes a thing you can punch.
+- **It makes the title literal.** White light carries every colour already; the
+  Spectrum is what you see when it's split. The everyday world isn't the drab
+  world — it's the world with the colour still folded up inside it.
+- **It solves the thinness problem.** We are not writing a gazetteer because we
+  are not inventing a world. The chapter teaches a *procedure*: take a real local
+  problem, find its shape, build the Spectrum version, and stat the monster. The
+  reader's own town is the setting, and 2,500 words is generous for that.
+- **Lisa Frank stops being decoration and becomes diegetic.** The airbrushed
+  rainbow is not a house style applied to the art — it is what a place looks like
+  over there. The art direction and the fiction now say the same thing.
+- **It fits the song structure exactly.** Verse: the everyday, and the problem
+  shows up as a real thing. Chorus: first contact goes badly. Bridge: refract.
+  Big Finish: the fight, in full colour. Encore: home again — and the real thing
+  has changed.
+- **The stakes stay human and ungendered.** This is a game about caring for your
+  actual community, not about destiny or chosen-ones.
+
+### 6.2 What the chapter contains
+
+- **The Spectrum** — what it looks like, how it behaves, what the rules of the
+  place are (few, and mostly about colour and sincerity).
+- **The Gloom** — how neglect becomes a monster, what it wants (nothing; that is
+  the horror of it), and what winning actually changes back home.
+- **Refracting** — where the seams are, who can find them, what it costs.
+- **Four or five worked examples**, each a real mundane problem paired with its
+  Spectrum monster, as models rather than canon.
+- **The conversion procedure** — explicit, step-by-step: local problem → Gloom
+  clock → monster → what changes in the everyday when it falls. This is the
+  chapter's actual payload.
 
 ---
 
@@ -337,6 +441,9 @@ word gets exactly one grammatical job:
 | **Adjective** — the state you are in | **transformed** | "fought transformed", "your transformed form". |
 | **Named moves** | **Solo Morph**, **Synchronized Morph**, **Combined Form** | Capitalized, always these exact names. |
 | **Your personal expression of it** | **Radiance** | The look, sound, phrase, and object. Never a synonym for the act. |
+| **Crossing into the Spectrum** | **refract** | "you refract at the Bridge". Refracting and morphing are the same act; never describe them as two steps. |
+| **The two layers** | **the everyday** / **the Spectrum** | Lowercase "everyday", capitalised "Spectrum". Never "the real world" — both are real. |
+| **The team-fusion gate** | **the Chord** | Each Star *sounds their note*. Never "meter", "gauge", or "bar". |
 
 Transformation is the thing; morphing is the doing; transformed is the being. One
 word per job, no overlap.
