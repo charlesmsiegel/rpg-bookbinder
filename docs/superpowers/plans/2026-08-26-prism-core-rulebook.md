@@ -1151,10 +1151,25 @@ git commit -m "Plan PRISM structure: 10 chapters, 25,000 words"
 
 Run: `python -c "
 import json; d=json.load(open('projects/prism/state/project_state.json'))
-print(d.get('project_info', {}).get('current_phase'))
+i=d.get('project_info', {})
+print(i.get('current_phase'), '| planning_complete:', d.get('planning_complete'))
 "`
-Expected: `planning_complete`. Read it from `project_info` — a top-level lookup
-returns `None` and would falsely look like the gate had not been passed.
+Expected: `first_draft | planning_complete: True`.
+
+**Two traps here, both hit during execution.**
+
+First, read the phase from `project_info` — a top-level lookup returns `None`
+and would falsely look like the gate had not been passed.
+
+Second, **`planning_complete` is not a valid phase.** `/plan-project` Step 9
+instructs you to set it, and `/first-draft` line 13 checks for it, but
+`set_project_phase` accepts only `planning`, `first_draft`, `review`,
+`second_draft`, `editing`, `final`, `complete` and rejects anything else. The
+commands and the tool disagree. Planning being finished means the project is
+entering `first_draft`, which satisfies "planning_complete or later" under the
+vocabulary the tool actually accepts; a separate root-level `planning_complete`
+flag records that Phase 1 finished. The same mismatch applies to
+`first_draft_complete` at `/first-draft` line 97 — use `review` there.
 
 - [ ] **Step 2: Run the command**
 
