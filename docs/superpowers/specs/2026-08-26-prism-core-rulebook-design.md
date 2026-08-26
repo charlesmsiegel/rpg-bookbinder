@@ -191,10 +191,9 @@ diminishing returns, no ceiling break.
 **Backing costs the backer.** Choose one when you back:
 - Lose 1 Shine, or
 - Spend 1 Sparkle, or
-- Give up your own next action — **only if you actually have one pending**. If the
-  scene ends before you would have acted, the forfeit carries into the next scene.
-  You may not choose this option after your last action of a scene; pick another
-  cost. A cost you were never going to pay is not a cost.
+- Give up your own next action — **available only in the Big Finish** (§2.8),
+  where actions are a defined thing. Outside it, choose another cost. A cost you
+  were never going to pay is not a cost.
 - Expose something — a secret, a weakness, a feeling you'd rather not say aloud.
 
 A backer who has an unspent **Bond** with the roller may **spend the Bond**
@@ -231,6 +230,29 @@ points.
 Gloom is not evil. It is what happens when something stops being cared about.
 
 ---
+
+### 2.8 How turns work
+
+Most of a Number has **no turn order at all**. People talk, the Showrunner asks
+for a roll when something is at stake, and the spotlight moves the way
+conversation moves. This is deliberate: three of the four beats are a
+conversation, and imposing initiative on them would make PRISM feel like a
+different game.
+
+**The Big Finish is the exception.** Once the team is transformed and the clock
+is live, go **around the table in seating order**, and each Star takes **one
+action** per round. The Showrunner acts between rounds, not within them.
+
+That gives "your action" a precise meaning exactly where the rules need one:
+
+- **Backing by giving up your next action** is available only here. In a
+  free-form scene, pick a different cost.
+- **Reaching a Dimmed Star** costs your action for the round here. Outside the
+  Big Finish it costs you the scene — you spend it going after them, which is
+  its own price and needs no bookkeeping.
+
+Two rules, one page, and no initiative system. If a table wants to run a Chorus
+with turns because a chase is getting confusing, that is allowed and normal.
 
 ### 2.6 What a Mixed result costs
 
@@ -270,6 +292,13 @@ how deep the neglect goes. You win by emptying it.
 - **The Gloom wins only if every Star is Dimmed.** Nobody dies. The team simply
   can't go on tonight, the world keeps the loss, and that place stays grey until
   someone comes back for it.
+
+**If one result does both, the team wins.** A last Star on 1 Shine can roll
+Mixed against a clock on 1: the clock empties and the cost Dims them. Emptying
+the clock is checked first and ends the Number, and the Star goes down *as* the
+thing falls — which is the best image in the genre, not an edge case to
+arbitrate. They are still Dimmed when the Encore opens, and somebody still has
+to reach them.
 
 **The clock cannot be taken below 1 before the Big Finish.** However well the Verse
 and Chorus go, the last tick belongs to the climax. This is a one-sentence pacing
@@ -526,7 +555,7 @@ Scenes and sessions are organized as a pop song. A session is a **Number**.
 | Beat | What happens |
 |---|---|
 | **Verse** | Ordinary life. Who these people are when nothing is wrong. The problem arrives at the end. |
-| **Chorus** | First engagement. It goes badly. The Gloom asserts itself and a clock starts filling. |
+| **Chorus** | First engagement. It goes badly. The Gloom asserts itself and its clock — already full — is revealed for what it is. |
 | **Bridge** | The key change. Someone says the thing they've been avoiding. **Transformation happens here.** |
 | **Big Finish** | The climax, fought transformed. Finishers, Combined Form, the Gloom clock racing the team's Shine. |
 

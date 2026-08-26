@@ -55,9 +55,8 @@ The Showrunner names one. The player may always refuse it and lose 1 Shine inste
 
 - A backer adds **+1d6**. Multiple backers each add one.
 - **You always keep exactly two dice.** Every added die also drops one.
-- Backing costs the backer: lose 1 Shine, spend 1 Sparkle, give up a
-  *genuinely pending* action (carries forward if the scene ends first; not
-  available after your last action), or expose something.
+- Backing costs the backer: lose 1 Shine, spend 1 Sparkle, give up your next
+  action (**Big Finish only** — see Turns), or expose something.
 - A backer with an unspent **Bond** may spend the Bond instead. A spent Bond
   is marked until the next Encore, where it deepens and returns.
 - You cannot back yourself, and cannot back someone you have never been
@@ -65,6 +64,15 @@ The Showrunner names one. The player may always refuse it and lose 1 Shine inste
 
 Verified rates, Trait +1 vs Difficulty 9: **41.7%** / **68.1%** / **82.6%** /
 **90.6%** for zero through three backers.
+
+## Turns
+
+- Most of a Number has **no turn order**. Conversation moves the spotlight.
+- **In the Big Finish only**: go around the table in seating order, one action
+  each per round. The Showrunner acts between rounds.
+- "Give up your next action" as a backing cost exists only in the Big Finish.
+- Reaching a Dimmed Star costs your action in the Big Finish; outside it, it
+  costs you the scene.
 
 ## Shine
 
@@ -87,6 +95,9 @@ Verified rates, Trait +1 vs Difficulty 9: **41.7%** / **68.1%** / **82.6%** /
 
 - **Empties** → you win; the everyday thing comes back.
 - **The Gloom wins only if every Star is Dimmed.**
+- **If one result does both, the team wins.** Emptying the clock is checked
+  first and ends the Number. The Star still goes down, and still has to be
+  reached at the Encore.
 - A Miss's +1 never exceeds the starting size. The Gloom endures; it does not grow.
 - **The clock cannot be taken below 1 before the Big Finish.**
 
@@ -149,7 +160,7 @@ One mark per Star. The Chord is full when every note sounds.
 | Beat | What happens |
 |---|---|
 | **Verse** | The everyday. The problem arrives by the end. |
-| **Chorus** | First engagement. It goes badly. |
+| **Chorus** | First engagement. It goes badly. The clock — already full — is revealed for what it is. |
 | **Bridge** | The key change. **Morphing happens here.** |
 | **Big Finish** | The climax, fought transformed. |
 

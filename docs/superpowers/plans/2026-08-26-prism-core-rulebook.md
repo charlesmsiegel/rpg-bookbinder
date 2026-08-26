@@ -64,6 +64,26 @@ Debian-packaged PyJWT the installer cannot replace), use:
 `httpx` alone is enough for the test suite; `mcp` is needed for Task 2's
 server-import check.
 
+- [ ] **Step 1b: Install the export toolchain**
+
+Task 13 verifies DOCX, EPUB, PDF, and a triple-spaced editing PDF. None of the
+tools ship in a clean container, and `scripts/export.sh` routes several steps
+through `2>/dev/null`, so a missing toolchain produces absent artifacts rather
+than a loud failure. Install them up front:
+
+```bash
+npm install                                  # docx, for the DOCX export
+pip install pypandoc-binary weasyprint pypdf # pandoc + PDF engine + page counting
+python3 -c "
+import pypandoc, shutil, os
+src = pypandoc.get_pandoc_path(); dst = '/usr/local/bin/pandoc'
+if not os.path.exists(dst): shutil.copy(src, dst); os.chmod(dst, 0o755)
+print('pandoc on PATH:', dst)
+"
+```
+
+Verify: `command -v pandoc weasyprint && node -e "require('docx')" && echo ok`
+
 - [ ] **Step 2: Confirm the suite is green before changing anything**
 
 Run: `python -m unittest discover tests`
@@ -1042,8 +1062,11 @@ print('title:', d.get('project_title'))
 "
 ```
 Expected: `state/`, `content/`, `development/`, `notes/`, `output/` all present, the
-three state files exist, phase prints `initialization` (**not** `None` — the phase
+three state files exist, phase prints **`planning`** (**not** `None` — the phase
 lives under `project_info`, not at the state root), and title prints `PRISM`.
+`initialize_project` in `mcp_servers/project.py` sets `planning`, and
+`.claude/commands/init-project.md` documents the same; anything else means the
+project did not initialize cleanly.
 
 - [ ] **Step 4: Commit**
 
@@ -1322,6 +1345,18 @@ for field in Refrain Signature Bond Look Radiance; do
 done
 echo "Command word:     $(grep -ci 'command word' "$f")     (expect >=1, shared by the team)"
 echo "Traits above +2:  $(grep -oE '\+[3-9]' "$f" | wc -l)  (expect 0)"
+echo
+echo "--- and across EVERY chapter, since a +3 can be introduced at any draft stage ---"
+grep -rnoE '\+[3-9]' projects/prism/content/*/final_draft.md | while IFS= read -r hit; do
+  loc=${hit%%:*}; rest=${hit#*:}; line=${rest%%:*}
+  ctx=$(sed -n "${line}p" "$loc")
+  # A Trait value is a +N next to a Trait name or on a stat line. A margin
+  # table entry ("+3: 19.9%") or "3 backers" is fine.
+  case "$ctx" in
+    *Heart*|*Flash*|*Craft*|*Cool*|*Trait*) echo "REVIEW: $loc:$line  $ctx" ;;
+  esac
+done
+echo "Trait-context scan complete"
 ```
 Expected: five Stars, each with all five fields, one shared command word, and
 no Trait above +2.
@@ -1369,7 +1404,57 @@ counting every heading.
 Run: `grep -nE '!\[.*\]\(.*\.(png|jpg)\)' projects/prism/output/compiled_supplement.md || echo "no image refs, as expected"`
 Expected: `no image refs, as expected` — compile strips them when the prompt manifest exists.
 
-- [ ] **Step 4: Final forbidden-patterns check on the compiled output**
+- [ ] **Step 4: Verify every required export artifact**
+
+`/compile` Step 4 requires DOCX, EPUB, PDF, and a triple-spaced editing PDF in
+addition to the Markdown. `scripts/export.sh` pipes several steps through
+`2>/dev/null`, so a missing toolchain can leave artifacts absent without an
+obvious failure — checking only the Markdown would let a "finished" rulebook
+ship with no publication exports at all.
+
+The toolchain **is** available in this environment once Task 0 has run
+(`npm install` for `docx`, `pip install pypandoc-binary weasyprint`, with the
+pandoc binary copied onto PATH), so every artifact below is expected to exist
+and be non-empty. Do not treat an absent export as acceptable.
+
+```bash
+cd projects/prism/output
+fail=0
+for f in PRISM.docx PRISM.epub PRISM.pdf; do
+  if [ -s "$f" ]; then printf "  %-28s %s bytes\n" "$f" "$(wc -c < "$f")"
+  else echo "  MISSING OR EMPTY: $f"; fail=1; fi
+done
+# The triple-spaced editing PDF is named from project_title, not the slug.
+ts=$(ls *.pdf 2>/dev/null | grep -vi '^PRISM.pdf$' | head -1)
+if [ -n "$ts" ] && [ -s "$ts" ]; then
+  printf "  %-28s %s bytes\n" "$ts" "$(wc -c < "$ts")"
+else echo "  MISSING OR EMPTY: triple-spaced editing PDF"; fail=1; fi
+echo "exports OK: $([ $fail -eq 0 ] && echo yes || echo NO)"
+cd - >/dev/null
+```
+Expected: `exports OK: yes`, with every file non-empty.
+
+**Triple-spaced page ratio.** The editing PDF exists to be written on, so it
+must actually be triple-spaced — roughly 2.5–3.5x the page count of the normal
+PDF. Compare them:
+
+```bash
+python3 - <<'PYEOF'
+import glob
+try:
+    from pypdf import PdfReader
+except ImportError:
+    from PyPDF2 import PdfReader
+def pages(p): return len(PdfReader(p).pages)
+norm = pages("projects/prism/output/PRISM.pdf")
+ts = [f for f in glob.glob("projects/prism/output/*.pdf") if not f.endswith("PRISM.pdf")]
+t = pages(ts[0])
+print(f"normal {norm}pp, triple-spaced {t}pp, ratio {t/norm:.2f}")
+print("ratio in 2.5-3.5:", 2.5 <= t/norm <= 3.5)
+PYEOF
+```
+
+- [ ] **Step 5: Final forbidden-patterns check on the compiled output**
 
 Run:
 ```bash
@@ -1378,12 +1463,12 @@ grep -nE 'TODO|TBD|FIXME|PLACEHOLDER|p\. XX|page XX|ARCHITECT COMMENT|<!-- |Draf
 ```
 Expected: `compiled output is clean`.
 
-- [ ] **Step 5: Run the whole test suite one last time**
+- [ ] **Step 6: Run the whole test suite one last time**
 
 Run: `python -m unittest discover tests -v`
 Expected: PASS.
 
-- [ ] **Step 6: Commit**
+- [ ] **Step 7: Commit**
 
 ```bash
 git add projects/prism
