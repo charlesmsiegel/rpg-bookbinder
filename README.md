@@ -35,6 +35,10 @@ rather than reconstructed from a conversation.
 The issue tracker is a working backlog rather than a defect list — an open issue
 usually records a design decision made and not yet acted on.
 
+Bookbinder is an IP-clean rebuild of a private predecessor developed since 2025; 
+this repository carries the pipeline without the third-party game content that 
+made the original unshareable.
+
 ## What you bring
 
 Bookbinder is a skeleton. Everything that makes a supplement belong to *your*
