@@ -252,3 +252,21 @@ somebody something: *"What do you say?"* Then wait. The waiting is the job.
 
 You are not adjudicating a combat. There is one mechanic, it fits on a card,
 and your actual role is to keep asking people what they said out loud.
+
+## When not to roll
+
+Trouble is not the same as dice. Do not reach for them when:
+
+- **Nothing is at stake.** If the Star wants to do it and failing would just be
+  an inconvenience, they do it.
+- **A Star is reaching a Dimmed friend.** Never. Not once. Not even when it
+  would be dramatic.
+- **Somebody is telling the truth about themselves.** Sincerity is not a
+  contested action in this game. If a player says their Star finally admits the
+  thing, the Star admits the thing.
+- **The answer is obviously yes and the fun is in the description.** Let them
+  describe it and give them the win.
+
+Roll when the outcome is genuinely uncertain *and* you can name what a Miss
+would change. If you cannot say what a Miss does before the dice go down, you
+do not need the dice.
