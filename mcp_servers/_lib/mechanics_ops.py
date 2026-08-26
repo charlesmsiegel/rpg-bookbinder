@@ -4,6 +4,8 @@ Dice probability, XP costs, combat soak, random tables.
 """
 
 import math
+from collections import defaultdict
+from itertools import product
 from typing import Optional
 
 from . import config
@@ -325,4 +327,112 @@ def generate_random_table(
         lines.append(f"{range_text:<12} {entry}")
         current_min = current_max + 1
 
+    return "\n".join(lines)
+
+
+# =========================================================================
+# SUM-BASED DICE PROBABILITY
+# =========================================================================
+
+def _sum_distribution(dice: int, sides: int, keep: int) -> Optional[dict]:
+    """
+    Exact distribution over the sum of the best `keep` of `dice` dice of `sides` sides.
+
+    Returns {sum: number_of_outcomes}, or None if the calculation would be too
+    large to enumerate. Convolution handles the keep-everything case in linear
+    time; dropping dice needs enumeration, which is guarded.
+    """
+    if keep == dice:
+        counts = {0: 1}
+        for _ in range(dice):
+            nxt = defaultdict(int)
+            for running, c in counts.items():
+                for face in range(1, sides + 1):
+                    nxt[running + face] += c
+            counts = dict(nxt)
+        return counts
+
+    if sides ** dice > 2_000_000:
+        return None
+
+    counts = defaultdict(int)
+    for roll in product(range(1, sides + 1), repeat=dice):
+        counts[sum(sorted(roll, reverse=True)[:keep])] += 1
+    return dict(counts)
+
+
+def calculate_sum_probability(
+    dice: Optional[int] = None,
+    sides: Optional[int] = None,
+    modifier: int = 0,
+    target: Optional[int] = None,
+    keep: Optional[int] = None,
+) -> str:
+    """
+    Probability for a sum-based roll: add up the best `keep` of `dice` dice,
+    plus a flat modifier, against a target number.
+
+    Every argument falls back to config, so calling this bare answers
+    "what are the odds on a standard roll for this game system?"
+
+    Args:
+        dice: How many dice to roll. Defaults to mechanics.dice.count.
+        sides: Faces per die. Defaults to mechanics.dice.sides.
+        modifier: Flat bonus added to the kept sum.
+        target: Number the total must reach. Defaults to mechanics.dice.default_target.
+        keep: How many of the highest dice to add. Defaults to all of them.
+
+    Returns:
+        Success chance, expected value, a margin table, and the chance that
+        every kept die shows the maximum face.
+    """
+    if dice is None:
+        dice = config.get("mechanics.dice.count", 2)
+    if sides is None:
+        sides = config.get("mechanics.dice.sides", 6)
+    if target is None:
+        target = config.get("mechanics.dice.default_target", 9)
+    if keep is None:
+        keep = dice
+
+    if not 1 <= dice <= 12:
+        return "Error: dice must be between 1 and 12"
+    if not 2 <= sides <= 100:
+        return "Error: sides must be between 2 and 100"
+    if not 1 <= keep <= dice:
+        return f"Error: keep must be between 1 and {dice}"
+
+    dist = _sum_distribution(dice, sides, keep)
+    if dist is None:
+        return "Error: that pool is too large to enumerate exactly (try fewer dice or sides)"
+
+    total = sum(dist.values())
+    meets = sum(c for s, c in dist.items() if s + modifier >= target)
+    expected = sum((s + modifier) * c for s, c in dist.items()) / total
+
+    notation = f"{dice}d{sides}" if keep == dice else f"best {keep} of {dice}d{sides}"
+    if modifier:
+        notation += f" {modifier:+d}"
+
+    lines = [
+        f"{notation} vs target {target}",
+        "",
+        f"Chance of meeting the target: {100.0 * meets / total:.1f}%",
+        f"Expected total: {expected:.2f}",
+        f"Range: {min(dist) + modifier} to {max(dist) + modifier}",
+        "",
+        "Margin table (chance of beating the target by at least N):",
+    ]
+    for m in range(0, 6):
+        c = sum(cnt for s, cnt in dist.items() if s + modifier >= target + m)
+        lines.append(f"  +{m}: {100.0 * c / total:.1f}%")
+
+    # Systems with an "all kept dice showed the best face" special result need this
+    # figure, and it cannot be recovered from a sum-only margin table.
+    best = keep * sides
+    top = dist.get(best, 0)
+    lines += [
+        "",
+        f"Every kept die shows the maximum face ({sides}): {100.0 * top / total:.2f}%",
+    ]
     return "\n".join(lines)

@@ -16,6 +16,7 @@ class TestMechanics(unittest.TestCase):
             "calculate_extended_action",
             "calculate_experience_cost",
             "calculate_damage_soak",
+            "calculate_sum_probability",
             "generate_random_table",
         }
         actual = {
