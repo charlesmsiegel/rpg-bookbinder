@@ -283,3 +283,37 @@ is playable. Write the Bond as the absence: *"We have been in the same rooms
 for two years and I could not tell you one true thing about him."* Then watch
 what happens the first time one of them needs to back the other and finds they
 cannot yet.
+
+## Your first scene
+
+You have a sheet. Here is how to use it without thinking hard.
+
+**Lead with the Refrain.** In your first scene, put your Star in a position
+where their line is relevant, and then hold to it in front of everyone. It
+tells the table who you are faster than any description, and it usually earns
+you a Sparkle inside ten minutes.
+
+**Say the +0 out loud early.** The first time the group hits something in your
+weak Trait, announce it: *"That's Flash. I'm nothing at Flash."* You are not
+apologising — you are opening a door for somebody else to walk through, and
+the game is built to reward them for doing it.
+
+**Do not save your Sparkle.** New players hoard it. Three points is not a
+war chest; it is roughly one morph and one reroll, and it refills every Encore.
+Spend it on the first moment that feels big.
+
+**Back somebody in the first hour.** It sounds your note, it costs you little
+this early, and it establishes the habit before the Big Finish when it matters.
+
+## The sheet, in one breath
+
+Four Traits — one +2, two +1, one +0. A Refrain you can lose things over. A
+Signature that drops a band when you are being most yourself. A Look that is
+ordinary. A Radiance that is not. One Bond to every other Star, each of them a
+true thing that happened.
+
+Three Sparkle. Five Shine.
+
+That is a complete character in a game where nothing on the sheet ever goes up,
+and it is enough, because the part of your Star that grows is the part written
+in other people's handwriting.

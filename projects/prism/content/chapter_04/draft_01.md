@@ -232,3 +232,38 @@ And it is *the same place*. Whatever the Star knows about the everyday version
 still applies. The bus route still runs the way it runs. The library still has
 a broken window at the back. That continuity is what makes winning matter — you
 are not visiting a fantasy world, you are seeing your own one with the lid off.
+
+## Which gear, and when
+
+Three gears, one question each.
+
+**Solo Morph** — *is this my moment?* Use it when the scene belongs to your
+Star: when the thing in front of the group is yours to answer, or when you are
+the only one still standing, or when you have just said something true and want
+the world to change colour around you for saying it. It costs the most per
+person and it buys the most attention.
+
+**Synchronized Morph** — *is this our moment?* Cheaper for the group, and it
+opens the shared abilities, so mechanically it is usually correct. But use it
+when the fiction has earned a shout, not merely when it is efficient. A
+Synchronized Morph is five people agreeing out loud at the same time; spend it
+where that means something.
+
+**Combined Form** — you do not choose this one. It arrives when the Chord is
+full and the Big Finish is running and somebody looks up and says *"together?"*
+If you find yourself planning it in advance, you are playing the wrong game
+slightly. Let it be the thing that happens *to* you.
+
+A useful default for a first Number: nobody morphs in the Verse, one or two
+Solo Morphs when the Chorus goes badly, and the Synchronized Morph at the
+Bridge as the answer to whatever the Chorus did to you.
+
+## One last thing about the phrase
+
+Say it every time.
+
+Not a shortened version, not "I do my morph thing" — the actual words, at
+actual volume, every single time your Star refracts. It will feel silly in
+session one and it will stop feeling silly somewhere in session two, and by
+session three somebody at your table will get a genuine shiver when they hear
+it, and that is the entire reason this game exists.
