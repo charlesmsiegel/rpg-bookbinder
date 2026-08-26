@@ -54,9 +54,19 @@ themselves. The game's thesis and its math are the same statement.
 - **Cool** — composure, style, reading a room, keeping it together
 
 Starting spread is fixed: one **+2**, two **+1**, one **+0**. **+3** is reachable
-only through advancement, never at creation. There is no trade or point-buy — every
-character starts from the same shape and is distinguished by Refrain, Signature,
-Bonds, and Radiance rather than by arithmetic.
+only through advancement, never at creation. There is no trade or point-buy.
+
+**The fixed spread is a feature, not a simplification.** A flat character has no
+shape — nothing they reach for first, nothing they need anyone else for. The **+0**
+is the most important number on the sheet: it is the slot where Power of Friendship
+stops being optional. Every Star is good at one thing, shaky at one thing, and
+ordinary at two, and that asymmetry is what makes backing each other structural
+rather than polite. Characters are distinguished by Refrain, Signature, Bonds, and
+Radiance — not by arithmetic.
+
+Chapter 3 must teach the +0 as a creative prompt rather than a penalty: *what do you
+do when the thing in front of you is the thing you're worst at?* The answer the game
+wants is "ask someone."
 
 ### 2.2 Outcome ladder
 
