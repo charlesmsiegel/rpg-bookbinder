@@ -16,5 +16,11 @@
     "agent": "consistency_checker",
     "type": "decision",
     "message": "Third review round resolved. Six rules/continuity defects fixed: the Chord's key restated as one note per Star (three- and four-Star teams could not sound five); Formation restricted to Stars who have both not yet acted, closing a double-action hole; Chapter 8's Miss list restructured so the clock tick or Shine loss is mandatory and the named Gloom move is the fiction carrying it, not an alternative to it; the three-player lineup corrected from Wren/Priya/Danny to Wren/Priya/Marisol, which is the trio that actually has the +2 coverage the text claims; and Chapter 10's Chorus no longer crosses into the Spectrum before the Bridge, since refracting and morphing are the same act. Three compile-phase verification steps in the plan were also corrected before use."
+  },
+  {
+    "timestamp": "2026-08-26T23:03:54.251622",
+    "agent": "consistency_checker",
+    "type": "decision",
+    "message": "Fourth review round resolved. The Formation restriction was propagated into references/prism/00-core-rules.md, which round three had left contradicting the corrected Chapter 4. Backing eligibility no longer resets each Number: honesty, once had, persists, which is what canon says and what the pregen paragraph assumes. The character sheet gained the two bracketed morphed-Shine boxes and its Sparkle track was corrected to the real starting maximum of 3, as was Chapter 10's Quick Reference. initialize_project now seeds one gate vocabulary so a finished project reports 7/7 rather than 7/12, and pass_quality_gate resolves the next gate inside the caller's vocabulary instead of across both."
   }
 ]

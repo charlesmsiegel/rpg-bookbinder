@@ -246,8 +246,10 @@ paid for it himself.
 **You cannot back yourself.** Obviously.
 
 **You cannot back someone you have never been honest with.** If your Stars have
-not had a real conversation, if nothing true has passed between them this
-Number, the help is not available yet. Go and have the conversation. The
+never had a real conversation, if nothing true has ever passed between them,
+the help is not available yet. Honesty does not expire: once a pair have had
+that conversation, in this Number or any earlier one, they can back each other
+from then on. Go and have the conversation. The
 Showrunner should enforce this warmly, as an invitation rather than a penalty:
 *"You'd love to help her, and you realise you don't actually know what's wrong.
 Ask her."*

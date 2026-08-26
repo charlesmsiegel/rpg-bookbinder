@@ -188,7 +188,8 @@ lose 1 Shine · spend 1 Sparkle · Exposure · Gloom +1 tick
 **Backing:** +1d6, still keep two. Costs the backer 1 Shine, 1 Sparkle, their
 next action (Big Finish only), Exposure, or a Bond.
 
-**Sparkle:** start 3, max 5. Morph · reroll a die · ignore 1 Shine · Finisher.
+**Sparkle:** start 3, max 3 (5 only after long play). Morph · reroll a die ·
+ignore 1 Shine · Finisher.
 Refresh 1 when your Refrain costs you something, once per scene.
 
 **Shine:** 5 boxes. At 0 you are Dimmed, present, not dead, cannot act, cannot
@@ -242,8 +243,9 @@ RADIANCE
   Object .............................................................
   Transformed ability ................................................
 
-SPARKLE  [ ] [ ] [ ] [ ] [ ]        SHINE  [ ] [ ] [ ] [ ] [ ]
-         (start 3, max 5)                  (+2 boxes while morphed)
+SPARKLE  [ ] [ ] [ ]                SHINE  [ ] [ ] [ ] [ ] [ ]   ( ) ( )
+         (start 3, max 3;                  (5 boxes, plus the two
+          5 only after long play)           in brackets while morphed)
 
 MY NOTE ON THE CHORD  [ ]
 

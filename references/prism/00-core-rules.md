@@ -147,7 +147,7 @@ Crossing into the Spectrum is **refracting**, and it is the same act as morphing
 
 | Ability | What it does |
 |---|---|
-| **Formation** | Once per round, two Stars may swap places in the turn order. Free — it costs position, not resources. |
+| **Formation** | Once per round, two Stars **who have both not yet acted this round** may swap places in the turn order. Free — it costs position, not resources. Never a second action for anyone. |
 | **Chained backing** | A backer pays their cost **once** and it covers backing two different rolls in the same round. The keep-two rule is unchanged; this buys a second use of one payment, never a third die on one roll. |
 | **Group finisher** | Two or more Stars each spend 1 Sparkle and act together. The Gloom removed is doubled **once per participating Star** — two Stars quadruple it, three multiply it by eight. |
 

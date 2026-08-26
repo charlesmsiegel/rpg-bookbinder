@@ -165,11 +165,13 @@ def initialize_project(
             "final_reviewer": {"status": "ready", "last_active": None},
         },
         "quality_gates": {
-            "initial_draft": False,
-            "first_review": False,
-            "consistency_check": False,
-            "final_review": False,
-            "publication_ready": False,
+            # The gates the shipped .claude/commands pipeline actually sets.
+            # The legacy five (initial_draft, first_review, consistency_check,
+            # final_review, publication_ready) are still ACCEPTED by
+            # pass_quality_gate for projects that already use them, but they are
+            # not initialized here: nothing in the current pipeline sets them, so
+            # seeding both vocabularies would make check_quality_gates report a
+            # fully finished project as 7/12.
             "first_draft": False,
             "architectural_review": False,
             "research_enhancement": False,
@@ -479,9 +481,15 @@ def pass_quality_gate(project_name: str, gate_name: str) -> str:
     # Two vocabularies exist: the legacy five created at init, and the seven
     # the .claude/commands pipeline actually reads. Accept both — rejecting
     # the command set made every phase gate impossible to pass.
-    valid_gates = ["initial_draft", "first_review", "consistency_check", "final_review", "publication_ready",
-                   "first_draft", "architectural_review", "research_enhancement",
-                   "second_draft", "copy_edit", "final_draft", "compilation"]
+    # Two gate vocabularies are accepted, but they are alternatives rather than
+    # one long sequence: a project uses one or the other. "Next gate" must be
+    # resolved inside the vocabulary the caller is using, or passing a legacy
+    # terminal gate would point back at the start of the current pipeline.
+    legacy_gates = ["initial_draft", "first_review", "consistency_check",
+                    "final_review", "publication_ready"]
+    pipeline_gates = ["first_draft", "architectural_review", "research_enhancement",
+                      "second_draft", "copy_edit", "final_draft", "compilation"]
+    valid_gates = legacy_gates + pipeline_gates
 
     if gate_name not in valid_gates:
         return f"Invalid gate. Valid gates: {valid_gates}"
@@ -495,8 +503,9 @@ def pass_quality_gate(project_name: str, gate_name: str) -> str:
     save_project_state(project_name, state)
 
     # Determine next gate
-    gate_idx = valid_gates.index(gate_name)
-    next_gate = valid_gates[gate_idx + 1] if gate_idx < len(valid_gates) - 1 else None
+    sequence = legacy_gates if gate_name in legacy_gates else pipeline_gates
+    gate_idx = sequence.index(gate_name)
+    next_gate = sequence[gate_idx + 1] if gate_idx < len(sequence) - 1 else None
 
     lines = [f"Quality gate '{gate_name}' marked as PASSED"]
     if next_gate:
