@@ -315,6 +315,10 @@ whose punchline is that the game is silly.
   cross-reference integrity is enforced instead by the heading ID registry
   (`/plan-project` Step 8a) and the consistency-checker pass — which is what those
   artifacts are for.
+- `art.active_generator` → `"ideogram-v4"` (see §9.4)
+- `art.density_words_per_illustration` → `1500`. At 25,000 words that is ~17 art
+  slots — appropriate for a visually-forward book, where the default 2,250
+  (~11 slots) would read as sparse.
 - `layout.style_file` → `"styles/layout/prism.md"` and `layout.docx_theme` →
   `"prism"`. **Both keys move together**: `/compile` Step 3 reads `style_file` as
   the design language that the selected theme implements, and confirms it points at
@@ -390,6 +394,34 @@ the tool.
 - `config/README.md` — updated with the new `mechanics.dice.count` and
   `mechanics.dice.default_target` fields and the compatibility constraint above
 
+### 9.4 Art generator: Ideogram 4
+
+**Decision: Ideogram 4 for the entire book, single model.** (Alternative considered:
+Anima.)
+
+- **The Lisa Frank anchor is not anime.** It is 90s airbrushed commercial
+  illustration — rainbow gradients, chrome, hyper-saturated impossible animals.
+  Anima is an anime specialist; that register fights its training on every image.
+- **Rulebook art is subject-diverse**: chapter openers, places, objects, Gloom
+  clocks, spot art. Anime checkpoints are character-centric and weaker on
+  environments, objects, and abstract composition.
+- **Sentai ensembles are a prompt-adherence problem.** "Five color-coded figures in
+  synchronized formation, each distinct" is where anime checkpoints blur and lose
+  count. The repo's `ideogram-v4` profile drives a structured JSON caption that
+  names each element separately — built for exactly this.
+- **Text rendering.** A cover wordmark and in-world signage; PRISM's transformation
+  phrases belong on the page. Ideogram is strong here; anime models are not.
+- **Consistency beats peak quality.** Mixing two visual languages across one book
+  reads as incoherent.
+- **Tiebreaker, not the reason**: `styles/art/ideogram-v4.md` and its ComfyUI
+  workflow already exist and are complete. Anima has no profile, rules file, or
+  workflow in this repo.
+
+**What this costs**: Anima would produce better expressive close-up transformation
+portraits. This is recoverable — the prompt manifest is model-agnostic text, so
+those slots can be re-rendered through another backend later without rewriting the
+book. The manifest flags which slots are character splashes for exactly that reason.
+
 ---
 
 ## 10. Pipeline Plan
@@ -404,7 +436,7 @@ Run in order, with the standard quality gate between each:
 | 3 | `/architect-review prism` | Architectural commentary |
 | 4 | `/second-draft prism` | `draft_02.md` — comment integration + copy edit |
 | 5 | `/final-draft prism` | `final_draft.md` — consistency, final review |
-| 5.5 | `/art-direction prism` (deferred mode) | **Prompt manifest only — no images** |
+| 5.5 | `/art-direction prism` (deferred mode) | **Prompt manifest only — no images**, Ideogram 4 profile |
 | 6 | `/compile prism` | Assembled manuscript + exports |
 
 **No images are generated**, since no image models are available in this
