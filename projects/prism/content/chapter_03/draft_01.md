@@ -87,6 +87,8 @@ Say it out loud to the table. If it makes someone go *oh*, keep it.
 The one thing your Star is unmistakably about. It gets a name, and it does
 something specific.
 
+<!-- ARCHITECT COMMENT [COMMENT-006]: Undefined edge: what happens when a Signature drops an Easy task? There is no band below 6. State the answer - most likely 'you simply do it, no roll' - because a Signature that fires on an Easy task is the commonest case at the table and currently has no rule. -->
+
 A Signature **drops a task one Difficulty band** when you are doing the thing
 you are for: Dazzling becomes Tricky, Tricky becomes Easy. Or it makes
 something *attemptable* that the Showrunner would otherwise not have offered a
@@ -161,6 +163,8 @@ should say what it was *before*, in the everyday, because that is the good part.
 
 Now go back and write your Signature's transformed ability, in one sentence,
 using the imagery you just made.
+
+<!-- ARCHITECT COMMENT [COMMENT-007]: The Bond procedure assumes four other Stars. Nothing in the book addresses table size, and it materially changes the game: with three players the Chord fills much faster and the Bond web is 6 lines rather than 20; with five it is 20 lines and roughly forty minutes. Add a short 'How many of you' note here or in Chapter 1 giving the honest shape at 3, 4, and 5 players. -->
 
 ## Bonds: the web
 

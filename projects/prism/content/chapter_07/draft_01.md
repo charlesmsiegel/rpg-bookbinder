@@ -103,6 +103,8 @@ unfightable, and a monster made of them will be a fog rather than a thing.
 The test: **can a Star point at it?** If they can walk to it and put a hand on
 it, you have a Gloom. If they can only gesture at it, go smaller.
 
+<!-- ARCHITECT COMMENT [COMMENT-016]: The five-step procedure is the chapter's payload and it works, but it never says how long it should take. Add 'about ten minutes' at the top of the procedure - Showrunners who think worldbuilding is an evening's work will not use it, and the whole design depends on them using it every session. -->
+
 ### 2. Ask what it costs, and who pays
 
 This is the Gloom's diet, and it decides everything downstream.
@@ -154,6 +156,8 @@ two people who had stopped seeing each other are on it.**
 
 That sentence is the reward for the whole Number, and the Stars should hear it
 in the last thirty seconds of the session, and it should be worth the evening.
+
+<!-- ARCHITECT COMMENT [COMMENT-015]: Real structural redundancy: all four of these - Quiet Shelf, Silt, Long Weekend, Grey Ledger - appear again as full stat blocks in Chapter 9. The reader meets each twice, and the second meeting adds little. Either cut these to one-line pointers into Chapter 9, or replace all four with different examples so the book carries ten Glooms instead of six. The second is better value for the same word count. -->
 
 ## Four worked examples
 

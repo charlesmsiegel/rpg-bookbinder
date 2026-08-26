@@ -121,6 +121,8 @@ never hold more than **5**.
 Spend 1 Sparkle to:
 
 - **Morph** — a Solo Morph, which Chapter 4 covers properly.
+<!-- ARCHITECT COMMENT [COMMENT-003]: Genuine rules gap. When a roll has backing dice, rerolling 'one die' is ambiguous: may you reroll a die you were not going to keep, and does the new result then compete for the keep-best-two? State it explicitly - 'reroll any one die in the pool, then keep the best two as normal' - because with three or more dice this comes up constantly and tables will resolve it differently. -->
+
 - **Reroll one die.** Any die, once, after seeing it. Keep the new result.
 - **Ignore 1 Shine loss.** You shrug it off. It looked like it hurt; it didn't.
 - **Fuel a Finisher** — doubling the damage you do to a Gloom, once you are
@@ -235,6 +237,8 @@ paid for it himself.
 
 **You cannot back yourself.** Obviously.
 
+<!-- ARCHITECT COMMENT [COMMENT-005]: This rule is excellent and it has an unhandled interaction with Chapter 6: the pregenerated Stars ship with every Bond already written, so on night one with pregens the restriction never bites. Either note that pre-written Bonds satisfy it (and the rule is there for Stars the table builds themselves), or give Chapter 6 one unwritten Bond pair deliberately. The second option is more interesting. -->
+
 **You cannot back someone you have never been honest with.** If your Stars have
 not had a real conversation — if nothing true has passed between them this
 Number — the help is not available yet. Go and have the conversation. The
@@ -244,6 +248,8 @@ Ask her."*
 
 That rule is the whole game compressed into one sentence. In PRISM you do not
 get stronger by acquiring things. You get stronger by being known.
+
+<!-- ARCHITECT COMMENT [COMMENT-004]: Shine is introduced as five boxes here, but Chapter 4 raises the cap to seven while transformed and Chapter 10's quick reference says '+2 boxes while morphed'. A reader going 2 -> 5 in order meets the cap change with no warning. Add a half-sentence forward reference: 'Five boxes - though morphing lifts that, see Chapter 4.' -->
 
 ## Shine and Gloom
 

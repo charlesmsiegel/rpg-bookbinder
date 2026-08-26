@@ -127,6 +127,8 @@ birthday party, on a Saturday, for forty people.
 
 ---
 
+<!-- ARCHITECT COMMENT [COMMENT-019]: This is the most delicate content in the book and its safety note is at the end of the entry, after the reader has already absorbed the concept. Move the 'ask first' note to the top of the entry. Also consider whether clock 8 is right: it is the longest fight in the book on the most personal subject, and 6 may serve the material better. -->
+
 ## The Understudy — clock 8
 
 **In the everyday:** Burnout. Specifically the belief — arrived at quietly, over

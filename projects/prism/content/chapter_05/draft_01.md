@@ -165,6 +165,8 @@ Mechanically, the Encore does four things:
 And two things that are not mechanical but matter more: check in on lines and
 veils, and ask each player what they loved. Thirty seconds each.
 
+<!-- ARCHITECT COMMENT [COMMENT-012]: This section is doing a lot of load-bearing work in very little space, and it is the one place a reader may feel short-changed. Add two sentences on what a long-running PRISM group actually accumulates - a map of their town, a list of things that came back - so 'no advancement' reads as a different kind of progression rather than an absence of one. -->
+
 ## If you run a second Number
 
 Here is the whole of advancement in PRISM. It is deliberately not a chapter.
@@ -193,6 +195,8 @@ none of the probabilities in Chapter 2.
 If your group wants more than that, you do not want more rules. You want
 another Number. Go and pick a different thing in your town that somebody
 stopped caring about.
+
+<!-- ARCHITECT COMMENT [COMMENT-011]: Arithmetic verified correct throughout, including the clock ticking back up on Toby's Miss and the Shine transfers. One addition would strengthen it: show the Showrunner offering Priya the choice to refuse the named cost and take 1 Shine instead - it is a rule Chapter 2 promises is 'always open' and it never appears in any example. -->
 
 ## A Big Finish, end to end
 

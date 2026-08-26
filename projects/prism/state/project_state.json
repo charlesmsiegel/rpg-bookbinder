@@ -4,7 +4,7 @@
     "type": "core rulebook",
     "target_length": "short",
     "created_date": "2026-08-26T21:28:18.479161",
-    "current_phase": "review",
+    "current_phase": "second_draft",
     "current_step": 1
   },
   "progress": {
@@ -56,13 +56,13 @@
   },
   "quality_gates": {
     "initial_draft": true,
-    "first_review": false,
+    "first_review": true,
     "consistency_check": false,
     "final_review": false,
     "publication_ready": false,
     "first_draft": true,
-    "architectural_review": false,
-    "research_enhancement": false,
+    "architectural_review": true,
+    "research_enhancement": true,
     "second_draft": false,
     "copy_edit": false,
     "final_draft": false,
@@ -184,5 +184,8 @@
       "chapter_10": 1700
     }
   },
-  "planning_complete": true
+  "planning_complete": true,
+  "architect_review": {
+    "total_comments": 21
+  }
 }

@@ -195,6 +195,7 @@ having done so.
 - *To Wren:* You came back for me when there was no reason to think I was still
   there.
 - *To Toby:* I know what the jokes are for.
+<!-- ARCHITECT COMMENT [COMMENT-013]: Cross-check against Priya's entry in this chapter: this Bond says Priya gave Danny a wrench and claimed it was spare, while Priya's Radiance says she carries the wrench that was her first ever tool. If those are the same wrench the detail is lovely and should be made unmistakable; if they are two wrenches, change one, because readers will assume a continuity error. -->
 - *To Priya:* You gave me the wrench. You said it was spare. It was not spare.
 - *To Marisol:* I am waiting. I am not going anywhere.
 
@@ -204,6 +205,8 @@ everything. His Refrain will cost him, because people tell him the bad version
 and he has to carry it.
 
 ---
+
+<!-- ARCHITECT COMMENT [COMMENT-014]: This chapter is 1,544 of 1,800 and the cheapest good expansion is a short 'If you are playing with three' note: which two Stars to drop and which Bonds to rewrite as a result. Chapter 6 is the chapter a hurried table actually uses, so table-size guidance belongs here as well as in Chapter 3. -->
 
 ## The team's Bonds and command word
 

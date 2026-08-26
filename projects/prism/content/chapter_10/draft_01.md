@@ -15,6 +15,8 @@ stopped seeing each other are on it.
 
 ---
 
+<!-- ARCHITECT COMMENT [COMMENT-021]: The five opening questions are excellent. Add one line telling the Showrunner what to do with the answers - specifically, that at least one of them should come back in the Big Finish. New Showrunners will ask the questions and then never reference them again, which wastes the best prep in the chapter. -->
+
 ### Verse — the ordinary world
 
 Open on a Thursday evening in the everyday. No Spectrum, no monster, no hurry.
@@ -152,6 +154,8 @@ Come back to the everyday. Thursday, 23:40, Tolgate Street, exactly as it was.
 End there. Encore next session.
 
 ---
+
+<!-- ARCHITECT COMMENT [COMMENT-020]: The quick reference omits two things a table will look for mid-session: the Signature rule (drops a band) and the Chord's three triggers are present but the Combined Form's three conditions are compressed to one line. Also verify this page fits on one printed side once the layout theme is applied - it is titled 'one page' in the outline. -->
 
 ## Quick reference
 

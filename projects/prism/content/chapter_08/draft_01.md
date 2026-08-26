@@ -27,6 +27,8 @@ whole thing runs on.
 **You never refuse a rescue.** Reaching a Dimmed Star always works. There is no
 circumstance, no special Gloom, and no dramatic moment that makes it fail.
 
+<!-- ARCHITECT COMMENT [COMMENT-017]: The prep list promises fifteen minutes but step 3 - finding the Bridge - is genuinely hard and is given three sentences. Expand it with two or three more worked hinges drawn from the Chapter 9 Glooms, in the form 'for The Quiet Shelf it is ...'. It is the one piece of prep a new Showrunner will get wrong. -->
+
 ## Building a Number
 
 A Number is one session and one complete story. Here is the prep, and it should
@@ -140,6 +142,8 @@ Bridge.** Do not block it. Roll with it: the key change came early, so move the
 Number toward its Big Finish from there. If no Gloom clock is running yet, the
 morph starts one — a transformation is itself a declaration that something is
 wrong.
+
+<!-- ARCHITECT COMMENT [COMMENT-018]: Cross-reference gap: these moves are generic, while each Gloom in Chapter 9 carries three of its own. Say explicitly that the Gloom's three moves take precedence and this list is the fallback, otherwise a Showrunner has two lists and no ordering. -->
 
 ## Showrunner moves
 

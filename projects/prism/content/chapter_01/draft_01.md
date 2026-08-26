@@ -138,12 +138,16 @@ town into a monster, which is the job. Chapter 9 has six ready-made ones for
 when you want to skip that step, and Chapter 10 is a complete first Number you
 can run cold.
 
+<!-- ARCHITECT COMMENT [COMMENT-001]: This routing section tells players to read 1-3 and Showrunners to read everything, but never tells a player they can safely stop before Chapter 7. Add one line: 'Chapters 7-10 are the Showrunner's; you are welcome to read them and it will spoil nothing, because PRISM has no secrets.' That last clause reinforces the no-masquerade premise while solving the routing question. -->
+
 If you have **never played a tabletop roleplaying game before**: welcome, this
 is a good one to start with. The short version is that one person describes a
 situation, everyone else says what their character does about it, and dice
 settle the bits where it is genuinely uncertain. The character you play is
 traditionally called a player character; in this book we call them a **Star**,
 because that is what they are.
+
+<!-- ARCHITECT COMMENT [COMMENT-002]: Chapter 1 is the thinnest against target (1,459 of 1,800). The gap that matters is experiential: nothing here tells a newcomer what an evening actually FEELS like. Add a short 'What a night of PRISM looks like' section between 'What you need' and the safety tools - four sentences, one per beat, in plain language. It is the single highest-value addition available in this chapter. -->
 
 ## A note on who gets to shine
 

@@ -20,6 +20,8 @@ gears you are using. There are exactly three, and this chapter is them.
 
 You, on your own, out loud.
 
+<!-- ARCHITECT COMMENT [COMMENT-008]: The +2 Shine on morphing is a large effect that Chapter 2's economy section never mentions. A player reading Chapter 2 alone would price Sparkle wrongly. Consider a one-line cross-reference back, and check the two chapters agree that the granted boxes arrive filled. -->
+
 **Cost: 1 Sparkle.** Say your phrase. You arrive in the Spectrum transformed,
 your Radiance unlocked, and you immediately **gain 2 Shine** — your track goes
 to seven boxes for the duration and the two new ones arrive *filled*, not
@@ -113,6 +115,8 @@ no way to sound somebody else's for them.
 Keep it visible. A row of boxes in the middle of the table, one per Star,
 filled in as the night goes. Players will start watching it without being told.
 
+<!-- ARCHITECT COMMENT [COMMENT-009]: This is the best passage in the book and it is buried at the end of a long chapter. Consider promoting the core claim - a team cannot combine until nobody has been left out - into Chapter 1's pitch. It is the strongest single sentence PRISM has for explaining what makes it different, and right now a browser in a shop would never reach it. -->
+
 ### What the Chord is actually for
 
 It looks like a resource meter. It is not. It is a question the game asks the
@@ -146,6 +150,8 @@ Rare, enormous, and the reason the Chord exists.
 Then the team fuses. One sheet. One entity, described together — everybody
 contributes an image and the Showrunner welds them into one thing that should
 not fit through a doorway.
+
+<!-- ARCHITECT COMMENT [COMMENT-010]: With the Chapter 6 pregens, two Stars have Heart +2 and nobody has Cool +2 except Marisol - so the Combined Form is +2 across the board only because the five happen to cover all four Traits. Worth a sentence acknowledging that a team who all picked the same +2 will have a weaker Combined Form, and that this is a real consequence of character choices rather than an oversight. -->
 
 - **Traits**: the best of each Trait across the team, **capped at +2**. A team
   who chose different specialities becomes +2 in all four, which is better than
