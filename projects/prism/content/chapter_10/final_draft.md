@@ -53,19 +53,25 @@ Tolgate Street.
 
 ### Chorus, the seam and the bus
 
-They find the seam. A bus shelter at the wrong time of night is the most
-obvious one in the book, so let it be that: the timetable's letters go slightly
-too crisp, the strip light takes a beat too long, and then they are through.
+They find the seam, and they do not go through it. Not yet. Crossing over *is*
+morphing, one move and not two ([Chapter 4](#transformation)), and the morph is
+the Bridge. What happens in the Chorus is that the Spectrum leans on the
+everyday from the other side, hard enough to come through.
 
-**The Spectrum, first look.** Give this thirty seconds of pure description and
-do not let anyone roll through it.
+A bus shelter at the wrong time of night is the most obvious seam in the book,
+so let it be that: the timetable's letters go slightly too crisp, the strip
+light takes a beat too long, and Tolgate Street stops being only one street.
 
-> Tolgate Street in nine colours. The chrome shelter reflecting a street that
-> has one more shop on it than this one does. Glitter banked in the gutters
-> like warm snow. Something enormous moving very slowly two streets over, and
-> the sound of it arriving half a second after the shape does.
+**First look, through the seam.** Give this thirty seconds of pure description
+and do not let anyone roll through it.
 
-Then the bus.
+> The chrome shelter reflecting a street with one more shop on it than this one
+> has. Glitter banked in the gutters, but only in the reflection. Nine colours
+> coming off a puddle that should hold two. Something enormous moving very
+> slowly two streets over, and the sound of it arriving half a second after the
+> shape does.
+
+Then the bus, which does not stay on its own side of the glass.
 
 > Three storeys of chrome and rust, the length of the whole street, pulling
 > away from a stop it never quite reached. Headlights like two dead suns.
@@ -91,8 +97,8 @@ pulling away, and the street keeps getting longer.
 was always like this. On a Miss with the clock full, which it will be, take
 **1 Shine** and describe the cold coming off it.
 
-**Nobody should morph here.** If someone does, that is your Bridge and you skip
-to it.
+**Nobody should morph here**, which is the same sentence as *nobody should
+cross yet*. If someone does anyway, that is your Bridge and you skip to it.
 
 ### Bridge, the question you came for
 
@@ -109,6 +115,9 @@ didn't notice."* Wait for it. Do not fill the silence.
 When it lands, command word. All five.
 
 > **"PRISM — SPLIT THE LIGHT!"**
+
+And they refract, which is to say they cross and they change in the same
+movement, because in PRISM those were never two things.
 
 **Airtime.** Everyone narrates their own morph, uninterrupted, in turn. No
 dice. However long it takes.

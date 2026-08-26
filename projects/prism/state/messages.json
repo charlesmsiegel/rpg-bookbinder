@@ -10,5 +10,11 @@
     "agent": "art_director",
     "type": "decision",
     "message": "ART_DIRECTION_COMPLETE in prompt-manifest mode. 33 prompts authored to development/art_prompts.md (1 cover + 10 chapter openers + 11 NPC portraits + 11 content illustrations at 1 per 2,000 words), all 33 registered in art_manifest.json with reserved content/art/ paths. Mode was forced: the active generator ideogram-v4 has a comfyui backend and /art-direction's probe is a1111-only. Cover crossed modes as the skill allows and was generated algorithmically ('Refraction', a p5.js sketch in development/cover_sketch/, seed 20260826, 1600x2400) so /compile has a real cover; it is a standalone piece, not a render of the reserved cover prompt."
+  },
+  {
+    "timestamp": "2026-08-26T22:54:31.870967",
+    "agent": "consistency_checker",
+    "type": "decision",
+    "message": "Third review round resolved. Six rules/continuity defects fixed: the Chord's key restated as one note per Star (three- and four-Star teams could not sound five); Formation restricted to Stars who have both not yet acted, closing a double-action hole; Chapter 8's Miss list restructured so the clock tick or Shine loss is mandatory and the named Gloom move is the fiction carrying it, not an alternative to it; the three-player lineup corrected from Wren/Priya/Danny to Wren/Priya/Marisol, which is the trio that actually has the +2 coverage the text claims; and Chapter 10's Chorus no longer crosses into the Spectrum before the Bridge, since refracting and morphing are the same act. Three compile-phase verification steps in the plan were also corrected before use."
   }
 ]

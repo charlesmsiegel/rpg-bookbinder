@@ -218,10 +218,15 @@ proves he can, when it matters.
 
 That asymmetry is the good part. Do not tidy it up.
 
-**Playing with three?** Use Wren, Priya and Danny. That keeps a +2 in Heart,
-Craft and Cool, loses Flash entirely (which makes chases genuinely frightening,
-and is more interesting than it sounds), and cuts the Bond web to six lines.
-Delete the Bonds to Toby and Marisol and leave the rest.
+**Playing with three?** Use Wren, Priya and Marisol. That keeps a **+2 in
+Heart, Craft and Cool** and leaves Flash as the gap, with nobody above +1,
+which makes chases genuinely frightening and is more interesting than it
+sounds. It also cuts the Bond web to six lines: delete the Bonds to Toby and
+Danny and leave the rest.
+
+Dropping Danny takes Marisol's unwritten Bond out with him, so a three-player
+game starts with a complete web. If you would rather keep the rule visible,
+leave one Bond of your own blank and fill it at the table.
 
 **The command word:**
 

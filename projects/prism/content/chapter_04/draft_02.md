@@ -85,7 +85,7 @@ exist while the team is synchronized:
 
 | Ability | What it does |
 |---|---|
-| **Formation** | Once per round, two Stars swap places in the turn order. Free, it costs position, not resources. |
+| **Formation** | Once per round, two Stars who have **both not yet acted this round** swap places in the turn order. Free, it costs position, not resources. Nobody gets a second action out of it. |
 | **Chained backing** | A backer pays their cost **once**, and it covers backing two different rolls in the same round. It never puts a third die on one roll. |
 | **Group finisher** | Two or more Stars each spend 1 Sparkle and act together. The Gloom removed doubles **once per participating Star**, two Stars quadruple it, three multiply it by eight. |
 
@@ -96,7 +96,9 @@ hold exactly as printed.
 
 ## The Chord
 
-The Combined Form has a key, and the key is made of five notes.
+The Combined Form has a key, and the key is made of **one note per Star**.
+Five of you, five notes; three of you, three. The gate is that *everybody*
+has sounded, not that any particular number has.
 
 **Every Star is a note.** You **sound your note** the first time in a Number
 that you do any one of these:

@@ -1363,7 +1363,9 @@ each, and play. Check the chapter actually delivers five usable characters:
 
 ```bash
 f=projects/prism/content/chapter_06/final_draft.md
-echo "Stars found:      $(grep -cE '^### ' "$f")            (expect 5)"
+# Pregen names are level-two headings in the committed chapter, not level-three.
+# Count the registry names directly rather than guessing at a heading level.
+echo "Stars found:      $(grep -cE '^## (Wren|Tobias|Priya|Marisol|Danny)' "$f")            (expect 5)"
 for field in Refrain Signature Bond Look Radiance; do
   printf "%-12s appears %s times (expect >=5)\n" "$field" "$(grep -cw "$field" "$f")"
 done
@@ -1425,8 +1427,21 @@ counting every heading.
 
 - [ ] **Step 3: Verify no image references survived**
 
-Run: `grep -nE '!\[.*\]\(.*\.(png|jpg)\)' projects/prism/output/compiled_supplement.md || echo "no image refs, as expected"`
-Expected: `no image refs, as expected` — compile strips them when the prompt manifest exists.
+The cover is a real committed file (`projects/prism/content/art/cover.png`) and
+`/compile` requires it as the first element of every output, so it MUST survive.
+Only the 32 prompt-only illustrations, which have no file on disk, may be stripped.
+
+```bash
+out=projects/prism/output/compiled_supplement.md
+echo "cover reference:  $(grep -cE '!\[[^]]*\]\([^)]*cover\.png\)' "$out")   (expect >=1)"
+echo "other image refs: $(grep -nE '!\[[^]]*\]\([^)]*\.(png|jpg)\)' "$out" | grep -vc 'cover\.png')   (expect 0)"
+# every surviving reference must point at a file that exists
+grep -oE '\([^)]*\.(png|jpg)\)' "$out" | tr -d '()' | while read -r rel; do
+  [ -f "projects/prism/$rel" ] || [ -f "$rel" ] || echo "  DANGLING: $rel"
+done
+```
+Expected: the cover referenced at least once, no other image references, and no
+dangling paths.
 
 - [ ] **Step 4: Verify every required export artifact**
 
@@ -1448,11 +1463,15 @@ for f in PRISM.docx PRISM.epub PRISM.pdf; do
   if [ -s "$f" ]; then printf "  %-28s %s bytes\n" "$f" "$(wc -c < "$f")"
   else echo "  MISSING OR EMPTY: $f"; fail=1; fi
 done
-# The triple-spaced editing PDF is named from project_title, not the slug.
-ts=$(ls *.pdf 2>/dev/null | grep -vi '^PRISM.pdf$' | head -1)
-if [ -n "$ts" ] && [ -s "$ts" ]; then
-  printf "  %-28s %s bytes\n" "$ts" "$(wc -c < "$ts")"
-else echo "  MISSING OR EMPTY: triple-spaced editing PDF"; fail=1; fi
+# The triple-spaced editing PDF does NOT live here. /compile writes it to the
+# user-configured <EDITING_DIR> as "<Natural Title>.pdf", and build_triple_spaced.py
+# only falls back to the project's own output/ when --output-dir is omitted. The
+# natural title here is "PRISM", which would collide with the normal PRISM.pdf
+# export, so pass an explicit --output-dir and check THAT path.
+#   python3 build_triple_spaced.py --output-dir "$EDIT_OUT"
+# then, with EDIT_OUT resolved:
+#   [ -s "$EDIT_OUT/PRISM.pdf" ] || { echo "MISSING: editing PDF"; fail=1; }
+# Do not look for a second PDF in output/ — a compliant compile leaves none.
 echo "exports OK: $([ $fail -eq 0 ] && echo yes || echo NO)"
 cd - >/dev/null
 ```

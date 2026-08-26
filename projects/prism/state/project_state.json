@@ -13,7 +13,7 @@
     "chapters_completed": 10,
     "sections_total": 0,
     "sections_completed": 0,
-    "word_count_actual": 21098,
+    "word_count_actual": 21335,
     "word_count_target": 25000,
     "chapters_drafted": 10
   },
@@ -69,7 +69,7 @@
     "final_draft": true,
     "compilation": false
   },
-  "last_updated": "2026-08-26T22:38:47.755053",
+  "last_updated": "2026-08-26T22:54:31.868954",
   "project_title": "PRISM",
   "writing_style": {
     "source": "picked",
@@ -383,6 +383,17 @@
         "headings": "125 headings, 125 unique ids, 34 links, 0 broken, 0 self-links, 0 duplicates",
         "diffs": "10/10 final_draft differs from draft_02",
         "test_suite": "50 tests, all passing"
+      },
+      "rerun_after_review_round_3": {
+        "trigger": "Codex round on e0e4dba1ec, 9 findings; 6 in the book and 3 in the plan's compile checklist, all verified before edit",
+        "overall": "PASS",
+        "total_words": 21335,
+        "forbidden_patterns": 0,
+        "word_counts": "10/10 on target",
+        "banned_terms": "10/10 clean",
+        "headings": "125 headings, 125 unique ids, 35 links, 0 broken, 0 self, 0 duplicates",
+        "diffs": "10/10 differ from draft_02",
+        "test_suite": "50/50"
       }
     }
   },

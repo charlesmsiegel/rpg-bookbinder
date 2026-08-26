@@ -166,12 +166,17 @@ entry in Chapter 9 carries three, they are specific to that monster, and they
 are always the better choice when one fits. This list is the fallback for when
 none of them does.
 
-Pick from these, and always change the situation:
+**The mechanical consequence is not optional.** Every Miss advances the Gloom
+clock by 1, or, if the clock is already full, takes 1 Shine from the Star
+instead. That happens on every single Miss and it is the whole of the
+mechanical move.
 
-- **Advance the clock**: the default. If the clock is full, take 1 Shine from
-  the Star instead, and describe why.
-- **Use one of the Gloom's three moves.** Strand someone. Make the distance
-  longer. Convince them it was always like this.
+What you choose is the *fiction that carries it*. Pick one, and make it change
+the situation:
+
+- **One of the Gloom's three moves.** Always the first place to look, because
+  they are specific to this monster. Strand someone. Make the distance longer.
+  Convince them it was always like this.
 - **Separate them.** Distance is the Gloom's favourite weapon.
 - **Take something small away.** The phone, the light, the route back.
 - **Offer them an easier thing.** Let them out. Let them stop. Make it genuinely
@@ -180,8 +185,8 @@ Pick from these, and always change the situation:
 
 Never: hurt a Star permanently, kill anyone, or take a Star's turn away.
 
-**Important:** the clock tick *is* the move. Do not advance the clock and then
-also do something else on the same Miss. One Miss, one move.
+**One Miss, one tick, one image.** Do not take the Shine *and* advance the
+clock, and do not stack two of the images above onto the same Miss.
 
 ## Tone dials
 
