@@ -12,7 +12,9 @@ through the Bookbinder pipeline (Phases 0–6, excluding art generation).
 PRISM is a sugarpop fantasy tabletop RPG about transformation — alone and together —
 against a spreading dullness called the Gloom.
 
-It is set in **the modern world you actually live in**, plus one other layer. The
+It is **a pickup one-shot game**: make characters in twenty minutes, play tonight,
+finish the story. It is set in **the modern world you actually live in**, plus one
+other layer. The
 everyday is exactly itself: your town, the library losing its funding, the river
 nobody cleans. Alongside it is **the Spectrum**, the same places in howling
 airbrushed rainbow, where that neglect has a body and can be hit. You cross over by
@@ -54,17 +56,23 @@ themselves. The game's thesis and its math are the same statement.
 |---|---|---|
 | Easy | Anyone could | 6 |
 | Tricky | Takes something from you | 9 |
-| Dazzling | Should not be possible | 12 |
+| Dazzling | Should not be possible | 11 |
 
-**Four Traits**, rated **+0 to +3** at creation:
+**Four Traits**, rated **+0 to +2**:
 
 - **Heart** — sincerity, courage, connection, standing your ground
 - **Flash** — speed, grace, performance, physical daring
 - **Craft** — cleverness, making, fixing, knowing
 - **Cool** — composure, style, reading a room, keeping it together
 
-Starting spread is fixed: one **+2**, two **+1**, one **+0**. **+3** is reachable
-only through advancement, never at creation. There is no trade or point-buy.
+Starting spread is fixed: one **+2**, two **+1**, one **+0**. There is no trade, no
+point-buy, and **no advancement** — **+2 is the ceiling, permanently** (§3.1).
+
+**Why Dazzling is 11 and not 12.** With no advancement the maximum Trait is +2, so
+an ordinary roll tops out at **14**. A Hit must beat the Difficulty by 3, so at
+Difficulty 12 a Hit would need 15 — unreachable, leaving Dazzling able to produce
+Mixed and Flourish but never a clean Hit. Retuning Dazzling to **11** puts a Hit at
+exactly the ceiling: possible, and only at full stretch.
 
 **The fixed spread is a feature, not a simplification.** A flat character has no
 shape — nothing they reach for first, nothing they need anyone else for. The **+0**
@@ -105,10 +113,9 @@ a flat gap that distorts who should be rolling.
 
 **Flourish is double sixes, not a margin.** A fixed margin cannot work here, and the
 first two revisions of this spec both got it wrong. Two kept d6 cap at 12 and the
-maximum Trait is +3, so an ordinary roll tops out at **15**; even the Combined Form
-(best Trait +1) reaches only **16**. Any margin band wide enough to feel special at
-Difficulty 6 is unreachable at Difficulty 12 — a permanently dead band at the top of
-a ladder the book presents as universal.
+maximum Trait is +2, so an ordinary roll tops out at **14**. Any margin band wide
+enough to feel special at Difficulty 6 is unreachable at the top Difficulty — a
+permanently dead band at the top of a ladder the book presents as universal.
 
 Double sixes fixes this and pays a dividend: because you keep the best two dice,
 **more backers make Flourishes likelier**, verified by enumeration —
@@ -129,9 +136,19 @@ is — an early Verse, an ordinary-life scene — the GM instead **starts** one,
 reveals that one has been quietly filling all along. A miss can be the moment the
 problem arrives; that is a feature, and the GM chapter says so.
 
-**Dazzling stays hard.** A Hit at Difficulty 12 needs a 15 — Trait +3 and both
-dice sixes. The ordinary Dazzling success is therefore Mixed: you do the impossible
+**Dazzling stays hard.** A Hit at Difficulty 11 needs a 14 — Trait +2 and both dice
+sixes. The ordinary Dazzling success is therefore Mixed: you do the impossible
 thing, and it costs you. That is the intended feel.
+
+Full ladder, verified by enumeration (chance of meeting the Difficulty):
+
+| | 0 backers | 1 | 2 | 3 |
+|---|---|---|---|---|
+| Easy (6), Trait +1 | 83.3% | 94.9% | 98.5% | 99.5% |
+| Tricky (9), Trait +1 | 41.7% | 68.1% | 82.6% | 90.6% |
+| Tricky (9), Trait +0 | 27.8% | 52.3% | 69.4% | 80.6% |
+| Dazzling (11), Trait +2 | 27.8% | 52.3% | 69.4% | 80.6% |
+| Dazzling (11), Trait +0 | 8.3% | 19.9% | 32.0% | 43.4% |
 
 ### 2.3 Sparkle — the personal resource
 
@@ -275,6 +292,35 @@ A PRISM character is built from six things:
 
 Character creation is a **session-one group activity** with a fixed running order,
 because the team's shared command word and the Bond web have to be made together.
+Target: **twenty minutes** — or zero, if the table uses the pregenerated Stars in
+Chapter 6.
+
+### 3.1 One-shot by default, and what "minimal advancement" means
+
+PRISM is built for **a pickup one-shot**: one Number, one evening, one problem
+solved. That is genre fidelity rather than a limitation dressed up as a virtue — the
+touchstones are episodic formats where the numbers famously do not go up. Characters
+don't get stronger; they get better known.
+
+**There is no numeric Trait advancement, ever.** Traits cap at +2 and stay there.
+This keeps the probability ladder small enough to verify exhaustively, and it
+removes the +3 ceiling that broke the Flourish math twice during this spec's
+development.
+
+**What changes if a group runs a second Number:**
+
+- **Bonds** rewrite. A Bond spent and returned at the Encore comes back saying
+  something different, because something different is now true.
+- **Radiance** evolves. New colour, new sound, a new line you say. Free, narrative,
+  unbounded.
+- **Refrain** may be rewritten once it has been genuinely tested — the clearest
+  statement available that a character has grown.
+- **Sparkle maximum** rises by 1 after every second Number, hard cap **5**. This is
+  the only numeric growth in the game, and deliberately the one that touches no
+  Difficulty and no ceiling.
+
+That is all of advancement. It occupies roughly 400 words inside Chapter 5 beside
+the Encore scene. There is no advancement chapter.
 
 ---
 
@@ -395,6 +441,13 @@ delivers all three:
 **The Combined Form requires that nobody has been left out.** That is the whole
 thesis of the game, stated as a trigger condition.
 
+**It is the intended climax of a Number, not a rare event.** Earlier drafts of this
+spec made it something a long campaign might see three times. In a one-shot game
+that framing is incoherent: it would either never fire, or fire once and be a
+scripted set piece rather than an earned one. A group that plays PRISM the way PRISM
+asks should reach the Combined Form in the Big Finish of most Numbers — and should
+feel, correctly, that they got there by looking after each other all evening.
+
 ### 4.4 Placement in the scene
 Transformation belongs at the **Bridge** (§5) — during the action, escalating into
 the climax. The GM chapter states this as a hard structural rule and gives
@@ -484,17 +537,28 @@ Target: **25,000 words**, ±25% tolerance per Bookbinder convention.
 | # | Chapter | Words | Content |
 |---|---|---|---|
 | 1 | Welcome to the Show | 1,800 | Pitch, tone, what you need, safety and consent tools, how to read this book |
-| 2 | How to Play | 3,000 | The roll, difficulties, outcome ladder, Sparkle, Power of Friendship, Shine and Gloom |
-| 3 | Making a Star | 3,500 | Traits, Refrain, Signature, Bonds, Look, Radiance; session-one group procedure |
-| 4 | Transformation | 2,800 | Solo, synchronized, combined; finishers; giving morphs airtime |
-| 5 | Trouble | 3,000 | Conflict, chases, social pressure, Gloom clocks, Dimming and rescue |
-| 6 | Growing | 1,600 | Advancement, Bond evolution, the Encore scene |
-| 7 | The World | 2,500 | The Gloom, rainbow cosmology, sketched places, build-your-own |
+| 2 | How to Play | 3,000 | The roll, Difficulties, outcome ladder, Mixed costs, Sparkle, Power of Friendship, Shine and Gloom |
+| 3 | Making a Star | 3,200 | Traits, Refrain, Signature, Bonds, Look, Radiance; the twenty-minute group procedure |
+| 4 | Transformation | 2,800 | Solo, Synchronized, Combined Form; the Chord; finishers; giving morphs airtime |
+| 5 | Trouble | 3,000 | Conflict, beating a Gloom, chases, social pressure, Dimming and rescue, the Encore scene, minimal advancement (~400) |
+| 6 | **Five Stars, Ready to Play** | 1,800 | **Pregenerated characters** with Bonds pre-written between them, a shared command word, and a filled sheet each |
+| 7 | Your Town and the Spectrum | 2,500 | The two layers, refracting, the Gloom, worked examples, the conversion procedure |
 | 8 | Running the Game | 3,300 | Building a Number, GM moves, tone dials, escalation, making the Bridge land |
-| 9 | The Cast & The Gloom | 1,800 | Sample antagonists and allies with stat blocks |
+| 9 | The Gloom | 1,900 | Monsters and antagonists with stat blocks, built from real neglect |
 | 10 | The First Number | 1,700 | Starter adventure, quick reference, character sheet |
 
 **Total: 25,000**
+
+**What changed for the one-shot pivot.** The old Chapter 6, "Growing" (1,600 words
+of advancement), is gone; its surviving content is ~400 words beside the Encore
+scene in Chapter 5. The freed budget buys **Chapter 6: Five Stars, Ready to Play** —
+five pregenerated characters, colour-coded, with Bonds already written between them.
+
+For a pickup one-shot book that is the highest-value page count available: it takes
+time-to-play from twenty minutes to zero, it is exactly what the genre supports (a
+colour-coded team is *the* sentai image), and it doubles as the clearest possible
+worked example of what Chapter 3 is asking for. An advancement chapter in a one-shot
+game would have been the least-read pages in the book.
 
 ---
 
@@ -622,8 +686,8 @@ for the mechanics chapter):
 |---|---|---|
 | Trait +1, no backing, vs Difficulty 9 | roughly a coin flip | **41.7%** ✓ |
 | Trait +1, one ally backing, vs Difficulty 9 | clearly better, short of a sure thing | **68.1%** ✓ |
-| Trait +3, two allies backing, vs Difficulty 12 | achievable but not routine | **69.4%** ✓ |
-| Trait +0, no backing, vs Difficulty 12 | possible, rare | **2.8%** ✓ |
+| Trait +2, two allies backing, vs Difficulty 11 | achievable but not routine | **69.4%** ✓ |
+| Trait +0, no backing, vs Difficulty 11 | possible, rare | **8.3%** ✓ |
 
 All four verified by exact enumeration against the keep-best-two rule. The
 implementation must reproduce these numbers; they are test cases, not aspirations.
@@ -803,7 +867,12 @@ subagents, per the session's configuration.
    chapters — verified by the consistency-checker pass.
 6. Nothing in the book gates transformation, role, or tone on gender.
 7. A reader who has never played an RPG can finish Chapters 1–3 and make a
-   character.
+   character in twenty minutes.
+8. A group can open to Chapter 6, take a pregenerated Star each, read Chapter 10's
+   starter Number, and be playing inside ten minutes with no prep and no
+   advancement rules to consult.
+9. No Trait above +2 appears anywhere in the book, including stat blocks and
+   pregenerated characters.
 
 ---
 
