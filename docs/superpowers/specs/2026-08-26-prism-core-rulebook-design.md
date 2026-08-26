@@ -78,6 +78,22 @@ Chapter 3 must teach the +0 as a creative prompt rather than a penalty: *what do
 do when the thing in front of you is the thing you're worst at?* The answer the game
 wants is "ask someone."
 
+**Why not a wider 3/2/1/0 spread?** It was considered and rejected. A wider spread
+doubles the distinct arrays (4! instead of 4!/2) but breaks the core mechanic. At
+Tricky, a **+0 backed by a friend** succeeds 52.3% of the time. Under 2/1/1/0, the
+specialist working alone manages 58.3% — a **6-point** gap, cheap enough that tables
+will help each other for fiction reasons. Under 3/2/1/0 the specialist alone hits
+72.2%, making it a **20-point tax** to involve the weaker character. Power of
+Friendship would decay into a fallback for when the expert is busy, and the game's
+own math would argue against its thesis.
+
+The array is also the least interesting axis of variation in PRISM — characters are
+told apart by Refrain, Signature, Bonds, and Radiance. Doubling combinatorics on the
+thinnest axis at the cost of the central mechanic is a bad trade. Sharper
+specialization, if wanted, belongs in the **Signature** as a conditional +1 when
+you're doing your own thing: asymmetry that is narrative and situational rather than
+a flat gap that distorts who should be rolling.
+
 ### 2.2 Outcome ladder
 
 | Result | Outcome |
