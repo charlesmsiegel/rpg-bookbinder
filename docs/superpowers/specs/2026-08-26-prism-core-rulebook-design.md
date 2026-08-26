@@ -9,8 +9,8 @@ through the Bookbinder pipeline (Phases 0–6, excluding art generation).
 
 ## 1. What PRISM Is
 
-PRISM is a sugarpop fantasy tabletop RPG about people who transform — alone and
-together — to push back a spreading dullness called the Gloom.
+PRISM is a sugarpop fantasy tabletop RPG about transformation — alone and together —
+against a spreading dullness called the Gloom.
 
 Its tonal touchstones are My Little Pony, Barbie, magical-girl anime, Super
 Sentai / Power Rangers, the Lisa Frank airbrush aesthetic, and the unembarrassed
@@ -23,7 +23,7 @@ pronouns, and art direction reflect that without comment or apology.
 
 Most games make you stronger by accumulating things. PRISM makes you stronger by
 being *known*. The mechanical escalation ladder — extra dice, transformation,
-combined form — is gated behind other people choosing to back you at a cost to
+Combined Form — is gated behind other people choosing to back you at a cost to
 themselves. The game's thesis and its math are the same statement.
 
 ### What it is not
@@ -79,7 +79,7 @@ wants is "ask someone."
 
 **Flourish is double sixes, not a margin.** A fixed margin cannot work here, and the
 first two revisions of this spec both got it wrong. Two kept d6 cap at 12 and the
-maximum Trait is +3, so an ordinary roll tops out at **15**; even the combined form
+maximum Trait is +3, so an ordinary roll tops out at **15**; even the Combined Form
 (best Trait +1) reaches only **16**. Any margin band wide enough to feel special at
 Difficulty 6 is unreachable at Difficulty 12 — a permanently dead band at the top of
 a ladder the book presents as universal.
@@ -208,13 +208,13 @@ PRISM fuses the magical-girl register (individual, sincere, private, a personal
 phrase and object) with the sentai register (collective, synchronized, color-coded,
 a shared command word). Three gears:
 
-### 4.1 Solo morph
+### 4.1 Solo Morph
 One character. Costs **1 Sparkle**. Declared with your personal phrase. Unlocks
 your Radiance abilities and **grants 2 Shine, raising your cap by the same 2** for
 the scene — the boxes arrive filled, not empty. Available any time you can speak.
 
-The book instructs the table to give a solo morph *airtime* — the transforming
-player narrates, uninterrupted, and nobody rolls during it.
+The book instructs the table to give a Solo Morph *airtime* — the morphing player
+narrates, uninterrupted, and nobody rolls during it.
 
 **Early morphs are allowed once there is something to morph *at*.** From the moment
 the problem is on the table — which is the end of the Verse at the latest — a player
@@ -229,11 +229,11 @@ it looks fantastic, and it moves nothing. The Bridge is a position in the Number
 a clock time, so this rule is about where the key change *falls*, never about
 forbidding a player from reaching for it.
 
-### 4.2 Synchronized morph
+### 4.2 Synchronized Morph
 The whole team, together, on the shared command word the players invent in session
 one. Costs **1 Sparkle, paid in full by any single character** — cheaper for the team
 than each member morphing solo, deliberately. Sparkle is never split or fractional;
-one person pays, and the whole team transforms. Unlocks each character's Radiance
+one person pays, and the whole team morphs. Unlocks each character's Radiance
 *plus* the team's shared abilities (formation moves, chained backing, group
 finishers).
 
@@ -242,8 +242,8 @@ or at the Encore, whichever comes first. Without this, one Sparkle in the first
 session would buy a permanently transformed team, bypassing both the recurring cost
 and the Bridge structure entirely.
 
-### 4.3 Combined form
-Available **only after a synchronized morph**, and **only when a Gloom clock is at
+### 4.3 Combined Form
+Available **only after a Synchronized Morph**, and **only when a Gloom clock is at
 one tick from full**. The team fuses: one sheet, one Trait array (best of each,
 +1), one pooled Shine, one enormous finisher. Lasts until the clock resolves.
 
@@ -266,7 +266,7 @@ Scenes and sessions are organized as a pop song. A session is a **Number**.
 | **Verse** | Ordinary life. Who these people are when nothing is wrong. The problem arrives at the end. |
 | **Chorus** | First engagement. It goes badly. The Gloom asserts itself and a clock starts filling. |
 | **Bridge** | The key change. Someone says the thing they've been avoiding. **Transformation happens here.** |
-| **Big Finish** | The climax, fought transformed. Finishers, combined form, the Gloom clock racing the team's Shine. |
+| **Big Finish** | The climax, fought transformed. Finishers, Combined Form, the Gloom clock racing the team's Shine. |
 
 **Encore** is the between-adventure downtime scene: curtain call, Bonds deepen and
 change, Sparkle and Shine fully refresh, advancement is spent. It sits *between*
@@ -323,7 +323,30 @@ this is a "real" RPG.
 Codified in `styles/writing/prism.md`, produced during `/plan-project` Step 2 and
 read by every drafting agent thereafter.
 
-Banned throughout: gendered assumptions about who transforms or how; "it's not X,
+### 8.1 Terminology discipline — transformation vs. morph
+
+PRISM deliberately runs two registers at once: the magical-girl one (sincere,
+personal, ceremonial) and the sentai one (punchy, collective, commanded). That mix
+is the point. Left uncontrolled it reads as sloppiness rather than range, so each
+word gets exactly one grammatical job:
+
+| Slot | Word | Use |
+|---|---|---|
+| **Noun** — the phenomenon, the concept, the chapter | **Transformation** | "Transformation is how PRISM escalates." Magical-girl register. |
+| **Verb** — what a character does | **morph** | "When you morph…", "the morphing player". **Never** "transform" as a verb in rules text. Sentai register. |
+| **Adjective** — the state you are in | **transformed** | "fought transformed", "your transformed form". |
+| **Named moves** | **Solo Morph**, **Synchronized Morph**, **Combined Form** | Capitalized, always these exact names. |
+| **Your personal expression of it** | **Radiance** | The look, sound, phrase, and object. Never a synonym for the act. |
+
+Transformation is the thing; morphing is the doing; transformed is the being. One
+word per job, no overlap.
+
+The consistency-checker pass must verify this across all ten chapters, and
+`development/outlines/forbidden_patterns.md` gains an entry for "transform" used as
+a verb (`transforms`, `transforming`, `to transform`). The one licensed exception is
+quoted in-world dialogue, where a character may say whatever they like.
+
+Banned throughout: gendered assumptions about who morphs or how; "it's not X,
 it's Y" constructions; the words *whimsical*, *quirky*, and *adorkable*; any joke
 whose punchline is that the game is silly.
 
