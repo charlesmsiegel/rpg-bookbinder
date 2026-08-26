@@ -75,7 +75,7 @@ When creating or referencing NPC stat blocks:
 
 - **Dice Pools**: Follow the system's standard Attribute + Ability + power-stat structure
 - **Difficulties**: Use your system's standard difficulty ranges, per `config/system.json` → `mechanics`
-- **Success Thresholds**: Match complexity to required successes (Simple=1, Complex=3-5, Extreme=10+)
+- **Difficulty**: Match complexity to the system's difficulty bands. For a dice-pool system that is required successes (Simple=1, Complex=3-5, Extreme=10+). For a sum-based system it is the target number — in PRISM, 6 (Easy) / 9 (Tricky) / 11 (Dazzling). Never invent a band that is unreachable at the system's maximum roll; check with the probability tool first.
 - **Prerequisite Requirements**: Respect established power-tier capabilities
 - **Resource Costs**: Balance magical/technological and willpower-or-equivalent resource expenditures
 
@@ -108,7 +108,7 @@ Consult `references/` per the precedence hierarchy documented in `references/REA
 ## Tools Usage
 
 - If `skills.toolkit_skill` is set in `config/system.json`, invoke that skill first for stat blocks and mechanical content — it owns system-legality checks and standardized templates; otherwise follow the templates in `styles/templates/`
-- Use `calculate_dice_probability` for dice pool balance testing rather than guessing
+- Use the probability tools rather than guessing. For sum-based (xdy+z) systems use `calculate_sum_probability`; for dice-pool systems that count successes use `calculate_dice_probability`. `config/system.json` → `mechanics.dice` tells you which this project uses.
 - Use `calculate_extended_action` for multi-roll tasks with cumulative success requirements
 - Use `calculate_experience_cost` to validate advancement costs against `config/system.json` → `mechanics.xp_costs`
 - Use `calculate_damage_soak` for combat and damage-system balance checks

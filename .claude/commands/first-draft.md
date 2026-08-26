@@ -38,7 +38,7 @@ For each chapter, create `content/chapter_XX/draft_01.md` by running the **mecha
 - Rules sections, stat blocks, mechanical systems in `draft_01.md`
 - Cross-references with existing precedents in `references/` (coordinate with **reference-librarian**)
 - **Working notes in `notes/mechanics_notes/`** — one file per chapter (e.g., `ch_01_mechanics.md`) capturing:
-  - Balance calculations for new powers, traits, or items (dice math via `calculate_dice_probability`/`calculate_extended_action`, XP cost derivation via `calculate_experience_cost`)
+  - Balance calculations for new powers, traits, or items. Use `calculate_sum_probability` for any sum-based (xdy+z) system; use `calculate_dice_probability`/`calculate_extended_action` only for dice-pool systems that count successes. Check `mechanics.dice` in `config/system.json` to see which this project is. XP cost derivation via `calculate_experience_cost`.
   - System-interaction rationale and edge cases considered
   - Design intent: what the mechanic is for and what it deliberately excludes
   - Cut options and why they were rejected
