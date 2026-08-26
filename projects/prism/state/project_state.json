@@ -4,16 +4,17 @@
     "type": "core rulebook",
     "target_length": "short",
     "created_date": "2026-08-26T21:28:18.479161",
-    "current_phase": "editing",
-    "current_step": 1
+    "current_phase": "final",
+    "current_step": 1,
+    "current_phase_label": "final_draft_complete"
   },
   "progress": {
     "chapters_planned": 10,
-    "chapters_completed": 0,
+    "chapters_completed": 10,
     "sections_total": 0,
     "sections_completed": 0,
-    "word_count_actual": 0,
-    "word_count_target": 0,
+    "word_count_actual": 20871,
+    "word_count_target": 25000,
     "chapters_drafted": 10
   },
   "agents": {
@@ -58,17 +59,17 @@
     "initial_draft": true,
     "first_review": true,
     "consistency_check": true,
-    "final_review": false,
+    "final_review": true,
     "publication_ready": false,
     "first_draft": true,
     "architectural_review": true,
     "research_enhancement": true,
     "second_draft": true,
     "copy_edit": true,
-    "final_draft": false,
+    "final_draft": true,
     "compilation": false
   },
-  "last_updated": "2026-08-26T21:33:57.491586",
+  "last_updated": "2026-08-26T22:31:53.885303",
   "project_title": "PRISM",
   "writing_style": {
     "source": "picked",
@@ -264,6 +265,113 @@
       "violations": 0,
       "result": "PASS",
       "note": "Em-dash overuse from first draft (234 book-wide vs allowance 40) resolved to 21."
+    }
+  },
+  "art": {
+    "budget": {
+      "cover": 1,
+      "chapter_openers": 10,
+      "npc_portraits": 11,
+      "content_illustrations": 11,
+      "total": 33,
+      "density_words_per_illustration": 2000,
+      "final_draft_words": 20865,
+      "npc_portrait_basis": "5 pregenerated Stars (Ch6) + 6 Glooms with stat blocks (Ch9); Ch7's four sketch Glooms have no stat blocks and are excluded"
+    },
+    "result": {
+      "mode": "prompt_manifest",
+      "reason": "active generator ideogram-v4 has backend comfyui; /art-direction's mode probe (mcp__art__get_models) is a1111-only and returns a refusal for any other backend, so the command always falls back to manifest mode. No image models are available in this environment. The cover is the documented exception that crosses modes and was produced algorithmically.",
+      "planned_count": 33,
+      "produced_count": 33,
+      "output_path": "development/art_prompts.md",
+      "prompts_authored": 33,
+      "images_produced": 1,
+      "cover_image_path": "content/art/cover.png"
+    },
+    "cover": {
+      "status": "generated_algorithmic",
+      "path": "content/art/cover.png",
+      "dimensions": "1600x2400",
+      "method": "p5.js generative sketch 'Refraction', rendered headlessly via Chromium",
+      "sketch": "development/cover_sketch/refraction.js",
+      "philosophy": "development/concepts/cover_philosophy.md",
+      "seed": 20260826,
+      "note": "Standalone placeholder, not a render of the art_prompts.md cover prompt. That figurative prompt stays reserved for a later Ideogram v4 run."
+    }
+  },
+  "validation": {
+    "final_draft": {
+      "run_date": "2026-08-26",
+      "overall": "PASS",
+      "total_words": 20871,
+      "forbidden_pattern_scan": {
+        "result": "PASS",
+        "matches": 0,
+        "literal_patterns_checked": [
+          "<!-- ",
+          "[Note:",
+          "Draft Notes:",
+          "Word Count:",
+          "**End of Chapter",
+          "p. XX",
+          "page XX",
+          "ARCHITECT COMMENT",
+          "combined form",
+          "solo morph",
+          "synchronized morph",
+          "Difficulty 12"
+        ],
+        "word_boundary_patterns_checked": [
+          "TODO",
+          "FIXME",
+          "TBD",
+          "PLACEHOLDER",
+          "transform",
+          "transforms",
+          "transforming",
+          "Gamemaster"
+        ],
+        "casing_sweep": "all 22 occurrences of Combined Form / Solo Morph / Synchronized Morph are canonical case",
+        "review_flags": {
+          "player character": "1 occurrence, chapter_01 line 178, the required newcomer gloss before the book renames them Stars",
+          "+3": "1 occurrence, chapter_10 line 168, a roll margin in the Quick Reference outcome ladder, not a Trait"
+        }
+      },
+      "word_count_validation": {
+        "result": "PASS",
+        "chapters_on_target": 10,
+        "chapters_off_target": 0,
+        "tolerance": 0.25,
+        "note": "every chapter within tolerance; book total 20,871 against a 25,000 sum-of-targets, i.e. 16.5% under the ceiling the design set"
+      },
+      "npc_registry_cross_check": {
+        "result": "PASS",
+        "star_trait_mismatches": 0,
+        "gloom_clock_mismatches": 0,
+        "traits_above_plus_2": 0,
+        "difficulty_constants": "Easy 6 / Tricky 9 / Dazzling 11 consistent everywhere; no contradictory value in the book",
+        "false_positive_reviewed": "chapter_06 line 216 flagged by the automated pass because Marisol and 'Heart +0' share a line; the sentence is about Toby, whose Heart is +0. Correct as written."
+      },
+      "heading_link_integrity": {
+        "result": "PASS",
+        "headings": 125,
+        "unique_ids": 125,
+        "internal_links": 34,
+        "broken_links": 0,
+        "self_links": 0,
+        "duplicate_ids_found_and_fixed": 3,
+        "fix": "chapter_10's three beat subheads collided with chapter_08's in the compiled anchor space. Renamed to scenario-specific titles (Chorus, the seam and the bus / Bridge, the question you came for / Big Finish, transformed and running) and heading_id_registry.md updated to match. No link pointed at them, so nothing was broken; this removes a latent collision in the single-document compile."
+      },
+      "diff_verification": {
+        "result": "PASS",
+        "chapters_differing_from_draft_02": 10,
+        "chapters_identical": 0
+      },
+      "banned_terms_scan": {
+        "result": "PASS",
+        "chapters_clean": 10,
+        "violations": 0
+      }
     }
   }
 }

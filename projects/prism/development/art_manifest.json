@@ -1,5 +1,271 @@
 {
   "project": "prism",
   "created": "2026-08-26T21:28:18.480601",
-  "images": []
+  "images": [
+    {
+      "chapter": "cover",
+      "path": "content/art/cover.png",
+      "description": "Cover — 'Refraction': one achromatic beam descending a column, meeting a noise-perturbed boundary and separating into spectrum. Generative p5.js sketch, seed 20260826, 1600x2400; Snell dispersion over a Cauchy model (A=1.500, B=0.00460), dispersionGain 90, 260 wavelengths x 120 sub-rays, additive float light buffer, bloom r26 a0.55, exposure 1.75, gamma 0.78. Five weighted spines at 404/492/516/578/660 nm, one per Star. Sketch: development/cover_sketch/; philosophy: development/concepts/cover_philosophy.md. NOT the figurative scene in development/art_prompts.md - that prompt stays reserved for Ideogram v4.",
+      "source": "algorithmic",
+      "license": "Generated in-repo by development/cover_sketch/refraction.js; no third-party assets",
+      "added": "2026-08-26T22:28:20.293588"
+    },
+    {
+      "chapter": "Chapter 1",
+      "path": "content/art/chapter_01_opener.png",
+      "description": "chapter 1 opener — A bus shelter at night, half in ordinary streetlight and half exploded into airbrushed rainbow, the split running vertically down the middle of.... Prompt: development/art_prompts.md § chapter_01_opener.png",
+      "source": "prompt_only",
+      "license": "Not yet generated — prompt reserved for a later Ideogram v4 run",
+      "added": "2026-08-26T22:28:27.087577"
+    },
+    {
+      "chapter": "Chapter 2",
+      "path": "content/art/chapter_02_opener.png",
+      "description": "chapter 2 opener — Two enormous six-sided dice tumbling through a gradient void, chrome-edged, throwing off spectrum light, with three more dice ghosting in behind them. Prompt: development/art_prompts.md § chapter_02_opener.png",
+      "source": "prompt_only",
+      "license": "Not yet generated — prompt reserved for a later Ideogram v4 run",
+      "added": "2026-08-26T22:28:27.088044"
+    },
+    {
+      "chapter": "Chapter 3",
+      "path": "content/art/chapter_03_opener.png",
+      "description": "chapter 3 opener — An empty magenta coat, an empty pair of cyan skates, and an empty clockwork sleeve arranged on a bedroom floor as though waiting, warm lamplight,.... Prompt: development/art_prompts.md § chapter_03_opener.png",
+      "source": "prompt_only",
+      "license": "Not yet generated — prompt reserved for a later Ideogram v4 run",
+      "added": "2026-08-26T22:28:27.088368"
+    },
+    {
+      "chapter": "Chapter 4",
+      "path": "content/art/chapter_04_opener.png",
+      "description": "chapter 4 opener — A single figure mid-refraction, caught at the instant of splitting into spectrum, their ordinary silhouette still visible inside the colour, one.... Prompt: development/art_prompts.md § chapter_04_opener.png",
+      "source": "prompt_only",
+      "license": "Not yet generated — prompt reserved for a later Ideogram v4 run",
+      "added": "2026-08-26T22:28:27.088673"
+    },
+    {
+      "chapter": "Chapter 5",
+      "path": "content/art/chapter_05_opener.png",
+      "description": "chapter 5 opener — A chrome clock face with six segments, three of them cracked and leaking colour, floating above a wet pavement that reflects it. Prompt: development/art_prompts.md § chapter_05_opener.png",
+      "source": "prompt_only",
+      "license": "Not yet generated — prompt reserved for a later Ideogram v4 run",
+      "added": "2026-08-26T22:28:27.088966"
+    },
+    {
+      "chapter": "Chapter 6",
+      "path": "content/art/chapter_06_opener.png",
+      "description": "chapter 6 opener — Five colour-coded silhouettes in a loose row against a white background, magenta cyan yellow violet mint, each in a distinct stance. Prompt: development/art_prompts.md § chapter_06_opener.png",
+      "source": "prompt_only",
+      "license": "Not yet generated — prompt reserved for a later Ideogram v4 run",
+      "added": "2026-08-26T22:28:27.089277"
+    },
+    {
+      "chapter": "Chapter 7",
+      "path": "content/art/chapter_07_opener.png",
+      "description": "chapter 7 opener — An ordinary residential street rendered twice in the same frame, once in plain daylight and once in full airbrushed spectrum, the two versions.... Prompt: development/art_prompts.md § chapter_07_opener.png",
+      "source": "prompt_only",
+      "license": "Not yet generated — prompt reserved for a later Ideogram v4 run",
+      "added": "2026-08-26T22:28:27.089599"
+    },
+    {
+      "chapter": "Chapter 8",
+      "path": "content/art/chapter_08_opener.png",
+      "description": "chapter 8 opener — A Showrunner's-eye view across a kitchen table: dice, a hand-drawn clock on paper, five character sheets, mugs, and spectrum light leaking in from.... Prompt: development/art_prompts.md § chapter_08_opener.png",
+      "source": "prompt_only",
+      "license": "Not yet generated — prompt reserved for a later Ideogram v4 run",
+      "added": "2026-08-26T22:28:27.089954"
+    },
+    {
+      "chapter": "Chapter 9",
+      "path": "content/art/chapter_09_opener.png",
+      "description": "chapter 9 opener — A bus the length of a street, three storeys of chrome and rust, headlights like two dead suns, always pulling away, seen from the pavement in.... Prompt: development/art_prompts.md § chapter_09_opener.png",
+      "source": "prompt_only",
+      "license": "Not yet generated — prompt reserved for a later Ideogram v4 run",
+      "added": "2026-08-26T22:28:27.090358"
+    },
+    {
+      "chapter": "Chapter 10",
+      "path": "content/art/chapter_10_opener.png",
+      "description": "chapter 10 opener — A night bus timetable on a chrome post, nine colours, with one printed strip at the bottom glowing brighter than the rest. Prompt: development/art_prompts.md § chapter_10_opener.png",
+      "source": "prompt_only",
+      "license": "Not yet generated — prompt reserved for a later Ideogram v4 run",
+      "added": "2026-08-26T22:28:27.090697"
+    },
+    {
+      "chapter": "Chapter 6",
+      "path": "content/art/portrait_wren_adeyemi.png",
+      "description": "NPC portrait — Wren Adeyemi — Portrait of Wren Adeyemi, magenta and chrome, a coat trailing behind her like a comet throwing off sparks that do not go out when they land, hands.... Prompt: development/art_prompts.md § portrait_wren_adeyemi.png",
+      "source": "prompt_only",
+      "license": "Not yet generated — prompt reserved for a later Ideogram v4 run",
+      "added": "2026-08-26T22:28:27.091212"
+    },
+    {
+      "chapter": "Chapter 6",
+      "path": "content/art/portrait_tobias_lark.png",
+      "description": "NPC portrait — Tobias 'Toby' Lark — Portrait of Tobias 'Toby' Lark, cyan and holographic oil-slick shimmer, skates leaving a gradient hanging in the air behind him, a battered.... Prompt: development/art_prompts.md § portrait_tobias_lark.png",
+      "source": "prompt_only",
+      "license": "Not yet generated — prompt reserved for a later Ideogram v4 run",
+      "added": "2026-08-26T22:28:27.091654"
+    },
+    {
+      "chapter": "Chapter 6",
+      "path": "content/art/portrait_priya_raghunathan.png",
+      "description": "NPC portrait — Priya Raghunathan — Portrait of Priya Raghunathan, sunburst yellow and brass, a coat made of working clockwork with gears visibly turning at the shoulders and hem,.... Prompt: development/art_prompts.md § portrait_priya_raghunathan.png",
+      "source": "prompt_only",
+      "license": "Not yet generated — prompt reserved for a later Ideogram v4 run",
+      "added": "2026-08-26T22:28:27.092046"
+    },
+    {
+      "chapter": "Chapter 6",
+      "path": "content/art/portrait_marisol_vega.png",
+      "description": "NPC portrait — Marisol Vega — Portrait of Marisol Vega, violet and starfield, not printed stars but actual depth as though something enormous were showing through, completely.... Prompt: development/art_prompts.md § portrait_marisol_vega.png",
+      "source": "prompt_only",
+      "license": "Not yet generated — prompt reserved for a later Ideogram v4 run",
+      "added": "2026-08-26T22:28:27.092429"
+    },
+    {
+      "chapter": "Chapter 6",
+      "path": "content/art/portrait_danny_okonkwo_byrne.png",
+      "description": "NPC portrait — Danny Okonkwo-Byrne — Portrait of Danny Okonkwo-Byrne, mint green and pearl, a soft glow with no obvious source that makes the air around him feel like a small room,.... Prompt: development/art_prompts.md § portrait_danny_okonkwo_byrne.png",
+      "source": "prompt_only",
+      "license": "Not yet generated — prompt reserved for a later Ideogram v4 run",
+      "added": "2026-08-26T22:28:27.092863"
+    },
+    {
+      "chapter": "Chapter 9",
+      "path": "content/art/portrait_the_last_bus.png",
+      "description": "NPC portrait — The Last Bus (Gloom) — A bus the length of a street, three storeys of chrome and rust, every window lit warm and full of people not looking out, doors always closing,.... Prompt: development/art_prompts.md § portrait_the_last_bus.png",
+      "source": "prompt_only",
+      "license": "Not yet generated — prompt reserved for a later Ideogram v4 run",
+      "added": "2026-08-26T22:28:27.093405"
+    },
+    {
+      "chapter": "Chapter 9",
+      "path": "content/art/portrait_the_quiet_shelf.png",
+      "description": "NPC portrait — The Quiet Shelf (Gloom) — Library shelves growing taller and further apart until the aisles are canyons and the ceiling is a rumour, warm and silent, a returns slot high in.... Prompt: development/art_prompts.md § portrait_the_quiet_shelf.png",
+      "source": "prompt_only",
+      "license": "Not yet generated — prompt reserved for a later Ideogram v4 run",
+      "added": "2026-08-26T22:28:27.093903"
+    },
+    {
+      "chapter": "Chapter 9",
+      "path": "content/art/portrait_the_silt.png",
+      "description": "NPC portrait — The Silt (Gloom) — A chrome tide, mirror-bright and thickening, moving at the speed of a minute hand, swallowing landmarks and reflecting them back slightly wrong. Prompt: development/art_prompts.md § portrait_the_silt.png",
+      "source": "prompt_only",
+      "license": "Not yet generated — prompt reserved for a later Ideogram v4 run",
+      "added": "2026-08-26T22:28:27.094429"
+    },
+    {
+      "chapter": "Chapter 9",
+      "path": "content/art/portrait_the_long_weekend.png",
+      "description": "NPC portrait — The Long Weekend (Gloom) — A very comfortable room that keeps adding doors, all of which lead back into it, deep chairs, good light, a blanket exactly warm enough. Prompt: development/art_prompts.md § portrait_the_long_weekend.png",
+      "source": "prompt_only",
+      "license": "Not yet generated — prompt reserved for a later Ideogram v4 run",
+      "added": "2026-08-26T22:28:27.094903"
+    },
+    {
+      "chapter": "Chapter 9",
+      "path": "content/art/portrait_the_grey_ledger.png",
+      "description": "NPC portrait — The Grey Ledger (Gloom) — An enormous filing structure of shelves and drawers and pneumatic tubes going up past where the sky should be, everything it processes coming out.... Prompt: development/art_prompts.md § portrait_the_grey_ledger.png",
+      "source": "prompt_only",
+      "license": "Not yet generated — prompt reserved for a later Ideogram v4 run",
+      "added": "2026-08-26T22:28:27.095343"
+    },
+    {
+      "chapter": "Chapter 9",
+      "path": "content/art/portrait_the_understudy.png",
+      "description": "NPC portrait — The Understudy (Gloom) — A figure that is almost exactly one of the Stars — same silhouette, same colour, slightly better — standing patiently and offering to help. Prompt: development/art_prompts.md § portrait_the_understudy.png",
+      "source": "prompt_only",
+      "license": "Not yet generated — prompt reserved for a later Ideogram v4 run",
+      "added": "2026-08-26T22:28:27.095845"
+    },
+    {
+      "chapter": "Chapter 2",
+      "path": "content/art/ch_02_backing.png",
+      "description": "content illustration — chapter 2, near 'Power of Friendship' — A hand reaching into frame to steady another hand that is holding dice, both figures colour-coded and half-transformed, spectrum light between them. Prompt: development/art_prompts.md § ch_02_backing.png",
+      "source": "prompt_only",
+      "license": "Not yet generated — prompt reserved for a later Ideogram v4 run",
+      "added": "2026-08-26T22:28:27.096363"
+    },
+    {
+      "chapter": "Chapter 3",
+      "path": "content/art/ch_03_radiance.png",
+      "description": "content illustration — chapter 3, near 'Radiance' — A single figure seen from behind, ordinary clothes, with the spectrum version of themselves standing in front of them like a reflection that has.... Prompt: development/art_prompts.md § ch_03_radiance.png",
+      "source": "prompt_only",
+      "license": "Not yet generated — prompt reserved for a later Ideogram v4 run",
+      "added": "2026-08-26T22:28:27.097015"
+    },
+    {
+      "chapter": "Chapter 4",
+      "path": "content/art/ch_04_synchronized.png",
+      "description": "content illustration — chapter 4, near 'Synchronized Morph' — Five figures shouting the same word at the same instant, colour erupting from all of them simultaneously, shot from ground level. Prompt: development/art_prompts.md § ch_04_synchronized.png",
+      "source": "prompt_only",
+      "license": "Not yet generated — prompt reserved for a later Ideogram v4 run",
+      "added": "2026-08-26T22:28:27.097462"
+    },
+    {
+      "chapter": "Chapter 4",
+      "path": "content/art/ch_04_combined.png",
+      "description": "content illustration — chapter 4, near 'Combined Form' — One enormous fused figure made visibly of five colours braided together, too big for the street it is standing in, chrome and gradient. Prompt: development/art_prompts.md § ch_04_combined.png",
+      "source": "prompt_only",
+      "license": "Not yet generated — prompt reserved for a later Ideogram v4 run",
+      "added": "2026-08-26T22:28:27.098066"
+    },
+    {
+      "chapter": "Chapter 5",
+      "path": "content/art/ch_05_dimmed.png",
+      "description": "content illustration — chapter 5, near 'Getting Dimmed' — A single completely grey figure standing in the middle of a hyper-saturated spectrum street, all colour drained out of them, everything around.... Prompt: development/art_prompts.md § ch_05_dimmed.png",
+      "source": "prompt_only",
+      "license": "Not yet generated — prompt reserved for a later Ideogram v4 run",
+      "added": "2026-08-26T22:28:27.098738"
+    },
+    {
+      "chapter": "Chapter 5",
+      "path": "content/art/ch_05_reaching.png",
+      "description": "content illustration — chapter 5, near 'Reaching someone' — One colour-blazing figure kneeling to take the hand of a grey Dimmed figure, colour just beginning to bleed back into the grey one at the point of.... Prompt: development/art_prompts.md § ch_05_reaching.png",
+      "source": "prompt_only",
+      "license": "Not yet generated — prompt reserved for a later Ideogram v4 run",
+      "added": "2026-08-26T22:28:27.099239"
+    },
+    {
+      "chapter": "Chapter 7",
+      "path": "content/art/ch_07_spectrum_street.png",
+      "description": "content illustration — chapter 7, near 'The Spectrum' — A launderette on a corner rendered in nine colours with chrome bevelled lettering, glitter banked in the gutters like warm snow, a snow leopard.... Prompt: development/art_prompts.md § ch_07_spectrum_street.png",
+      "source": "prompt_only",
+      "license": "Not yet generated — prompt reserved for a later Ideogram v4 run",
+      "added": "2026-08-26T22:28:27.099752"
+    },
+    {
+      "chapter": "Chapter 7",
+      "path": "content/art/ch_07_dolphins.png",
+      "description": "content illustration — chapter 7, near 'The Spectrum' — Dolphins moving through the air above a ring road as though it were a reef, gradient sky, traffic below entirely unbothered. Prompt: development/art_prompts.md § ch_07_dolphins.png",
+      "source": "prompt_only",
+      "license": "Not yet generated — prompt reserved for a later Ideogram v4 run",
+      "added": "2026-08-26T22:28:27.100266"
+    },
+    {
+      "chapter": "Chapter 8",
+      "path": "content/art/ch_08_table.png",
+      "description": "content illustration — chapter 8, near 'Pacing a first session' — An overhead view of a kitchen table mid-session: dice, a hand-drawn six-segment clock with three crossed off, five sheets, one empty chair. Prompt: development/art_prompts.md § ch_08_table.png",
+      "source": "prompt_only",
+      "license": "Not yet generated — prompt reserved for a later Ideogram v4 run",
+      "added": "2026-08-26T22:28:27.100793"
+    },
+    {
+      "chapter": "Chapter 9",
+      "path": "content/art/ch_09_gloom_scale.png",
+      "description": "content illustration — chapter 9, near 'How to read a Gloom' — Three Glooms of different sizes shown in silhouette against a gradient — a small one, a street-sized one, and one going up past the top of the frame. Prompt: development/art_prompts.md § ch_09_gloom_scale.png",
+      "source": "prompt_only",
+      "license": "Not yet generated — prompt reserved for a later Ideogram v4 run",
+      "added": "2026-08-26T22:28:27.101562"
+    },
+    {
+      "chapter": "Chapter 10",
+      "path": "content/art/ch_10_timetable.png",
+      "description": "content illustration — chapter 10, near 'The last thirty seconds' — A close view of a bus timetable in ordinary daylight, one printed strip at the bottom reading 'Fridays, late service, 00:15', a single piece of.... Prompt: development/art_prompts.md § ch_10_timetable.png",
+      "source": "prompt_only",
+      "license": "Not yet generated — prompt reserved for a later Ideogram v4 run",
+      "added": "2026-08-26T22:28:27.102170"
+    }
+  ],
+  "updated": "2026-08-26T22:28:27.102175"
 }

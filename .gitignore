@@ -15,3 +15,6 @@ references/*
 # PRISM's canon is our own original content, not third-party source material.
 !references/prism/
 .claude/settings.local.json
+
+# Bookbinder writes timestamped state backups on every update
+projects/*/state/*.backup_*.json

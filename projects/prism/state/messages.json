@@ -1,1 +1,14 @@
-[]
+[
+  {
+    "timestamp": "2026-08-26T22:31:53.888079",
+    "agent": "final_reviewer",
+    "type": "decision",
+    "message": "FINAL_DRAFT_APPROVED. Ten final_draft.md files, 20,871 words. Validation sweep: forbidden patterns 0 matches across 20 patterns; word counts 10/10 on target; NPC registry 0 mismatches (0 Star trait, 0 Gloom clock, 0 Traits above +2); heading links 125 headings / 125 unique ids / 34 internal links / 0 broken / 0 self-links, after renaming chapter_10's three beat subheads to clear a compiled-anchor collision with chapter_08; diff verification 10/10 differ from draft_02; banned terms 0 violations. Gate final_draft PASSED."
+  },
+  {
+    "timestamp": "2026-08-26T22:31:53.888376",
+    "agent": "art_director",
+    "type": "decision",
+    "message": "ART_DIRECTION_COMPLETE in prompt-manifest mode. 33 prompts authored to development/art_prompts.md (1 cover + 10 chapter openers + 11 NPC portraits + 11 content illustrations at 1 per 2,000 words), all 33 registered in art_manifest.json with reserved content/art/ paths. Mode was forced: the active generator ideogram-v4 has a comfyui backend and /art-direction's probe is a1111-only. Cover crossed modes as the skill allows and was generated algorithmically ('Refraction', a p5.js sketch in development/cover_sketch/, seed 20260826, 1600x2400) so /compile has a real cover; it is a standalone piece, not a render of the reserved cover prompt."
+  }
+]
