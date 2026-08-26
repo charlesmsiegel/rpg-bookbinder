@@ -170,6 +170,13 @@ def initialize_project(
             "consistency_check": False,
             "final_review": False,
             "publication_ready": False,
+            "first_draft": False,
+            "architectural_review": False,
+            "research_enhancement": False,
+            "second_draft": False,
+            "copy_edit": False,
+            "final_draft": False,
+            "compilation": False,
         },
         "last_updated": datetime.now().isoformat(),
     }
@@ -469,7 +476,12 @@ def pass_quality_gate(project_name: str, gate_name: str) -> str:
     Returns:
         Confirmation and next steps.
     """
-    valid_gates = ["initial_draft", "first_review", "consistency_check", "final_review", "publication_ready"]
+    # Two vocabularies exist: the legacy five created at init, and the seven
+    # the .claude/commands pipeline actually reads. Accept both — rejecting
+    # the command set made every phase gate impossible to pass.
+    valid_gates = ["initial_draft", "first_review", "consistency_check", "final_review", "publication_ready",
+                   "first_draft", "architectural_review", "research_enhancement",
+                   "second_draft", "copy_edit", "final_draft", "compilation"]
 
     if gate_name not in valid_gates:
         return f"Invalid gate. Valid gates: {valid_gates}"

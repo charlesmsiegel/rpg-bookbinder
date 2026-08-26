@@ -214,8 +214,10 @@ warmly, as an invitation, not a gotcha.
 - At **0 Shine** you are **Dimmed**: out of the scene, greyed, still present.
   Not dead. Never dead.
 - **A Dimmed character is brought back by another character reaching them** — a
-  scene, a truth, a hand held out. This takes the rescuer's action, and costs them
-  **1 Shine or 1 Sparkle** (rescuer's choice). The Dimmed Star returns with
+  scene, a truth, a hand held out. It costs the rescuer **1 Shine or 1 Sparkle**
+  (their choice), plus — **in the Big Finish** — their action for that round.
+  Outside the Big Finish there are no actions (§2.8), so it costs them the scene
+  instead. The Dimmed Star returns with
   **2 Shine**, and being reached **sounds the rescued Star's note** on the Chord
   (§4.3). This is always possible; no roll is required. Someone reaching you always
   works, which is the single most important thing this game believes.
@@ -448,8 +450,17 @@ The whole team, together, on the shared command word the players invent in sessi
 one. Costs **1 Sparkle, paid in full by any single character** — cheaper for the team
 than each member morphing solo, deliberately. Sparkle is never split or fractional;
 one person pays, and the whole team morphs. Unlocks each character's Radiance
-*plus* the team's shared abilities (formation moves, chained backing, group
-finishers).
+*plus* three defined **shared abilities**:
+
+| Ability | What it does |
+|---|---|
+| **Formation** | Once per round, two Stars swap places in the turn order. Free — it costs position, not resources. |
+| **Chained backing** | A backer pays their cost **once** and it covers backing two different rolls in the same round. Never a third die on one roll. |
+| **Group finisher** | Two or more Stars each spend 1 Sparkle and act together; the Gloom removed doubles **once per participating Star**. |
+
+None adds a die or raises the roll ceiling, so §2.2's probability analysis is
+untouched. An earlier draft named these three without defining them, which left
+the headline benefit of a Synchronized Morph unplayable.
 
 **It ends when the Number does** — when the Gloom clock that prompted it resolves,
 or at the Encore, whichever comes first. Without this, one Sparkle in the first

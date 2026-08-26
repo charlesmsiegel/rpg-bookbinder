@@ -1004,8 +1004,26 @@ for label, dc in [("Easy", 6), ("Tricky", 9), ("Dazzling", 11)]:
             cells.append(f"{100.0*hit/tot:.1f}%")
         print(f"| +{trait} | " + " | ".join(cells) + " |")
     print()
+
+print("## Flourish — both kept dice show 6\n")
+print("| Backers | Dice | Chance |")
+print("|---|---|---|")
+for b in range(4):
+    dist = m._sum_distribution(2 + b, 6, 2)
+    tot = sum(dist.values())
+    print(f"| {b} | {2+b}d6 keep 2 | {100.0*dist.get(12,0)/tot:.2f}% |")
+print()
+print("Friendship makes the spectacular likelier, not just the reliable.\n")
+print("## Ceiling\n")
+print("Maximum ordinary roll: 12 (dice) + 2 (Trait) = **14**. A Hit at Dazzling")
+print("needs 14, so it requires Trait +2 and double sixes. The ordinary Dazzling")
+print("success is Mixed.")
 PY
 ```
+
+The generator must emit **every** section the committed file has. Shell
+redirection truncates the file on each run, so a generator emitting less than
+the file contains silently deletes canonical rules the drafting agents rely on.
 
 - [ ] **Step 4: Verify the files are tracked, not ignored**
 
@@ -1153,8 +1171,8 @@ Run:
 ```bash
 python -c "
 import json; d=json.load(open('projects/prism/state/project_state.json'))
-t=d.get('word_count_targets', {})
-print(t); print('total:', sum(v if isinstance(v,int) else v.get('target',0) for v in t.values()))
+t=d['word_count_targets']['per_chapter']
+print(t); print('total:', sum(t.values()))
 "
 ```
 Expected: total 25,000 (±0 — these are targets, not results).
@@ -1316,9 +1334,15 @@ Run:
 sed '/^## Review flags/,$d' projects/prism/development/outlines/forbidden_patterns.md \
 | while IFS= read -r pat; do
   case "$pat" in -\ \`*) p=$(printf '%s' "$pat" | sed 's/^- `//; s/`.*$//')
-    # -w so `transform` does not match the correct words `transformed`/`transformation`.
-    if grep -rnw -F "$p" projects/prism/content/*/final_draft.md >/dev/null 2>&1; then
-      echo "VIOLATION: $p"; grep -rnw -F "$p" projects/prism/content/*/final_draft.md | head -3
+    # Whole-word matching ONLY for patterns containing word characters.
+    # `grep -w -F '<!-- '` never matches, because that string has none, and the
+    # sweep would silently pass over a real hard-reject artifact.
+    case "$p" in
+      *[A-Za-z0-9]*) wflag="-w" ;;
+      *)             wflag=""   ;;
+    esac
+    if grep -rn $wflag -F "$p" projects/prism/content/*/final_draft.md >/dev/null 2>&1; then
+      echo "VIOLATION: $p"; grep -rn $wflag -F "$p" projects/prism/content/*/final_draft.md | head -3
     fi ;;
   esac
 done

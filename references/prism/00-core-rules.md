@@ -78,9 +78,11 @@ Verified rates, Trait +1 vs Difficulty 9: **41.7%** / **68.1%** / **82.6%** /
 
 - Track of **5** boxes. Restores fully at an Encore.
 - At **0** you are **Dimmed**: out of the scene, present, not dead. Never dead.
-- **Reaching a Dimmed Star**: takes the rescuer's action and costs them 1 Shine
-  or 1 Sparkle. The Dimmed Star returns with **2 Shine**, and being reached
-  **sounds their note** on the Chord. No roll. It always works.
+- **Reaching a Dimmed Star**: costs the rescuer 1 Shine or 1 Sparkle, plus —
+  **in the Big Finish** — their action for that round. Outside the Big Finish
+  there are no actions, so it costs them the scene instead: they spend it going
+  after the Dimmed Star. The Dimmed Star returns with **2 Shine**, and being
+  reached **sounds their note** on the Chord. No roll. It always works.
 
 ## Gloom
 
@@ -135,8 +137,19 @@ Crossing into the Spectrum is **refracting**, and it is the same act as morphing
 
 ### Synchronized Morph
 - **1 Sparkle, paid in full by any single Star.** Never split or fractional.
-- Unlocks every Star's Radiance plus the team's shared abilities.
+- Unlocks every Star's Radiance plus the three **shared abilities** below.
 - **Ends** when the Gloom clock resolves or at the Encore.
+
+**Shared abilities** (available only while synchronized):
+
+| Ability | What it does |
+|---|---|
+| **Formation** | Once per round, two Stars may swap places in the turn order. Free — it costs position, not resources. |
+| **Chained backing** | A backer pays their cost **once** and it covers backing two different rolls in the same round. The keep-two rule is unchanged; this buys a second use of one payment, never a third die on one roll. |
+| **Group finisher** | Two or more Stars each spend 1 Sparkle and act together. The Gloom removed is doubled **once per participating Star** — two Stars quadruple it, three multiply it by eight. |
+
+None of these adds a die or raises the roll ceiling, so the probability ladder
+is untouched.
 
 ### Combined Form
 Requires all three: a Synchronized Morph, a **full Chord**, and the **Big Finish**.

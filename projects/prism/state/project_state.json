@@ -8,7 +8,7 @@
     "current_step": 1
   },
   "progress": {
-    "chapters_planned": 0,
+    "chapters_planned": 10,
     "chapters_completed": 0,
     "sections_total": 0,
     "sections_completed": 0,
@@ -58,7 +58,14 @@
     "first_review": false,
     "consistency_check": false,
     "final_review": false,
-    "publication_ready": false
+    "publication_ready": false,
+    "first_draft": false,
+    "architectural_review": false,
+    "research_enhancement": false,
+    "second_draft": false,
+    "copy_edit": false,
+    "final_draft": false,
+    "compilation": false
   },
   "last_updated": "2026-08-26T21:33:57.491586",
   "project_title": "PRISM",
