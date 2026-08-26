@@ -48,6 +48,34 @@ def calculate_dice_probability(
 
 
 @mcp.tool()
+def calculate_sum_probability(
+    dice: Optional[int] = None,
+    sides: Optional[int] = None,
+    modifier: int = 0,
+    target: Optional[int] = None,
+    keep: Optional[int] = None,
+) -> str:
+    """
+    Calculate probability for a sum-based roll (add the dice, add a modifier,
+    compare to a target). Use this for xdy+z systems.
+
+    Args:
+        dice: How many dice to roll. Defaults to mechanics.dice.count from config.
+        sides: Faces per die. Defaults to mechanics.dice.sides from config.
+        modifier: Flat bonus added to the kept sum.
+        target: Number the total must reach. Defaults to mechanics.dice.default_target.
+        keep: How many of the highest dice to add. Defaults to all of them.
+
+    Returns:
+        Success chance, expected value, a margin table, and the chance that
+        every kept die shows the maximum face.
+    """
+    return mechanics_ops.calculate_sum_probability(
+        dice=dice, sides=sides, modifier=modifier, target=target, keep=keep
+    )
+
+
+@mcp.tool()
 def calculate_extended_action(
     dice_pool: int,
     difficulty: int,
