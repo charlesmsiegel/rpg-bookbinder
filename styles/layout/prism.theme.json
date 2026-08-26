@@ -1,0 +1,5 @@
+{
+  "colors": { "body": "1A1A1A", "accent1": "FF2D95", "accent2": "00C8F0", "gold": "FFD400", "sidebarBg": "2B0B4A", "white": "FFFFFF", "altRow": "FFF0F7" },
+  "fonts": { "body": "Georgia", "heading": "Trebuchet MS", "toc": "Trebuchet MS", "header": "Trebuchet MS", "sidebar": "Trebuchet MS" },
+  "page": { "w": 12240, "h": 15840, "ml": 1080, "mr": 1080, "mt": 1267, "mb": 1440 }
+}
