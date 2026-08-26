@@ -57,20 +57,24 @@ Starting spread: one **+2**, two **+1**, one **+0**. **+3** is reachable only
 through advancement, never at creation.
 
 **The Refrain trade**: once at creation, you may lower one Trait by 1 to raise
-another by 1, if your Refrain justifies the trade in a sentence. The +2 creation
-ceiling still applies.
+another by 1, if your Refrain justifies the trade in a sentence. Both bounds hold —
+nothing may be raised above **+2** at creation, and nothing may be lowered below
+**+0**. Traits are never negative.
 
 ### 2.2 Outcome ladder
 
 | Result | Outcome |
 |---|---|
-| Under the Difficulty | **Miss.** It doesn't work, and the GM advances a Gloom clock. |
+| Under the Difficulty | **Miss.** It doesn't work, and the GM makes a move (below). |
 | Meets it, or beats it by 1–2 | **Mixed.** It works, but it costs — Shine, Sparkle, exposure, or time. |
 | Beats it by 3–5 | **Hit.** Clean. |
 | Beats it by 6 or more | **Flourish.** Clean, and something extra: a Sparkle back, a Gloom clock rolled back a tick, or a moment that becomes true forever. |
 
 A miss never stalls the scene. The GM's move on a miss always changes the
-situation.
+situation. If a Gloom clock is in play, the default move is to advance it. If none
+is — an early Verse, an ordinary-life scene — the GM instead **starts** one, or
+reveals that one has been quietly filling all along. A miss can be the moment the
+problem arrives; that is a feature, and the GM chapter says so.
 
 **Ceiling note — must be validated in §9.2.** An untransformed `2d6+3` tops out at
 15. Against Difficulty 12 that is a maximum margin of +3, so a Dazzling task can
@@ -99,8 +103,16 @@ A named subsystem, not a currency. This is the `x` in `xd6 + z`.
 
 **Backing up.** When another character rolls, you may declare that you're backing
 them. State how — what you say, what you do, what you put at risk. You add **+1d6**
-to their roll; they roll all dice and **drop the lowest**. Multiple allies may
-back the same roll; each adds a die.
+to their roll. Multiple allies may back the same roll; each adds a die.
+
+**You always keep exactly two dice.** Roll the whole pool and keep the best two;
+every die added by backing also drops a die. Backing makes a good result *likelier*,
+never larger — the target numbers are calibrated for a two-die sum and stay that way
+no matter how many people help.
+
+Verified by exact enumeration (Trait +1 vs Difficulty 9): **41.7%** unbacked,
+**68.1%** with one backer, **82.6%** with two, **90.6%** with three. Real help,
+diminishing returns, no ceiling break.
 
 **Backing costs the backer.** Choose one when you back:
 - Lose 1 Shine, or
@@ -170,16 +182,23 @@ a shared command word). Three gears:
 
 ### 4.1 Solo morph
 One character. Costs **1 Sparkle**. Declared with your personal phrase. Unlocks
-your Radiance abilities and raises your Shine cap by 2 for the scene. Available
-any time you can speak.
+your Radiance abilities and **grants 2 Shine, raising your cap by the same 2** for
+the scene — the boxes arrive filled, not empty. Available any time you can speak.
 
 The book instructs the table to give a solo morph *airtime* — the transforming
 player narrates, uninterrupted, and nobody rolls during it.
 
+**Early morphs are allowed, and they cost the Bridge.** A player may morph during a
+Verse or Chorus. When they do, that morph *is* the Bridge — the scene's key change
+has been spent early, and the GM moves the Number into its Big Finish from there.
+The Bridge is a structural position, not a clock time, so §4.4's rule is about where
+the key change *falls*, never about forbidding a player from reaching for it.
+
 ### 4.2 Synchronized morph
 The whole team, together, on the shared command word the players invent in session
-one. Costs **1 Sparkle total, split or paid by anyone** — cheaper per person than
-going solo, deliberately. Unlocks each character's Radiance *plus* the team's
+one. Costs **1 Sparkle, paid in full by any single character** — cheaper for the team
+than each member morphing solo, deliberately. Sparkle is never split or fractional;
+one person pays, and the whole team transforms. Unlocks each character's Radiance *plus* the team's
 shared abilities (formation moves, chained backing, group finishers).
 
 ### 4.3 Combined form
@@ -288,9 +307,19 @@ whose punchline is that the game is silly.
   errors on its own defaults. PRISM's sum target therefore lives under a new key,
   `default_target`, read only by `calculate_sum_probability`. The legacy pool tool
   is unused by PRISM but must not be left broken.
-- `citations.patterns` → internal cross-reference form only; PRISM has no external
-  source books, so the librarian role validates internal consistency instead
-- `layout.docx_theme` → `"prism"` (new theme file, see 9.3)
+- `citations` → **left at defaults and unused.** PRISM cites no external source
+  books. Configuration cannot repurpose this tooling for internal cross-references:
+  `extract_citations` hard-codes `Book, p. N` patterns and merely *appends*
+  configured ones, `validate_citation_format` unconditionally requires `p. N`, and
+  `generate_citation_report` ignores configured patterns entirely. Internal
+  cross-reference integrity is enforced instead by the heading ID registry
+  (`/plan-project` Step 8a) and the consistency-checker pass — which is what those
+  artifacts are for.
+- `layout.style_file` → `"styles/layout/prism.md"` and `layout.docx_theme` →
+  `"prism"`. **Both keys move together**: `/compile` Step 3 reads `style_file` as
+  the design language that the selected theme implements, and confirms it points at
+  a real file in `styles/layout/`. Leaving it on the neutral slate-and-gold default
+  would feed the compile step layout instructions that contradict the theme.
 
 ### 9.2 New code — sum-based dice probability
 
@@ -298,30 +327,45 @@ The existing `mcp_servers/_lib/mechanics_ops.py` implements
 `calculate_dice_probability` for World-of-Darkness-style **dice pools** (count
 successes against a per-die difficulty). It cannot express `2d6+3 vs 9`.
 
-Add `calculate_sum_probability(dice, sides, modifier, target, drop_lowest=0)`:
+Add `calculate_sum_probability(dice=None, sides=None, modifier=0, target=None, keep=None)`:
 
-- Exact distribution over the sum of `dice` dice of `sides` sides, optionally
-  dropping the `drop_lowest` lowest dice, plus a flat `modifier`.
+Every parameter is optional and falls back to config — `dice` to
+`mechanics.dice.count`, `sides` to `mechanics.dice.sides`, `target` to
+`mechanics.dice.default_target` — so the configured defaults are live, not
+decorative. Called bare, it answers "what are the odds on a standard PRISM roll?"
+
+`keep` (default: all dice) replaces the originally-specified `drop_lowest`, because
+Power of Friendship keeps a fixed *two* dice regardless of pool size; expressing
+that as a drop-count would force the caller to recompute it per backer and would
+re-admit the P1 bug above.
+
+- Exact distribution over the sum of the best `keep` of `dice` dice of `sides`
+  sides, plus a flat `modifier`.
 - Returns probability of meeting `target`, plus the PRISM outcome-ladder bands
   (mixed / hit / flourish) and the expected value.
 - Input validation matching the existing module's conventions (return an error
   string rather than raising).
 - Exposed as an MCP tool in `mcp_servers/mechanics.py`, delegating to `_lib`.
 - Unit tests in `tests/`, including hand-checkable cases (`1d6` uniform, `2d6`
-  bell curve, `2d6 drop lowest of 3` against a brute-forced enumeration).
+  bell curve, `best 2 of 3d6` against a brute-forced enumeration, and config
+  fallback when arguments are omitted).
 
-`drop_lowest` is required because Power of Friendship is exactly a drop-lowest
-mechanic; without it we cannot check whether backing is appropriately valuable.
+A keep-best-N parameter is required because Power of Friendship is exactly a
+keep-best-two mechanic; without it we cannot check whether backing is appropriately
+valuable — as the P1 finding on this spec's first revision demonstrated.
 
 **Balance targets to verify with this tool** (these are the acceptance criteria
 for the mechanics chapter):
 
-| Situation | Target |
-|---|---|
-| Trait +1, no backing, vs Difficulty 9 | roughly a coin flip |
-| Trait +1, one ally backing, vs Difficulty 9 | clearly better than a coin flip, short of a sure thing |
-| Trait +3, two allies backing, vs Difficulty 12 | achievable but not routine |
-| Trait +0, no backing, vs Difficulty 12 | possible, rare |
+| Situation | Target | Verified |
+|---|---|---|
+| Trait +1, no backing, vs Difficulty 9 | roughly a coin flip | **41.7%** ✓ |
+| Trait +1, one ally backing, vs Difficulty 9 | clearly better, short of a sure thing | **68.1%** ✓ |
+| Trait +3, two allies backing, vs Difficulty 12 | achievable but not routine | **69.4%** ✓ |
+| Trait +0, no backing, vs Difficulty 12 | possible, rare | **2.8%** ✓ |
+
+All four verified by exact enumeration against the keep-best-two rule. The
+implementation must reproduce these numbers; they are test cases, not aspirations.
 
 If the math contradicts the Difficulty numbers in §2.1, the numbers change, not
 the tool.
@@ -332,10 +376,17 @@ the tool.
 - `styles/templates/core-rulebook.md` — a book template for core rulebooks:
   chapter list, per-section word expectations, required elements (sheet, quick
   reference, starter adventure, safety tools)
-- `styles/layout/prism.theme.json` + a layout note — hyper-saturated palette for
-  DOCX export
+- `styles/layout/prism.md` + `styles/layout/prism.theme.json` — the layout design
+  language and its DOCX theme data: hyper-saturated Lisa Frank palette, both files
+  required by `/compile` Step 3
 - `references/prism/` — PRISM's own design documents, so the reference-librarian
-  role has something to validate internal consistency against
+  role has something to check internal consistency against. **Requires a
+  `.gitignore` change**: the repo currently ignores `references/**` except
+  `references/README.md`, which would leave these untracked and absent from fresh
+  clones. Add negations for `references/prism/` and its contents. This is safe
+  precisely because PRISM's canon is our own original content — the blanket ignore
+  exists to keep third-party source books out of the repo, and nothing here is
+  third-party.
 - `config/README.md` — updated with the new `mechanics.dice.count` and
   `mechanics.dice.default_target` fields and the compatibility constraint above
 
@@ -353,12 +404,25 @@ Run in order, with the standard quality gate between each:
 | 3 | `/architect-review prism` | Architectural commentary |
 | 4 | `/second-draft prism` | `draft_02.md` — comment integration + copy edit |
 | 5 | `/final-draft prism` | `final_draft.md` — consistency, final review |
+| 5.5 | `/art-direction prism` (deferred mode) | **Prompt manifest only — no images** |
 | 6 | `/compile prism` | Assembled manuscript + exports |
 
-**`/art-direction` is skipped.** No image models are available in this
-environment. The compiled book carries art *slots* — placement markers with
-descriptive captions — but no generated images. The art manifest is not
-populated.
+**No images are generated**, since no image models are available in this
+environment. But `/art-direction` is **not skipped outright** — it runs in its
+deferred / prompt-manifest mode, which writes `development/art_prompts.md`
+(placement, size, and a written prompt per slot) and produces no image files.
+
+This is required for `/compile` to run at all. `.claude/commands/compile.md`
+inserts cover and chapter-opener image references, and treats missing image files
+as an error *unless* `development/art_prompts.md` exists (line 58) — and it halts
+outright on a missing `content/art/cover.png` unless a deferred cover was
+explicitly chosen (line 86). Skipping the phase entirely, as this spec's first
+revision proposed, would have stalled the pipeline at the final step.
+
+The compiled book therefore carries art *slots* — placement markers with
+descriptive captions and a ready-to-run prompt for each — and no generated
+images. The art manifest is not populated. Compile is expected to emit its
+coverless-output warning; that is the correct outcome here, not a failure.
 
 Agent roles are executed inline in the driving session rather than dispatched as
 subagents, per the session's configuration.
@@ -386,7 +450,8 @@ subagents, per the session's configuration.
 
 ## 12. Out of Scope
 
-- Image generation and the art manifest (no image models available).
+- Image *generation* and the populated art manifest (no image models available).
+  The deferred prompt manifest is in scope; the images it describes are not.
 - Any supplement beyond the core book.
 - Reworking Bookbinder's existing MCP servers beyond the single additive function
   in §9.2.

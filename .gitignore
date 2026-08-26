@@ -7,6 +7,11 @@ node_modules/
 .vscode/
 .superpowers/
 generated_images/
-references/**
+# Only direct children are excluded, so a whole directory can be re-included
+# below. `references/**` would exclude references/prism itself, and git cannot
+# re-include a file whose parent directory is excluded.
+references/*
 !references/README.md
+# PRISM's canon is our own original content, not third-party source material.
+!references/prism/
 .claude/settings.local.json
