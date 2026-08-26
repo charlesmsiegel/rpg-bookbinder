@@ -8,7 +8,7 @@ class TestConfig(unittest.TestCase):
         config.load(force_reload=True)
 
     def test_default_file_loads(self):
-        self.assertEqual(config.get("system.project_type"), "supplement")
+        self.assertEqual(config.get("system.project_type"), "core rulebook")
 
     def test_dotted_get_with_default(self):
         self.assertEqual(config.get("no.such.key", "fallback"), "fallback")

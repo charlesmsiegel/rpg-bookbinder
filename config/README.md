@@ -162,9 +162,20 @@ Parameters for the mechanics server's dice-pool math and experience-point costs.
 | Field | Type | Purpose | Consumer |
 |---|---|---|---|
 | `xp_costs` | object, trait type → multiplier | Per-trait-type cost multiplier used to compute experience-point costs | Mechanics server (`calculate_experience_cost`) |
-| `dice.sides` | int | Number of sides per die in the dice pool | Mechanics server (dice-pool tools) |
-| `dice.default_difficulty` | int | Default target number for a success, when not specified per roll | Mechanics server |
+| `dice.sides` | int | Number of sides per die | Mechanics server (all dice tools) |
+| `dice.default_difficulty` | int | Default per-die threshold a die must meet to count as a success | Mechanics server (`calculate_dice_probability`, `calculate_extended_action`) |
 | `dice.botch_on_ones` | bool | Whether rolling all 1s (or however the system defines it) counts as a botch | Mechanics server |
+| `dice.count` | int | How many dice a standard roll uses in a sum-based system | Mechanics server (`calculate_sum_probability`) |
+| `dice.default_target` | int | Default number a **summed** roll must reach | Mechanics server (`calculate_sum_probability`) |
+
+**Two kinds of dice system, two sets of fields.** `default_difficulty` is a
+*per-die* threshold for pool systems that count successes; `default_target` is a
+*total* for sum-based (`xdy+z`) systems. They are not interchangeable.
+
+**Constraint:** `calculate_dice_probability` validates `3 <= default_difficulty <=
+sides` and errors otherwise — including on its own configured defaults. A sum-based
+game with `sides: 6` must therefore keep `default_difficulty` at 6 or below and put
+its real target in `default_target`, even though it never calls the pool tool.
 
 **Experience cost formula:** for a given trait type with multiplier `m`, raising the
 trait from level `L-1` to level `L` costs `cost(L) = (L - 1) × m` experience points.

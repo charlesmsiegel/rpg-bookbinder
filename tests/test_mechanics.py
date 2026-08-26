@@ -28,7 +28,7 @@ class TestMechanics(unittest.TestCase):
     def test_dice_uses_config_defaults(self):
         out = mechanics_ops.calculate_dice_probability(5)
         self.assertIn("difficulty 6", out)
-        self.assertIn("5d10", out)
+        self.assertIn("5d6", out)
 
     def test_dice_sides_configurable(self):
         p = Path(tempfile.gettempdir()) / "bb_mech_cfg.json"

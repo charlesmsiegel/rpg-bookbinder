@@ -1,59 +1,53 @@
 {
   "system": {
-    "name": "Generic RPG",
+    "name": "PRISM",
     "publisher_line": "",
-    "project_type": "supplement"
+    "project_type": "core rulebook"
   },
   "voice": {
-    "writing_style_file": "styles/writing/default.md",
-    "tone_keywords": [],
+    "writing_style_file": "styles/writing/prism.md",
+    "tone_keywords": ["sugarpop", "sincere", "rainbow", "loud", "kind", "unembarrassed"],
     "banned_phrases": [
       "It's not *, it's *",
       "a testament to",
       "little did they know",
-      "delve into"
+      "delve into",
+      "transforms",
+      "transforming",
+      "to transform",
+      "whimsical",
+      "quirky",
+      "adorkable"
     ],
-    "banned_names": [
-      "Elara",
-      "Kael",
-      "Lyra",
-      "Seraphina",
-      "Aria"
-    ],
+    "banned_names": ["Elara", "Kael", "Lyra", "Seraphina", "Aria"],
     "use_sparingly": [
-      {
-        "term": "tapestry",
-        "max_per_10k_words": 1
-      },
-      {
-        "term": "—",
-        "max_per_10k_words": 20
-      }
+      { "term": "tapestry", "max_per_10k_words": 1 },
+      { "term": "—", "max_per_10k_words": 20 }
     ]
   },
   "terminology": {
-    "gamemaster": "Gamemaster",
-    "player_character": "Player Character",
-    "supplement": "supplement"
+    "gamemaster": "Showrunner",
+    "player_character": "Star",
+    "supplement": "rulebook"
   },
   "citations": {
     "book_map": {},
-    "patterns": [
-      "(?P<book>[A-Z][\\w :']+?),?\\s*p\\.\\s*(?P<page>\\d+)"
-    ],
+    "patterns": ["(?P<book>[A-Z][\\w :']+?),?\\s*p\\.\\s*(?P<page>\\d+)"],
     "bibliography": {}
   },
   "mechanics": {
     "xp_costs": {},
     "dice": {
-      "sides": 10,
+      "sides": 6,
+      "count": 2,
+      "default_target": 9,
       "default_difficulty": 6,
-      "botch_on_ones": true
+      "botch_on_ones": false
     }
   },
   "art": {
-    "active_generator": "stable-diffusion-1.5",
-    "density_words_per_illustration": 2250,
+    "active_generator": "ideogram-v4",
+    "density_words_per_illustration": 2000,
     "generators": {
       "stable-diffusion-1.5": {
         "backend": "a1111",
@@ -78,14 +72,21 @@
         "endpoint": "http://127.0.0.1:8188",
         "rules_file": "styles/art/ideogram-v4.md",
         "workflow_file": "styles/art/example.workflow.json",
-        "style_prefix": "",
-        "negative_prompt": ""
+        "style_prefix": "hyper-saturated airbrushed rainbow illustration, Lisa Frank palette, glossy chrome and neon, ",
+        "negative_prompt": "muted colors, desaturated, grimdark, photorealistic, watermark",
+        "prompt_style": "natural",
+        "sizes": {
+          "portrait": [1024, 1024],
+          "landscape": [1536, 1024],
+          "column": [768, 1536],
+          "full_page": [1024, 1536]
+        }
       }
     }
   },
   "layout": {
-    "style_file": "styles/layout/default.md",
-    "docx_theme": "default"
+    "style_file": "styles/layout/prism.md",
+    "docx_theme": "prism"
   },
   "knowledge_base": {
     "root": "knowledge_base",
