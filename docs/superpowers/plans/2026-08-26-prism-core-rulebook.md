@@ -45,6 +45,25 @@
 
 ---
 
+### Task 0: Establish a green baseline
+
+`tests/test_art_backends.py` imports `httpx`, which the README lists as a
+dependency but which is not installed by default. Without it the suite errors
+before you have written a line, and it is easy to mistake that for damage you
+caused.
+
+- [ ] **Step 1: Install the runtime dependencies**
+
+Run: `pip install "mcp<2" httpx`
+
+- [ ] **Step 2: Confirm the suite is green before changing anything**
+
+Run: `python -m unittest discover tests`
+Expected: `OK`, 25 tests. If anything fails here, fix it before starting Task 1 —
+you need a known-good baseline to attribute later failures to.
+
+---
+
 ### Task 1: Sum-based dice probability
 
 The existing `calculate_dice_probability` counts successes in a World-of-Darkness dice pool. It cannot express `2d6+1 vs 9` at all, so none of PRISM's numbers are checkable without this.
@@ -435,7 +454,7 @@ class TestPrismConfig(unittest.TestCase):
 
     def test_art_profile_is_ideogram_with_sizes(self):
         self.assertEqual(config.get("art.active_generator"), "ideogram-v4")
-        self.assertEqual(config.get("art.density_words_per_illustration"), 1500)
+        self.assertEqual(config.get("art.density_words_per_illustration"), 2000)
         sizes = config.get("art.generators.ideogram-v4.sizes")
         self.assertIsNotNone(sizes, "art-direction.md requires a sizes map")
         for key in ("portrait", "landscape", "column", "full_page"):
@@ -522,7 +541,7 @@ Replace `config/system.json` with:
   },
   "art": {
     "active_generator": "ideogram-v4",
-    "density_words_per_illustration": 1500,
+    "density_words_per_illustration": 2000,
     "generators": {
       "stable-diffusion-1.5": {
         "backend": "a1111",
@@ -575,7 +594,19 @@ Replace `config/system.json` with:
 
 Note `default_difficulty` stays at **6**, not 9: `calculate_dice_probability` validates `3 <= difficulty <= sides`, and with `sides: 6` a value of 9 would make that tool error on its own defaults. PRISM's sum target lives in `default_target`.
 
-- [ ] **Step 4: Document the new fields**
+- [ ] **Step 4: Update the existing config test**
+
+`tests/test_config.py` line 11 asserts the checked-in config reports
+`"supplement"`. Changing `system.project_type` breaks it, and success criterion 1
+requires the whole suite green. Change that line to:
+
+```python
+        self.assertEqual(config.get("system.project_type"), "core rulebook")
+```
+
+Run `python -m unittest tests.test_config -v` and confirm it passes before moving on.
+
+- [ ] **Step 5: Document the new fields**
 
 In `config/README.md`, find the `mechanics.dice` section and add rows for the two new keys:
 
@@ -584,15 +615,15 @@ In `config/README.md`, find the `mechanics.dice` section and add rows for the tw
 | `mechanics.dice.default_target` | Target number a summed roll must reach. Read by `calculate_sum_probability`. Distinct from `default_difficulty`, which is the per-die threshold used by the pool-based `calculate_dice_probability` and must satisfy `3 <= difficulty <= sides`. | `9` |
 ```
 
-- [ ] **Step 5: Run the config test**
+- [ ] **Step 6: Run the config test**
 
 Run: `python -m unittest tests.test_prism_config -v`
 Expected: the dice, terminology, art, and system tests PASS. The `layout` and `voice` tests still FAIL — they assert files that Task 4 creates. That is expected; Task 4 finishes them.
 
-- [ ] **Step 6: Commit**
+- [ ] **Step 7: Commit**
 
 ```bash
-git add config/system.json config/README.md tests/test_prism_config.py
+git add config/system.json config/README.md tests/test_config.py tests/test_prism_config.py
 git commit -m "Configure Bookbinder for PRISM
 
 Sum-based d6 dice, Showrunner/Star terminology, the Ideogram profile with
@@ -1166,7 +1197,12 @@ print('all prompt_only:', all(i.get('source')=='prompt_only' for i in imgs))
 echo '--- no image files should exist ---'
 ls projects/prism/content/art/*.png 2>/dev/null && echo "UNEXPECTED IMAGES" || echo "no images, correct"
 ```
-Expected: ten `final_draft.md` files; `art_prompts.md` present; roughly 17 manifest entries (25,000 / 1,500), every one `source="prompt_only"`; no `.png` files.
+Expected: ten `final_draft.md` files; `art_prompts.md` present; **roughly 30**
+manifest entries, every one `source="prompt_only"`; no `.png` files.
+
+The count is 1 cover + 10 chapter openers + `ceil(25,000 / 2,000)` = 13 content
+illustrations + one portrait per major NPC. It is *not* just the density division —
+that governs content illustrations alone.
 
 - [ ] **Step 3: Run the forbidden-patterns sweep**
 

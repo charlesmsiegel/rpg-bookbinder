@@ -97,10 +97,16 @@ own math would argue against its thesis.
 
 The array is also the least interesting axis of variation in PRISM — characters are
 told apart by Refrain, Signature, Bonds, and Radiance. Doubling combinatorics on the
-thinnest axis at the cost of the central mechanic is a bad trade. Sharper
-specialization, if wanted, belongs in the **Signature** as a conditional +1 when
-you're doing your own thing: asymmetry that is narrative and situational rather than
-a flat gap that distorts who should be rolling.
+thinnest axis at the cost of the central mechanic is a bad trade. Sharper specialization, if wanted, belongs in the **Signature** — but **the
+Signature is never a bonus to the roll**. A conditional +1 would raise the maximum
+total to 15 and invalidate every ceiling argument in this section, including the
+reason Dazzling is 11.
+
+Instead a Signature changes *what is possible or which Difficulty applies*: it drops
+a task one band (Dazzling to Tricky, Tricky to Easy) when you are unmistakably doing
+your own thing, or makes attemptable something the Showrunner would otherwise not
+allow a roll for at all. That is a bigger effect than +1 and it leaves the
+arithmetic — and the verified probabilities — completely intact.
 
 ### 2.2 Outcome ladder
 
@@ -208,14 +214,17 @@ warmly, as an invitation, not a gotcha.
   hard.
 - At **0 Shine** you are **Dimmed**: out of the scene, greyed, still present.
   Not dead. Never dead.
-- A Dimmed character is brought back by another character reaching them — a
-  scene, a truth, a hand held out. This is always possible and always costs the
-  rescuer something.
+- **A Dimmed character is brought back by another character reaching them** — a
+  scene, a truth, a hand held out. This takes the rescuer's action, and costs them
+  **1 Shine or 1 Sparkle** (rescuer's choice). The Dimmed Star returns with
+  **2 Shine**, and being reached **sounds the rescued Star's note** on the Chord
+  (§4.3). This is always possible; no roll is required. Someone reaching you always
+  works, which is the single most important thing this game believes.
 - Shine restores fully at an Encore scene.
 
-**Gloom** is the opposition — clocks that both sides push (§2.7). Sizes: 4 (a bad
-afternoon), 6 (a real problem), 8 (a season's antagonist). If a Gloom clock fills,
-the *world* gets worse: a place loses its color, a person forgets what they loved, a rule of
+**Gloom** is the opposition — clocks that both sides push (§2.7). Sizes 4, 6, or 8,
+each starting full. If the team is ground down before a clock empties, the *world*
+keeps the loss: a place loses its color, a person forgets what they loved, a rule of
 the setting bends. Consequences land on the world and on NPCs, not on PC hit
 points.
 
@@ -245,21 +254,31 @@ resource economy so the probabilities in §9.2 mean something.
 A Gloom clock is a **tug-of-war on one track**, not a doom timer. It is the
 monster's hold on the thing it has taken, and both sides push it.
 
+**A Gloom clock starts full.** Its size *is* its starting value: **4** (a bad
+afternoon), **6** (a real problem), **8** (a season's antagonist). A full clock is
+how deep the neglect goes. You win by emptying it.
+
 | Result | Effect on the clock |
 |---|---|
-| **Miss** | Gloom **+1**, and the GM makes a move. |
+| **Miss** | Gloom **+1**, never above its starting size. **This is the GM's move** — do not advance the clock and *also* make a separate clock move. |
 | **Mixed** | Gloom **−1**, and you pay a cost (§2.6). |
 | **Hit** | Gloom **−1**, clean. |
 | **Flourish** | Gloom **−2**, clean, plus the extra. |
 
 - **Clock empties → you win.** The monster breaks and the thing it held comes back:
   the library reopens, the neighbour answers the door, the river runs clear.
-- **Clock fills → the Gloom wins this Number.** Nobody dies. The world simply keeps
-  the loss, and that place stays grey until someone comes back for it.
+- **The Gloom wins only if every Star is Dimmed.** Nobody dies. The team simply
+  can't go on tonight, the world keeps the loss, and that place stays grey until
+  someone comes back for it.
 
-Clocks are sized 4 (a bad afternoon), 6 (a real problem), or 8 (a season's
-antagonist), and start part-filled — the GM fills them during the Verse and Chorus
-through Gloom moves and misses, so the Big Finish opens with real ground to make up.
+**The clock cannot be taken below 1 before the Big Finish.** However well the Verse
+and Chorus go, the last tick belongs to the climax. This is a one-sentence pacing
+guarantee that costs nothing and stops a hot streak from ending the Number in its
+second scene.
+
+A Miss's +1 is capped at the starting size, so a bad run can undo progress but can
+never make a problem worse than it was. The Gloom does not grow; it endures. That is
+what makes it Gloom rather than a villain.
 
 **This is what makes the Big Finish a race**: the team's Shine draining against the
 Gloom's clock emptying, on the table, in front of everyone.
@@ -269,9 +288,15 @@ Gloom's clock emptying, on the table, in front of everyone.
 A **Finisher** requires you to be transformed and costs **1 Sparkle**: it **doubles
 the Gloom your roll removes**. A Hit finisher takes 2; a Flourish finisher takes 4.
 
-The **Combined Form's finisher empties the clock outright.** That is why it is the
-climax, and why the Chord gates it — the team's one guaranteed win condition is the
-one they can only reach by making sure nobody was left out.
+The **Combined Form's finisher empties the clock outright.** It costs **1 Sparkle,
+paid by any single Star, chosen by the players** — the same payment rule as the
+Synchronized Morph, since Sparkle stays personal even when everything else pools. If
+no Star has a Sparkle left, the finisher is unavailable and the team has to win the
+ordinary way.
+
+That is why the Combined Form is the climax, and why the Chord gates it — the team's
+one guaranteed win condition is the one they can only reach by making sure nobody
+was left out.
 
 ## 3. Characters
 
@@ -281,8 +306,12 @@ A PRISM character is built from six things:
 2. **Refrain** — a one-line creed in the character's own voice. Drives Sparkle
    refresh. ("I don't leave people in the dark." / "Somebody has to be ridiculous
    first.")
-3. **Signature** — the one thing you're unmistakably about, mechanically expressed
-   as a small always-on edge plus a transformed-state ability.
+3. **Signature** — the one thing you're unmistakably about. Mechanically it
+   **drops a task one Difficulty band** (Dazzling→Tricky, Tricky→Easy) when you are
+   unmistakably doing your own thing, or makes attemptable something the Showrunner
+   would not otherwise allow a roll for. It is **never a bonus to the roll** — see
+   §2.1; a numeric Signature would break the ceiling the Difficulty bands rest on.
+   Each Signature also names a transformed-state ability.
 4. **Bonds** — one written line per other PC, stating a specific shared truth.
    Bonds are spendable in Power of Friendship and deepen through play.
 5. **Look** — untransformed. Grounded, ordinary, specific.
@@ -332,14 +361,26 @@ a shared command word). Three gears:
 
 ### 4.1 Solo Morph
 One character. Costs **1 Sparkle**. Declared with your personal phrase. Unlocks
-your Radiance abilities and **grants 2 Shine, raising your cap by the same 2** for
-the scene — the boxes arrive filled, not empty. Available any time you can speak.
+your Radiance abilities and **grants 2 Shine, raising your cap by the same 2** while
+you remain transformed — the boxes arrive filled, not empty.
 
-**You can only be transformed once.** The Shine is granted on *entering* the
-transformed state and never again. Morphing while already transformed does nothing
-and costs nothing — you are already there — and you may not revert and re-morph to
-farm the grant. Without this, three Sparkle converts into six Shine and the
-five-box pressure the whole conflict system rests on evaporates.
+**When it ends.** The transformed state lasts until the Gloom clock resolves, or
+until the Encore, whichever comes first — the same duration as a Synchronized Morph.
+The Shine cap returns to 5 then, and any Shine above it is lost. The
+once-only restriction below resets at that same boundary, so a Star morphs afresh in
+the next Number.
+
+**You can only be transformed once at a time.** The Shine is granted on *entering*
+the transformed state and never again. Morphing while already transformed does
+nothing and costs nothing — you are already there — and you may not revert early and
+re-morph to farm the grant. Without this, three Sparkle converts into six Shine and
+the five-box pressure the whole conflict system rests on evaporates.
+
+**A Dimmed Star cannot morph.** Morphing requires you to be in the scene, and being
+Dimmed means you are not. A Star at 0 Shine comes back one way only: somebody
+reaches them (§2.5). Without this rule, 1 Sparkle would buy a self-rescue, which
+would bypass both the cost the rescuer pays and the Chord note the rescue sounds —
+and would quietly delete the most important thing the game has to say.
 
 The book instructs the table to give a Solo Morph *airtime* — the morphing player
 narrates, uninterrupted, and nobody rolls during it.
@@ -371,8 +412,15 @@ session would buy a permanently transformed team, bypassing both the recurring c
 and the Bridge structure entirely.
 
 ### 4.3 Combined Form
-The team fuses: one sheet, one Trait array (best of each, +1), one pooled Shine,
-one enormous finisher. Lasts until the Gloom clock resolves.
+The team fuses: one sheet, one Trait array, one pooled Shine, one enormous
+finisher. Lasts until the Gloom clock resolves.
+
+**The Trait array is the best of each Trait across the team, capped at +2.** No
+value above +2 exists anywhere in PRISM, including here — an earlier draft added +1
+to the best Trait, which would have produced a +3 and broken both the ceiling in
+§2.1 and the probability analysis built on it. The cap costs nothing: a four-Star
+team that chose different +2s fuses into +2 across all four Traits, which is already
+better than any Star has ever been.
 
 **Pooled Shine is the sum of the team's *current* Shine**, not their caps. A team
 that arrives battered fuses into something fragile, and a team that arrives intact
@@ -637,9 +685,26 @@ whose punchline is that the game is silly.
   manifest entry to take its dimensions from it rather than inventing them. Add
   `portrait`, `landscape`, `column`, and `full_page` at Ideogram-appropriate
   resolutions.
-- `art.density_words_per_illustration` → `1500`. At 25,000 words that is ~17 art
-  slots — appropriate for a visually-forward book, where the default 2,250
-  (~11 slots) would read as sparse.
+- `art.density_words_per_illustration` → `2000`.
+
+  **The density governs content illustrations only, not the whole budget.**
+  `.claude/commands/art-direction.md` Step 1 computes 1 cover + 1 opener per chapter
+  + 1 portrait per major NPC + `ceil(total_words / density)` content illustrations.
+  At 25,000 words and density 2,000 that is:
+
+  | Category | Count |
+  |---|---|
+  | Cover | 1 |
+  | Chapter openers | 10 |
+  | Content illustrations | 13 |
+  | Major-NPC portraits | ~6 |
+  | **Total prompts** | **~30** |
+
+  An earlier revision of this spec set density to 1,500 and described the result as
+  "~17 slots", mistaking the content-illustration count for the total. The real
+  figure was over 30. Density 2,000 keeps the book visually dense — roughly an image
+  every other page — with a stated workload of about thirty prompts rather than an
+  unstated one.
 - `layout.style_file` → `"styles/layout/prism.md"` and `layout.docx_theme` →
   `"prism"`. **Both keys move together**: `/compile` Step 3 reads `style_file` as
   the design language that the selected theme implements, and confirms it points at
@@ -739,9 +804,21 @@ Anima.)
   workflow in this repo.
 
 **What this costs**: Anima would produce better expressive close-up transformation
-portraits. This is recoverable — the prompt manifest is model-agnostic text, so
-those slots can be re-rendered through another backend later without rewriting the
-book. The manifest flags which slots are character splashes for exactly that reason.
+portraits.
+
+**And the prompts are not portable — correcting an earlier claim in this spec.**
+`.claude/commands/art-direction.md` requires every prompt to follow the *active*
+generator's `rules_file`, `prompt_style`, `style_prefix`, `negative_prompt`, and
+`sizes`, precisely because different generators need fundamentally different
+structures. The manifest will therefore be Ideogram-shaped natural language, not
+model-agnostic text.
+
+What survives a backend switch is the **art plan** — which images exist, where they
+sit, what each depicts, and their reserved `content/art/` paths. What does not
+survive is the prompt wording, which has to be regenerated by re-running
+`/art-direction` under the new profile. That is a cheap re-run against an unchanged
+book, not a rewrite; but it is a re-run, and this spec should not have implied
+otherwise.
 
 **The mode probe cannot see a ComfyUI server.** `.claude/commands/art-direction.md`
 (line 40) selects Generation vs. Prompt Manifest mode by probing

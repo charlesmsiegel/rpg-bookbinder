@@ -1,8 +1,16 @@
 # References
 
 Drop your game system's source books here (PDF and/or markdown conversions).
-**Nothing in this directory is ever committed** (see `.gitignore`) — Bookbinder
+**Third-party source material is never committed** (see `.gitignore`) — Bookbinder
 ships no game content, and your books are your own licensed copies.
+
+**Exception: your own original canon.** A project whose game system you wrote
+yourself has no external books to cite, and its design documents *are* the
+reference material the librarian role checks against — so they need to be in the
+repository, not only on one machine. `.gitignore` therefore re-includes
+`references/prism/`, holding PRISM's own rules, terminology, and probability
+references. If you add your own original system, add a matching negation; if you
+are dropping in someone else's published books, do not.
 
 ## Suggested layout
 
