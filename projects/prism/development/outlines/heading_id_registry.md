@@ -23,6 +23,14 @@ to hyphens.
 | 9 | The Gloom | `#the-gloom` |
 | 10 | The First Number | `#the-first-number` |
 
+> **Caution — anchors containing punctuation.** The IDs below are the ones this
+> project's link checker generates, which collapses runs of whitespace. Some
+> renderers do not: `## The roll: 2d6 + Trait` strips the `+` but keeps both
+> surrounding spaces, giving `#the-roll-2d6--trait` with two hyphens. Nothing in
+> the book links to that heading today, so nothing is broken, but check the
+> rendered output before adding a link to any heading whose text contains `+`,
+> `:` or `&`.
+
 ## Every heading
 
 | Chapter | Level | Heading | Anchor |
