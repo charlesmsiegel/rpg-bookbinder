@@ -56,6 +56,14 @@ caused.
 
 Run: `pip install "mcp<2" httpx`
 
+If that fails with `Cannot uninstall PyJWT ... RECORD file not found` (a
+Debian-packaged PyJWT the installer cannot replace), use:
+
+`pip install --ignore-installed PyJWT "mcp<2" httpx`
+
+`httpx` alone is enough for the test suite; `mcp` is needed for Task 2's
+server-import check.
+
 - [ ] **Step 2: Confirm the suite is green before changing anything**
 
 Run: `python -m unittest discover tests`
