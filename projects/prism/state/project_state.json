@@ -1,0 +1,64 @@
+{
+  "project_info": {
+    "name": "prism",
+    "type": "core rulebook",
+    "target_length": "short",
+    "created_date": "2026-08-26T21:28:18.479161",
+    "current_phase": "planning"
+  },
+  "progress": {
+    "chapters_planned": 0,
+    "chapters_completed": 0,
+    "sections_total": 0,
+    "sections_completed": 0,
+    "word_count_actual": 0,
+    "word_count_target": 0
+  },
+  "agents": {
+    "project_architect": {
+      "status": "ready",
+      "last_active": null
+    },
+    "mechanics_designer": {
+      "status": "ready",
+      "last_active": null
+    },
+    "lore_writer": {
+      "status": "ready",
+      "last_active": null
+    },
+    "reference_librarian": {
+      "status": "ready",
+      "last_active": null
+    },
+    "copy_editor": {
+      "status": "ready",
+      "last_active": null
+    },
+    "word_count_manager": {
+      "status": "ready",
+      "last_active": null
+    },
+    "consistency_checker": {
+      "status": "ready",
+      "last_active": null
+    },
+    "art_director": {
+      "status": "ready",
+      "last_active": null
+    },
+    "final_reviewer": {
+      "status": "ready",
+      "last_active": null
+    }
+  },
+  "quality_gates": {
+    "initial_draft": false,
+    "first_review": false,
+    "consistency_check": false,
+    "final_review": false,
+    "publication_ready": false
+  },
+  "last_updated": "2026-08-26T21:28:18.479287",
+  "project_title": "PRISM"
+}
