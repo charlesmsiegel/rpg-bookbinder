@@ -260,7 +260,7 @@ how deep the neglect goes. You win by emptying it.
 
 | Result | Effect on the clock |
 |---|---|
-| **Miss** | Gloom **+1**, never above its starting size. **This is the GM's move** — do not advance the clock and *also* make a separate clock move. |
+| **Miss** | Gloom **+1** if there is room. **If the clock is already full, the Star loses 1 Shine instead.** Either way **this is the GM's move** — never advance the clock *and* make a separate clock move on the same Miss. |
 | **Mixed** | Gloom **−1**, and you pay a cost (§2.6). |
 | **Hit** | Gloom **−1**, clean. |
 | **Flourish** | Gloom **−2**, clean, plus the extra. |
@@ -279,6 +279,13 @@ second scene.
 A Miss's +1 is capped at the starting size, so a bad run can undo progress but can
 never make a problem worse than it was. The Gloom does not grow; it endures. That is
 what makes it Gloom rather than a villain.
+
+**A Miss is never free.** Because clocks start full, a Miss early in a Number has no
+room to add a tick — so it takes a point of Shine off the Star instead. The Gloom
+has nowhere left to spread, so it pushes back on *you*. Without this the first
+several misses of every Number would cost nothing at all, and would be strictly
+better than a Mixed result, which always costs something. The Shine-versus-Gloom
+race has to be live from the first roll.
 
 **This is what makes the Big Finish a race**: the team's Shine draining against the
 Gloom's clock emptying, on the table, in front of everyone.
@@ -392,11 +399,20 @@ spent early and the GM moves the Number toward its Big Finish from there. If no 
 clock is running yet, the morph starts one; a transformation is itself a declaration
 that something is wrong.
 
-Before the problem arrives, in the ordinary-life opening, a morph is not a structural
-beat at all — it's flavor. Someone showing off in the kitchen. It costs the Sparkle,
-it looks fantastic, and it moves nothing. The Bridge is a position in the Number, not
-a clock time, so this rule is about where the key change *falls*, never about
-forbidding a player from reaching for it.
+Before the problem arrives, in the ordinary-life opening, a morph is not a
+transformation at all — it is a **flourish of light, and nothing more**. It costs no
+Sparkle, grants no Shine, unlocks no Radiance, has no duration, and does not count as
+having morphed. Someone showing off in the kitchen: the rainbow flares, everyone
+laughs, and it is over when the scene is. A Star who does this arrives at the Bridge
+completely unmorphed, with their real transformation still ahead of them.
+
+This matters because the alternative is a pre-buff. If an opening morph carried the
+Sparkle cost, the two Shine, the unlocked Radiance, the run-to-the-Encore duration
+*and* the no-second-morph restriction, a Star could spend the quiet scene arming
+themselves and then reach the conflict unable to perform the Bridge morph the Number
+is built around. The Bridge is a position in the Number, not a clock time — this rule
+is about where the key change *falls*, never about forbidding a player from reaching
+for it.
 
 ### 4.2 Synchronized Morph
 The whole team, together, on the shared command word the players invent in session
@@ -685,6 +701,15 @@ whose punchline is that the game is silly.
   manifest entry to take its dimensions from it rather than inventing them. Add
   `portrait`, `landscape`, `column`, and `full_page` at Ideogram-appropriate
   resolutions.
+
+  **The profile's `negative_prompt` must not contain `text`.** Ideogram was chosen
+  partly for the cover wordmark and in-world signage (§9.4), and
+  `styles/art/ideogram-v4.md` structures literal text elements deliberately. Note
+  that `.claude/commands/art-direction.md` *also* appends `text, watermark, …` to
+  every prompt from its own hardcoded list — so for the cover and any lettering
+  image, that appended `text` negative must be dropped by hand when the prompt is
+  written. Otherwise the manifest asks the generator to render a wordmark while
+  simultaneously suppressing all lettering.
 - `art.density_words_per_illustration` → `2000`.
 
   **The density governs content illustrations only, not the whole budget.**
@@ -731,8 +756,15 @@ re-admit the P1 bug above.
 
 - Exact distribution over the sum of the best `keep` of `dice` dice of `sides`
   sides, plus a flat `modifier`.
-- Returns probability of meeting `target`, plus the PRISM outcome-ladder bands
-  (mixed / hit / flourish) and the expected value.
+- Returns probability of meeting `target`, the expected value, a cumulative margin
+  table, and — system-neutrally phrased — **the chance that every kept die shows the
+  maximum face**. That last statistic is what PRISM reads as its Flourish rate, and
+  the drafting agents need it from the public tool rather than from a private test,
+  since Flourish cannot be recovered from a sum-only margin table at all.
+
+  PRISM's bands are then read directly off the margin table: Mixed at +0, Hit at +3,
+  and Flourish from the max-face line. The tool stays generic; the game's ladder is
+  applied by the reader.
 - Input validation matching the existing module's conventions (return an error
   string rather than raising).
 - Exposed as an MCP tool in `mcp_servers/mechanics.py`, delegating to `_lib`.

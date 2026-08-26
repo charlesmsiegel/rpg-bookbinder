@@ -133,6 +133,17 @@ class TestSumProbability(unittest.TestCase):
         out = mechanics_ops.calculate_sum_probability(dice=2, sides=6, target=7)
         self.assertIn("58.3%", out)
 
+    def test_publishes_the_all_max_face_statistic(self):
+        # PRISM reads this as its Flourish rate; drafting agents need it from the
+        # public tool, not from a private test.
+        out = mechanics_ops.calculate_sum_probability(dice=2, sides=6, target=7)
+        self.assertIn("maximum face", out)
+        self.assertIn("2.78%", out)
+
+    def test_all_max_face_rises_with_a_bigger_pool(self):
+        out = mechanics_ops.calculate_sum_probability(dice=4, sides=6, target=7, keep=2)
+        self.assertIn("13.19%", out)
+
     def test_notation_names_the_roll(self):
         out = mechanics_ops.calculate_sum_probability(dice=3, sides=6, modifier=1, target=9, keep=2)
         self.assertIn("best 2 of 3d6", out)
@@ -299,6 +310,15 @@ def calculate_sum_probability(
     for m in range(0, 6):
         c = sum(cnt for s, cnt in dist.items() if s + modifier >= target + m)
         lines.append(f"  +{m}: {100.0 * c / total:.1f}%")
+
+    # Systems with an "all kept dice showed the best face" special result need this
+    # figure, and it cannot be recovered from a sum-only margin table.
+    best = keep * sides
+    top = dist.get(best, 0)
+    lines += [
+        "",
+        f"Every kept die shows the maximum face ({sides}): {100.0 * top / total:.2f}%",
+    ]
     return "\n".join(lines)
 ```
 
@@ -567,8 +587,8 @@ Replace `config/system.json` with:
         "rules_file": "styles/art/ideogram-v4.md",
         "workflow_file": "styles/art/example.workflow.json",
         "style_prefix": "hyper-saturated airbrushed rainbow illustration, Lisa Frank palette, glossy chrome and neon, ",
-        "negative_prompt": "muted colors, desaturated, grimdark, photorealistic, text, watermark",
-        "prompt_style": "natural_language",
+        "negative_prompt": "muted colors, desaturated, grimdark, photorealistic, watermark",
+        "prompt_style": "natural",
         "sizes": {
           "portrait": [1024, 1024],
           "landscape": [1536, 1024],
@@ -596,15 +616,28 @@ Note `default_difficulty` stays at **6**, not 9: `calculate_dice_probability` va
 
 - [ ] **Step 4: Update the existing config test**
 
-`tests/test_config.py` line 11 asserts the checked-in config reports
-`"supplement"`. Changing `system.project_type` breaks it, and success criterion 1
-requires the whole suite green. Change that line to:
+Two existing tests assert the old configuration and will fail. Success criterion 1
+requires the whole suite green, so both are in scope.
+
+`tests/test_config.py` line 11 asserts `"supplement"`:
 
 ```python
         self.assertEqual(config.get("system.project_type"), "core rulebook")
 ```
 
-Run `python -m unittest tests.test_config -v` and confirm it passes before moving on.
+`tests/test_mechanics.py` line 30 (`test_dice_uses_config_defaults`) asserts the
+default pool output contains `5d10`. Changing `mechanics.dice.sides` to 6 makes
+that `5d6`:
+
+```python
+        self.assertIn("5d6", out)
+```
+
+Check the same test's `difficulty 6` assertion still holds — it does, because
+`default_difficulty` stays at 6.
+
+Run `python -m unittest tests.test_config tests.test_mechanics -v` and confirm both
+pass before moving on.
 
 - [ ] **Step 5: Document the new fields**
 
@@ -623,7 +656,7 @@ Expected: the dice, terminology, art, and system tests PASS. The `layout` and `v
 - [ ] **Step 7: Commit**
 
 ```bash
-git add config/system.json config/README.md tests/test_config.py tests/test_prism_config.py
+git add config/system.json config/README.md tests/test_config.py tests/test_mechanics.py tests/test_prism_config.py
 git commit -m "Configure Bookbinder for PRISM
 
 Sum-based d6 dice, Showrunner/Star terminology, the Ideogram profile with
@@ -971,19 +1004,40 @@ Run: `/init-project prism`
 
 When it asks for a title, answer **PRISM**. Accept the default directory layout.
 
-- [ ] **Step 2: Verify the skeleton**
+- [ ] **Step 2: Record the natural title**
+
+`initialize_project` stores only the slug, under `project_info.name`. But
+`/compile` (line 120) and `build_triple_spaced.py` (line 139) both read a
+**root-level `project_title`** to derive the editing PDF's filename. Without it,
+compilation is missing a required input. Set it now:
+
+```bash
+python - <<'PYEOF'
+import json
+p = "projects/prism/state/project_state.json"
+d = json.load(open(p))
+d["project_title"] = "PRISM"
+json.dump(d, open(p, "w"), indent=2)
+print("project_title:", d["project_title"])
+PYEOF
+```
+
+- [ ] **Step 3: Verify the skeleton**
 
 Run:
 ```bash
 ls -R projects/prism | head -40
 python -c "
 import json; d=json.load(open('projects/prism/state/project_state.json'))
-print('phase:', d.get('current_phase'))
+print('phase:', d.get('project_info', {}).get('current_phase'))
+print('title:', d.get('project_title'))
 "
 ```
-Expected: `state/`, `content/`, `development/`, `notes/`, `output/` all present, and the three state files exist.
+Expected: `state/`, `content/`, `development/`, `notes/`, `output/` all present, the
+three state files exist, phase prints `initialization` (**not** `None` — the phase
+lives under `project_info`, not at the state root), and title prints `PRISM`.
 
-- [ ] **Step 3: Commit**
+- [ ] **Step 4: Commit**
 
 ```bash
 git add projects/prism
@@ -1037,26 +1091,29 @@ Append to `projects/prism/development/outlines/forbidden_patterns.md`:
 
 ```markdown
 ## Terminology violations (spec section 8.1)
+Matched as whole words, so `transformation` and `transformed` — both correct —
+are not caught by the `transform` entry.
+- `transform`
 - `transforms`
 - `transforming`
-- `to transform`
 - `combined form` (lowercase — must be `Combined Form`)
 - `solo morph` (lowercase — must be `Solo Morph`)
 - `synchronized morph` (lowercase — must be `Synchronized Morph`)
 - `Gamemaster` (must be `Showrunner`)
-- `player character` (must be `Star`)
 
 ## Out-of-range values
 - `Difficulty 12` (Dazzling is 11)
 
 ## Review flags — not automatic rejections
-These need a human look rather than a blind strip, because each has a
-legitimate use:
+**These must NOT be added to the hard-reject sections above.** `/final-draft`
+treats every entry in this file with zero tolerance and fails the gate on any
+match, so a term the book is required to use once cannot be listed as forbidden.
 - `+3` — a Trait of +3 is forbidden, but "+3" appears innocently in a margin
   table or in "3 backers" phrasing. Check what it modifies.
-- `player character` — forbidden as PRISM's term for a Star, but Chapter 1
-  explains to newcomers what a player character *is* before naming them Stars.
-  That one use is correct; every other one is not.
+- `player character` — forbidden as PRISM's term for a Star, but Chapter 1 must
+  explain to a newcomer what a player character *is* before the book renames them
+  Stars. That one use is correct and required; every other one is wrong. Listing
+  it above would make a correct draft unable to pass Phase 5.
 ```
 
 - [ ] **Step 4: Verify word targets sum correctly**
@@ -1086,9 +1143,10 @@ git commit -m "Plan PRISM structure: 10 chapters, 25,000 words"
 
 Run: `python -c "
 import json; d=json.load(open('projects/prism/state/project_state.json'))
-print(d.get('current_phase'))
+print(d.get('project_info', {}).get('current_phase'))
 "`
-Expected: `planning_complete`.
+Expected: `planning_complete`. Read it from `project_info` — a top-level lookup
+returns `None` and would falsely look like the gate had not been passed.
 
 - [ ] **Step 2: Run the command**
 
@@ -1208,15 +1266,22 @@ that governs content illustrations alone.
 
 Run:
 ```bash
-while IFS= read -r pat; do
+# Only the hard-reject sections; stop at the "Review flags" heading.
+sed '/^## Review flags/,$d' projects/prism/development/outlines/forbidden_patterns.md \
+| while IFS= read -r pat; do
   case "$pat" in -\ \`*) p=$(printf '%s' "$pat" | sed 's/^- `//; s/`.*$//')
-    if grep -rnF "$p" projects/prism/content/*/final_draft.md >/dev/null 2>&1; then
-      echo "VIOLATION: $p"; grep -rnF "$p" projects/prism/content/*/final_draft.md | head -3
+    # -w so `transform` does not match the correct words `transformed`/`transformation`.
+    if grep -rnw -F "$p" projects/prism/content/*/final_draft.md >/dev/null 2>&1; then
+      echo "VIOLATION: $p"; grep -rnw -F "$p" projects/prism/content/*/final_draft.md | head -3
     fi ;;
   esac
-done < projects/prism/development/outlines/forbidden_patterns.md
+done
 echo "sweep complete"
 ```
+
+Whole-word matching is essential here: without `-w`, the `transform` entry would
+flag every correct use of `transformation` and `transformed` and the sweep would be
+unusable.
 Expected: `sweep complete` with no `VIOLATION` lines from the hard-reject
 sections. Hits under **Review flags** are not automatic failures — read each
 in context and decide. A `+3` in a margin table is fine; a `+3` Trait is not.
@@ -1266,9 +1331,15 @@ Run:
 ```bash
 ls -la projects/prism/output/
 wc -w projects/prism/output/compiled_supplement.md
-grep -c "^## " projects/prism/output/compiled_supplement.md
+# Count links inside the TOC block only — a rulebook has many level-two headings
+# in its chapter bodies, so counting every "## " would massively overcount.
+awk '/^## Table of Contents/{t=1; next} t && /^## /{exit} t' \
+  projects/prism/output/compiled_supplement.md | grep -cE '^\s*[-*0-9]+\.?\s*\['
 ```
-Expected: `compiled_supplement.md` exists, word count in the 18,750–31,250 band, and a table of contents with ten chapter entries.
+Expected: `compiled_supplement.md` exists, word count in the 18,750–31,250 band, and
+the TOC block contains **10** chapter links. If the TOC heading is worded
+differently, adjust the `awk` pattern to match it rather than falling back to
+counting every heading.
 
 - [ ] **Step 3: Verify no image references survived**
 
