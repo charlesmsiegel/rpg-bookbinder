@@ -150,12 +150,12 @@ Repeated across chapters; must match everywhere.
 | Difficulties | Easy 6, Tricky 9, Dazzling 11 |
 | Trait range | +0 to +2, permanently |
 | Starting spread | one +2, two +1, one +0 |
-| Sparkle | starts 3, maximum 5 |
+| Sparkle | starts 3; starting maximum 3, raised only by advancement to a hard cap of 5 |
 | Shine | 5 boxes |
 | Gloom clock sizes | 4, 6, 8 — each starts **full** |
 | Solo Morph | 1 Sparkle, grants 2 Shine, cap +2 while transformed |
 | Synchronized Morph | 1 Sparkle, paid in full by one Star |
 | Dimmed rescue | rescuer pays 1 Shine or 1 Sparkle; returns with 2 Shine |
 | Finisher | 1 Sparkle, doubles Gloom removed |
-| PoF at Tricky, Trait +1 | 41.7% / 68.1% / 82.6% / 90.6% (0–3 backers) |
-| Flourish | 2.78% / 7.41% / 13.19% / 19.62% (0–3 backers) |
+| PoF at Tricky, Trait +1 | 41.7% / 68.1% / 82.6% / 90.6% / 94.9% (0–4 backers) |
+| Flourish | 2.78% / 7.41% / 13.19% / 19.62% / 26.32% (0–4 backers) |

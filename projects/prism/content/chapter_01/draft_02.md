@@ -33,12 +33,6 @@ spectacular move at the end of the night is locked until every person at the
 table has had their moment. That is not a theme PRISM talks about. It is a
 trigger condition.
 
-And it has one rule that is the whole game in a sentence: **the five of you
-cannot combine into the big thing until nobody has been left out.** The
-spectacular move at the end of the night is locked until every person at the
-table has had their moment. That is not a theme PRISM talks about. It is a
-trigger condition.
-
 It is also sincere. This book is not going to nudge you in the ribs about how
 silly rainbows are. Rainbows are not silly. Bring your whole heart; you will
 need it, and so will everyone else at the table.
@@ -82,8 +76,9 @@ book is being coy about. You break the shape, and the route runs again.
 
 Not much.
 
-- **Three to five people.** One is the Showrunner and runs the world; the rest
-  play Stars. Four Stars is the sweet spot.
+- **Four to six people.** One is the Showrunner and runs the world; the rest
+  play Stars, so three to five Stars. Four is the sweet spot, and the
+  ready-made team in Chapter 6 is five.
 - **Two six-sided dice.** One pair is genuinely enough, passed around. More is
   nicer.
 - **Something to write on.** Character sheets are at the back of this book, and

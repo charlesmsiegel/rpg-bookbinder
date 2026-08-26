@@ -145,11 +145,19 @@ someone says *"we can't do this the normal way."*
 **Have an NPC say a smaller version of it.** Somebody the Stars are helping,
 admitting something minor. It gives the table permission.
 
-And if a player morphs early, in the Verse or Chorus? **That morph is the
-Bridge.** Do not block it. Roll with it: the key change came early, so move the
-Number toward its Big Finish from there. If no Gloom clock is running yet, the
-morph starts one, a transformation is itself a declaration that something is
-wrong.
+And if a player morphs early? It depends on whether there is anything to morph
+*at* yet.
+
+**Once the problem is on the table**, which is the end of the Verse at the
+latest, **that morph is the Bridge.** Do not block it. Roll with it: the key
+change came early, so move the Number toward its Big Finish from there. If no
+Gloom clock is running yet, the morph starts one, a transformation is itself a
+declaration that something is wrong.
+
+**Before the problem arrives**, in the ordinary-life opening, it is not a
+transformation at all, just a flourish of light. It costs nothing, grants
+nothing, and does not count as having morphed. Let them show off, and do not
+start a clock for it.
 
 ## Showrunner moves
 
@@ -303,7 +311,7 @@ feel inhabited, and is the single best trick in the chapter.
 
 **Keep one ordinary thing in frame.** A bin, a bus stop, a specific cracked
 paving slab. The Spectrum only feels strange in proportion to how much of the
-real world is still recognisably inside it. A scene with no anchor stops being
+everyday is still recognisably inside it. A scene with no anchor stops being
 uncanny and becomes wallpaper.
 
 ## When a session goes wrong

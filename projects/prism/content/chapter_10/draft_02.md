@@ -82,8 +82,10 @@ Let them try the sensible thing. It will be one of:
 - **Get Fen.** Heart, **Tricky**. (Wren's Signature drops this, she is
   refusing to abandon someone.)
 
-Whatever they do, it is not enough. The bus does not fight back. It simply
-keeps pulling away, and the distance to Fen is longer than it was.
+Whatever they do, it is not enough *against the bus*. If somebody gets to Fen,
+they get to Fen: she is off the road, shaken, and safe, and that sticks. What
+they cannot do is stop the thing. It does not fight back. It simply keeps
+pulling away, and the street keeps getting longer.
 
 **Use the moves:** strand someone, make the distance longer, convince them it
 was always like this. On a Miss with the clock full, which it will be, take
@@ -117,12 +119,15 @@ Turn order starts now: round the table, one action each, you between rounds.
 The bus is still pulling away and now they can catch it. Robot unicorns are
 absolutely permitted here and Toby will probably suggest it first.
 
-**Run the race.** Clock on 6, everyone's Shine visible. Say the clock out loud
-every time it moves.
+**Run the race.** The clock is wherever the Chorus left it, so 6 if that scene
+went badly and 5 if somebody landed a Hit. Everyone's Shine visible. Say the
+clock out loud every time it moves.
 
 Things to have happen:
 
-- **Fen is on the pavement still.** Reaching her is a whole action and worth it.
+- **Fen**, if nobody got to her in the Chorus, is on the pavement still, and
+  going to her costs a whole action and is worth it. If somebody did get to
+  her, she is behind them, watching, and will not go inside.
 - **The inside of the bus.** If they get aboard: rows of warm, comfortable
   people, none of them looking up, all of them absolutely fine. This is the
   image that makes players angry, in the good way.

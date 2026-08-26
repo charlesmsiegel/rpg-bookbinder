@@ -110,8 +110,10 @@ properly for the first time all night. Then:
 - **Outside the Big Finish**, where there are no rounds, it costs them the
   scene: they spend it going after the person instead of doing anything else.
 - The Dimmed Star comes back with **2 Shine**.
-- **Both** notes sound on the Chord, the rescuer's for reaching, the rescued
-  Star's for being reached.
+- **The rescued Star's note sounds** on the Chord. The rescuer's does not:
+  reaching someone is not one of the three things that sound your own note,
+  and if it were, the Chord would fill a note early and open the Combined
+  Form before everybody had actually had their moment.
 
 No roll, ever. Not a hard one, not an easy one. In a game whose entire argument
 is that people can reach each other, putting dice on the reaching would be
@@ -236,8 +238,9 @@ The rules above, running once.
 > (Marisol to 4). No roll, it simply works. She says: *"Breathe. I've got the
 > door."* Priya comes back with **2 Shine**.
 >
-> And both notes sound. Marisol's for reaching, Priya's for being reached.
-> **The Chord is full.**
+> And Priya's note sounds, for being reached. Marisol's does not; reaching
+> somebody is not one of the three things that sound your own note. Marisol
+> sounded hers earlier tonight. **The Chord is full.**
 >
 > **Danny**, last in the round, looks at the clock on 2 and at four people who
 > are all still standing, and says: *"Together?"*

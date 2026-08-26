@@ -46,7 +46,9 @@ The Showrunner names one. The player may always refuse it and lose 1 Shine inste
 
 ## Sparkle
 
-- Personal. Starts at **3**, maximum **5** (advancement only).
+- Personal. Starts at **3**. Your maximum starts at **3** too; only advancement
+  raises it, one point per two Numbers, to a hard cap of **5**. In a one-shot
+  the maximum is 3.
 - **Spend 1** to: power a Solo Morph; reroll one die; ignore 1 Shine loss; fuel a Finisher.
 - **Refresh**: when your Refrain costs you something, take back **1 Sparkle**,
   once per scene, never above maximum. Full refresh at an Encore.
@@ -63,7 +65,8 @@ The Showrunner names one. The player may always refuse it and lose 1 Shine inste
   honest with.
 
 Verified rates, Trait +1 vs Difficulty 9: **41.7%** / **68.1%** / **82.6%** /
-**90.6%** for zero through three backers.
+**90.6%** / **94.9%** for zero through four backers. Four backers is the
+five-Star case; the book's default table of four Stars tops out at three.
 
 ## Turns
 

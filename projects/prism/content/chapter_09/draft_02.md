@@ -123,6 +123,13 @@ birthday party, on a Saturday, for forty people.
 ---
 
 ## The Understudy (clock 6)
+
+**A note for the Showrunner:** This is the only Gloom that is about the Stars
+themselves rather than the town, and it needs a lighter hand than its clock
+size suggests. Never let The Understudy be contemptuous, the moment it sneers,
+it becomes a villain and stops being frightening. It should be *kind*. Check in
+before you run it, and again after.
+
 **In the everyday:** Burnout. Specifically the belief, arrived at quietly, over
 months, that your effort was never the point and the thing would have happened
 anyway.
@@ -140,11 +147,6 @@ offering to take over so they can rest.
 **When it falls:** The Star it was shadowing does one small ordinary thing
 badly, on purpose, in front of everyone, and it is fine.
 
-**A note for the Showrunner:** This is the only Gloom that is about the Stars
-themselves rather than the town, and it needs a lighter hand than its clock
-size suggests. Never let The Understudy be contemptuous, the moment it sneers,
-it becomes a villain and stops being frightening. It should be *kind*. Check in
-before you run it, and again after.
 
 ---
 

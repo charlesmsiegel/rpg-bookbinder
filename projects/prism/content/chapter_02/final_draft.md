@@ -85,10 +85,12 @@ helping you.**
 | 1 | 3d6 | 7.41% |
 | 2 | 4d6 | 13.19% |
 | 3 | 5d6 | 19.62% |
+| 4 | 6d6 | 26.32% |
 
-On your own, a Flourish is a once-a-night lightning strike. With the whole team
-behind you it is a one-in-five shot. Friendship in PRISM does not just make you
-more reliable. It makes you *spectacular*.
+On your own, a Flourish is a once-a-night lightning strike. With three friends
+behind you it is a one-in-five shot, and at a five-Star table, with four, it is
+better than one in four. Friendship in PRISM does not just make you more
+reliable. It makes you *spectacular*.
 
 ## What a Mixed result costs
 
@@ -115,8 +117,13 @@ rather than the sheet, and it is usually the best one.
 
 ## Sparkle
 
-**Sparkle** is your personal fuel. You start each Number with **3** and can
-never hold more than **5**.
+**Sparkle** is your personal fuel. You start each Number with **3**, and **3**
+is also your maximum: the Refrain refresh below tops you back up to it and
+never past it.
+
+Long play is the only thing that moves that ceiling, and it moves it slowly, to
+a hard cap of **5**. For a one-shot, which is most PRISM, your maximum is 3 and
+stays there.
 
 Spend 1 Sparkle to:
 
@@ -163,6 +170,7 @@ Here is what backing is worth, at Tricky with a +1 Trait:
 | 1 | 68.1% |
 | 2 | 82.6% |
 | 3 | 90.6% |
+| 4 | 94.9% |
 
 One friend turns a coin flip into a comfortable favourite. That is not a
 rounding error; that is the difference between the story going your way and
@@ -248,7 +256,9 @@ That rule is the whole game compressed into one sentence. In PRISM you do not
 get stronger by acquiring things. You get stronger by being known.
 
 **If you are using the ready-made Stars in [Chapter 6](#five-stars-ready-to-play)**, their Bonds are already
-written, so they can all back each other from the first scene. That is
+written, so they can back each other from the first scene, with one deliberate
+exception: Marisol and Danny, whose Bonds are blank until somebody says the
+thing. That is
 deliberate: the rule exists for Stars a table builds itself, where the honesty
 has to happen at the table before the help is available. One pair in [Chapter 6](#five-stars-ready-to-play)
 has been left deliberately unfinished so you can see the rule bite.
