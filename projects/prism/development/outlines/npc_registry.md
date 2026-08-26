@@ -102,19 +102,19 @@ Stat block shape: **Clock size** / **Everyday form** / **Spectrum body** /
 - **Canonical Stats**: Clock 4. Moves: *shorten the hours*, *lose the thing
   someone needed*, *empty a room*.
 - **Everyday form**: A library losing its funding.
-- **Chapter of Full Profile**: Chapter 9 · **References**: 7, 9
+- **Chapter of Full Profile**: Chapter 9 · **References**: 9
 
 ### The Silt — clock 6
 - **Canonical Stats**: Clock 6. Moves: *thicken*, *swallow a landmark*,
   *make it somebody else's job*.
 - **Everyday form**: A river nobody cleans.
-- **Chapter of Full Profile**: Chapter 9 · **References**: 7, 9
+- **Chapter of Full Profile**: Chapter 9 · **References**: 9
 
 ### The Long Weekend — clock 4
 - **Canonical Stats**: Clock 4. Moves: *make it easier to stay in*, *cancel a
   plan*, *offer a good excuse*.
 - **Everyday form**: A friend nobody has checked on in a month.
-- **Chapter of Full Profile**: Chapter 9 · **References**: 7, 9
+- **Chapter of Full Profile**: Chapter 9 · **References**: 9
 
 ### The Grey Ledger — clock 8
 - **Canonical Stats**: Clock 8. Moves: *reclassify*, *require a form*,
@@ -122,9 +122,20 @@ Stat block shape: **Clock size** / **Everyday form** / **Spectrum body** /
 - **Everyday form**: A community centre being quietly wound down.
 - **Chapter of Full Profile**: Chapter 9 · **References**: 9
 
-### The Understudy — clock 8
-- **Canonical Stats**: Clock 8. Moves: *offer to do it for you*, *be better at
+### Chapter 7's four sketches
+
+Chapter 7 carries four *additional* Glooms as worked examples of the conversion
+procedure. They have no stat blocks and appear nowhere else, so they need no
+registry entries — but they must not be confused with the six below:
+**The Understair** (4), **Just Us Two** (6), **The Long Grass** (6),
+**Vending** (8). Book total: ten Glooms.
+
+### The Understudy — clock 6
+- **Canonical Stats**: Clock 6. Moves: *offer to do it for you*, *be better at
   being you*, *ask why you bother*.
+- **Changed from 8 to 6 at second draft** (COMMENT-019): it is the most personal
+  subject in the book and an 8-clock made it the longest fight as well. Six
+  serves the material better.
 - **Everyday form**: Burnout — the belief that your effort was never the point.
 - **Chapter of Full Profile**: Chapter 9 · **References**: 9
 

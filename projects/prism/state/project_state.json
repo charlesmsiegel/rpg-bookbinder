@@ -4,7 +4,7 @@
     "type": "core rulebook",
     "target_length": "short",
     "created_date": "2026-08-26T21:28:18.479161",
-    "current_phase": "second_draft",
+    "current_phase": "editing",
     "current_step": 1
   },
   "progress": {
@@ -57,14 +57,14 @@
   "quality_gates": {
     "initial_draft": true,
     "first_review": true,
-    "consistency_check": false,
+    "consistency_check": true,
     "final_review": false,
     "publication_ready": false,
     "first_draft": true,
     "architectural_review": true,
     "research_enhancement": true,
-    "second_draft": false,
-    "copy_edit": false,
+    "second_draft": true,
+    "copy_edit": true,
     "final_draft": false,
     "compilation": false
   },
@@ -186,6 +186,84 @@
   },
   "planning_complete": true,
   "architect_review": {
-    "total_comments": 21
+    "total_comments": 21,
+    "resolved": 21,
+    "declined": 0
+  },
+  "word_count_results": {
+    "second_draft": {
+      "chapter_01": {
+        "words": 1893,
+        "target": 1800,
+        "ok": true
+      },
+      "chapter_02": {
+        "words": 2433,
+        "target": 3000,
+        "ok": true
+      },
+      "chapter_03": {
+        "words": 2739,
+        "target": 3200,
+        "ok": true
+      },
+      "chapter_04": {
+        "words": 2208,
+        "target": 2800,
+        "ok": true
+      },
+      "chapter_05": {
+        "words": 2409,
+        "target": 3000,
+        "ok": true
+      },
+      "chapter_06": {
+        "words": 1632,
+        "target": 1800,
+        "ok": true
+      },
+      "chapter_07": {
+        "words": 2071,
+        "target": 2500,
+        "ok": true
+      },
+      "chapter_08": {
+        "words": 2673,
+        "target": 3300,
+        "ok": true
+      },
+      "chapter_09": {
+        "words": 1749,
+        "target": 1900,
+        "ok": true
+      },
+      "chapter_10": {
+        "words": 1609,
+        "target": 1700,
+        "ok": true
+      },
+      "_total": {
+        "words": 21416,
+        "ok": true
+      }
+    }
+  },
+  "metadata_scan": {
+    "second_draft": {
+      "html_comments": 0,
+      "note_tags": 0,
+      "word_count_meta": 0,
+      "page_placeholders": 0,
+      "architect_comments": 0,
+      "result": "PASS"
+    }
+  },
+  "banned_terms_scan": {
+    "second_draft": {
+      "chapters_checked": 10,
+      "violations": 0,
+      "result": "PASS",
+      "note": "Em-dash overuse from first draft (234 book-wide vs allowance 40) resolved to 21."
+    }
   }
 }
