@@ -83,9 +83,9 @@ wants is "ask someone."
 | Result | Outcome |
 |---|---|
 | Under the Difficulty | **Miss.** It doesn't work, and the GM makes a move (below). |
-| Meets it, or beats it by 1–2 | **Mixed.** It works, but it costs — Shine, Sparkle, exposure, or time. |
+| Meets it, or beats it by 1–2 | **Mixed.** It works, but it costs (see §2.6). |
 | Beats it by 3 or more | **Hit.** Clean. |
-| **Both kept dice show 6** (on any success) | **Flourish.** Clean, and something extra: a Sparkle back, a Gloom clock rolled back a tick, or a moment that becomes true forever. |
+| **Both kept dice show 6** (on any success) | **Flourish.** Clean, hits the Gloom twice as hard, and something extra: a Sparkle back, or a moment that becomes true forever. |
 
 **Flourish is double sixes, not a margin.** A fixed margin cannot work here, and the
 first two revisions of this spec both got it wrong. Two kept d6 cap at 12 and the
@@ -180,15 +180,65 @@ warmly, as an invitation, not a gotcha.
   rescuer something.
 - Shine restores fully at an Encore scene.
 
-**Gloom** is the opposition — clocks that fill. Sizes: 4 (a bad afternoon), 6 (a
-real problem), 8 (a season's antagonist). When a Gloom clock fills, the *world*
-gets worse: a place loses its color, a person forgets what they loved, a rule of
+**Gloom** is the opposition — clocks that both sides push (§2.7). Sizes: 4 (a bad
+afternoon), 6 (a real problem), 8 (a season's antagonist). If a Gloom clock fills,
+the *world* gets worse: a place loses its color, a person forgets what they loved, a rule of
 the setting bends. Consequences land on the world and on NPCs, not on PC hit
 points.
 
 Gloom is not evil. It is what happens when something stops being cared about.
 
 ---
+
+### 2.6 What a Mixed result costs
+
+Mixed is the most common successful outcome, so it needs a procedure rather than a
+mood. **The GM names one cost from this list. The player may always refuse it and
+lose 1 Shine instead.**
+
+| Cost | Magnitude |
+|---|---|
+| **Shine** | Lose 1. |
+| **Sparkle** | Spend 1. If you have none, this cost cannot be chosen. |
+| **Exposure** | Something true comes out — a secret, a position, a feeling. No number; the fiction changes. |
+| **Time** | The Gloom gains 1 tick (§2.7). The thing you're fighting got a beat while you were busy. |
+
+The player's 1-Shine substitution guarantees every Mixed is resolvable, keeps the
+GM from choosing a cost the player finds unbearable, and puts a hard number on the
+resource economy so the probabilities in §9.2 mean something.
+
+### 2.7 Beating a Gloom
+
+A Gloom clock is a **tug-of-war on one track**, not a doom timer. It is the
+monster's hold on the thing it has taken, and both sides push it.
+
+| Result | Effect on the clock |
+|---|---|
+| **Miss** | Gloom **+1**, and the GM makes a move. |
+| **Mixed** | Gloom **−1**, and you pay a cost (§2.6). |
+| **Hit** | Gloom **−1**, clean. |
+| **Flourish** | Gloom **−2**, clean, plus the extra. |
+
+- **Clock empties → you win.** The monster breaks and the thing it held comes back:
+  the library reopens, the neighbour answers the door, the river runs clear.
+- **Clock fills → the Gloom wins this Number.** Nobody dies. The world simply keeps
+  the loss, and that place stays grey until someone comes back for it.
+
+Clocks are sized 4 (a bad afternoon), 6 (a real problem), or 8 (a season's
+antagonist), and start part-filled — the GM fills them during the Verse and Chorus
+through Gloom moves and misses, so the Big Finish opens with real ground to make up.
+
+**This is what makes the Big Finish a race**: the team's Shine draining against the
+Gloom's clock emptying, on the table, in front of everyone.
+
+#### Finishers
+
+A **Finisher** requires you to be transformed and costs **1 Sparkle**: it **doubles
+the Gloom your roll removes**. A Hit finisher takes 2; a Flourish finisher takes 4.
+
+The **Combined Form's finisher empties the clock outright.** That is why it is the
+climax, and why the Chord gates it — the team's one guaranteed win condition is the
+one they can only reach by making sure nobody was left out.
 
 ## 3. Characters
 
@@ -223,6 +273,12 @@ One character. Costs **1 Sparkle**. Declared with your personal phrase. Unlocks
 your Radiance abilities and **grants 2 Shine, raising your cap by the same 2** for
 the scene — the boxes arrive filled, not empty. Available any time you can speak.
 
+**You can only be transformed once.** The Shine is granted on *entering* the
+transformed state and never again. Morphing while already transformed does nothing
+and costs nothing — you are already there — and you may not revert and re-morph to
+farm the grant. Without this, three Sparkle converts into six Shine and the
+five-box pressure the whole conflict system rests on evaporates.
+
 The book instructs the table to give a Solo Morph *airtime* — the morphing player
 narrates, uninterrupted, and nobody rolls during it.
 
@@ -255,6 +311,15 @@ and the Bridge structure entirely.
 ### 4.3 Combined Form
 The team fuses: one sheet, one Trait array (best of each, +1), one pooled Shine,
 one enormous finisher. Lasts until the Gloom clock resolves.
+
+**Pooled Shine is the sum of the team's *current* Shine**, not their caps. A team
+that arrives battered fuses into something fragile, and a team that arrives intact
+fuses into something formidable — the Combined Form is as strong as whatever you
+have left, which is the right kind of dramatic.
+
+**On dissolution**, divide the remaining pooled Shine as evenly as possible among
+the Stars; the players choose who takes any remainder. Anyone who ends on 0 is
+**Dimmed**, and needs reaching like anyone else.
 
 **The gate is the Chord.** Three conditions, all required:
 
@@ -598,6 +663,20 @@ portraits. This is recoverable — the prompt manifest is model-agnostic text, s
 those slots can be re-rendered through another backend later without rewriting the
 book. The manifest flags which slots are character splashes for exactly that reason.
 
+**The mode probe cannot see a ComfyUI server.** `.claude/commands/art-direction.md`
+(line 40) selects Generation vs. Prompt Manifest mode by probing
+`mcp__art__get_models` / `mcp__art__get_options` — but both call `_require_a1111()`
+and return an error immediately for any non-`a1111` backend
+(`mcp_servers/art.py` lines 706–717 and 809–820). Since `ideogram-v4` is a
+`comfyui` profile, that probe **always** fails and the command **always** falls back
+to Prompt Manifest Mode, without ever contacting a server.
+
+For this project that is exactly the behaviour we want, and it is load-bearing
+rather than incidental — worth stating plainly instead of implying we chose manifest
+mode by preference. But it also means a later ComfyUI render can never be
+auto-detected: anyone picking these prompts up will need a ComfyUI-aware health
+check added to the mode selection, or will have to force Generation Mode by hand.
+
 **Caveat on "already exists".** The `ideogram-v4` profile's prompting rules are
 complete, but its `workflow_file` points at `styles/art/example.workflow.json`,
 whose own `_readme` calls it a template to replace — it has no model loader, no
@@ -662,10 +741,31 @@ outright on a missing `content/art/cover.png` unless a deferred cover was
 explicitly chosen (line 86). Skipping the phase entirely, as this spec's first
 revision proposed, would have stalled the pipeline at the final step.
 
-The compiled book therefore carries art *slots* — placement markers with
-descriptive captions and a ready-to-run prompt for each — and no generated
-images. The art manifest is not populated. Compile is expected to emit its
-coverless-output warning; that is the correct outcome here, not a failure.
+**What the compiled book actually contains — corrected.** Earlier revisions of this
+spec claimed the book would carry visible art *slots*. It will not.
+`.claude/commands/compile.md` Step 2.4 **strips** every image reference whose file is
+missing whenever `development/art_prompts.md` exists. So the compiled manuscript
+comes out clean: no images, and no placeholder markers either.
+
+The art record lives in two files beside the book, not inside it:
+
+- **`development/art_prompts.md`** — the authoritative record: placement, size, and
+  the full positive/negative prompt for every planned image.
+- **`development/art_manifest.json`** — **populated**, contrary to this spec's
+  earlier claim. `.claude/commands/art-direction.md` (lines 79–83) requires
+  `update_art_manifest` for every planned image in Prompt Manifest Mode, with
+  `source="prompt_only"` and `image_path` set to its intended
+  `content/art/[filename].png`. Those reserved paths are what lets a later run
+  generate and drop every image into place without redoing the prompt work.
+  Discarding them would throw away the main deliverable of the phase.
+
+`source="prompt_only"` is the field that distinguishes a planned image from a
+generated one; the manifest has no separate status field. Compile is expected to
+emit its coverless-output warning; that is the correct outcome here, not a failure.
+
+**Emitting visible slots would require a compile change.** We are not making one —
+the clean manuscript is the better artifact, and the manifest is a more useful
+record than an inline `[ART HERE]` marker.
 
 Agent roles are executed inline in the driving session rather than dispatched as
 subagents, per the session's configuration.
@@ -693,8 +793,11 @@ subagents, per the session's configuration.
 
 ## 12. Out of Scope
 
-- Image *generation* and the populated art manifest (no image models available).
-  The deferred prompt manifest is in scope; the images it describes are not.
+- Image *generation* (no image models available). The prompt manifest **and** the
+  `source="prompt_only"` manifest records are in scope; only the images themselves
+  are not.
+- Emitting visible art placeholders into the compiled manuscript, which would
+  require changing `/compile`'s image-stripping behaviour.
 - Any supplement beyond the core book.
 - Reworking Bookbinder's existing MCP servers beyond the single additive function
   in §9.2, and beyond the two drafting-prompt corrections in §9.5.
