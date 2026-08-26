@@ -4,7 +4,7 @@
     "type": "core rulebook",
     "target_length": "short",
     "created_date": "2026-08-26T21:28:18.479161",
-    "current_phase": "first_draft",
+    "current_phase": "review",
     "current_step": 1
   },
   "progress": {
@@ -13,7 +13,8 @@
     "sections_total": 0,
     "sections_completed": 0,
     "word_count_actual": 0,
-    "word_count_target": 0
+    "word_count_target": 0,
+    "chapters_drafted": 10
   },
   "agents": {
     "project_architect": {
@@ -54,12 +55,12 @@
     }
   },
   "quality_gates": {
-    "initial_draft": false,
+    "initial_draft": true,
     "first_review": false,
     "consistency_check": false,
     "final_review": false,
     "publication_ready": false,
-    "first_draft": false,
+    "first_draft": true,
     "architectural_review": false,
     "research_enhancement": false,
     "second_draft": false,
