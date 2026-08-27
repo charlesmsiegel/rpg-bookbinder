@@ -4,9 +4,9 @@
     "type": "core rulebook",
     "target_length": "short",
     "created_date": "2026-08-26T21:28:18.479161",
-    "current_phase": "final",
+    "current_phase": "complete",
     "current_step": 1,
-    "current_phase_label": "final_draft_complete"
+    "current_phase_label": "completed"
   },
   "progress": {
     "chapters_planned": 10,
@@ -60,16 +60,16 @@
     "first_review": true,
     "consistency_check": true,
     "final_review": true,
-    "publication_ready": false,
+    "publication_ready": true,
     "first_draft": true,
     "architectural_review": true,
     "research_enhancement": true,
     "second_draft": true,
     "copy_edit": true,
     "final_draft": true,
-    "compilation": false
+    "compilation": true
   },
-  "last_updated": "2026-08-27T04:26:26.583952",
+  "last_updated": "2026-08-27T06:43:59.639125",
   "project_title": "PRISM",
   "writing_style": {
     "source": "picked",
@@ -428,5 +428,49 @@
       "resolution": "recorded rather than backfilled. Writing them now would be manufacturing a paper trail after the fact. The design rationale that would have lived in them is genuinely recorded elsewhere: docs/superpowers/specs/2026-08-26-prism-core-rulebook-design.md for the mechanics, development/review_feedback/architect_comments_manifest.md for what changed at second draft and why, and state/messages.json for the decision log.",
       "gate_impact": "first_draft and second_draft gates were passed without this input. Flagged here so completeness is not overstated."
     }
+  },
+  "status": "completed",
+  "compilation": {
+    "date": "2026-08-27",
+    "compiled_words": 21529,
+    "source_words": 21365,
+    "images_embedded": 33,
+    "art_inline_placements": 22,
+    "validation": {
+      "forbidden_patterns": 0,
+      "broken_links": 0,
+      "duplicate_heading_ids": 0,
+      "missing_images": 0,
+      "headings": 129,
+      "internal_links": 45,
+      "concatenation_artifacts": 0
+    },
+    "artifacts": {
+      "compiled_supplement.md": 126912,
+      "prism.docx": 10732660,
+      "prism.epub": 11142639,
+      "prism.pdf": 11597592,
+      "editing_pdf": "C:/Users/charl/Documents/rpg-bookbinder-editing/PRISM.pdf (11,438,925)"
+    },
+    "pages": {
+      "styled": 102,
+      "triple_spaced": 160,
+      "ratio": 1.57,
+      "note": "Below the 2.5x guideline, but the spacing is correct. A controlled render of identical prose at 1.35 vs 3.0 gives exactly 2.0x (6 pages vs 12). The document ratio is diluted because ~24 pages are full-page images that occupy the same space in both, 129 headings force page breaks, and tables are fixed at 1.5 leading in the editing template. The 2.5x guideline assumes a text-only book."
+    },
+    "toolchain": {
+      "docx": "node scripts/export-docx.js, prism theme",
+      "epub": "pandoc 3.9 (pypandoc-binary) with scripts/epub.css",
+      "pdf": "pandoc HTML5 + scripts/pdf-template.html, printed by tools/html_to_pdf.py",
+      "renderer_note": "weasyprint could not be used: it needs the GTK/Pango stack, which is a system-level install absent on this machine. Playwright's Chromium renders instead and also supplies footer page numbers, which Chromium's CSS paged-media support cannot."
+    },
+    "export_variant": "Exports embed downscaled JPEGs from compiled_supplement.export.md; the PNG masters stay referenced by compiled_supplement.md. Art 85.2 MB -> 11.0 MB, which took the DOCX from 82 MB to 10.7 MB and the EPUB from 88 MB to 11.1 MB.",
+    "repo_fixes": [
+      "scripts/pdf-template.html had line-height 3.0, making the reading PDF triple-spaced and the ratio check a no-op; now 1.35.",
+      "build_triple_spaced.py wrote its styled HTML to a temp dir, so every relative image path broke; a CSS rule then hid the cover to mask it. HTML now written beside the markdown and the cover is shown.",
+      "build_triple_spaced.py read/wrote without encoding, failing on Windows cp1252 against the book's typography.",
+      "Both PDF paths rendered the TOC before the cover; the cover is now page 1.",
+      "pandoc implicit_figures printed each image's alt text as a visible caption ('Cover' under the cover); disabled."
+    ]
   }
 }

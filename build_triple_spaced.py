@@ -9,7 +9,9 @@ shared destination instead.
 import argparse
 import json
 import re
+import shutil
 import subprocess
+import sys
 import tempfile
 from pathlib import Path
 
@@ -111,15 +113,19 @@ hr {{
   width: 80%;
 }}
 a {{ color: #000; text-decoration: none; }}
-img {{ max-width: 100%; }}
+img {{ max-width: 100%; max-height: 8.5in; object-fit: contain; }}
 nav#TOC {{ page-break-after: always; line-height: 2.0; }}
 nav#TOC h1 {{ page-break-before: avoid; }}
 nav#TOC ul {{ list-style: none; padding-left: 0; }}
 nav#TOC ul ul {{ padding-left: 0.3in; }}
 nav#TOC li {{ margin: 4pt 0; line-height: 2.0; }}
 
-/* Image references with broken paths get hidden */
-img[alt="Cover"] {{ display: none; }}
+/* The cover is the first page of the editing copy, at full width. It used to be
+   hidden here because the styled HTML was written to a temp directory, so every
+   relative image path was broken; the HTML is now written beside the markdown
+   and the paths resolve. */
+img[alt="Cover"] {{ display: block; width: 100%; max-height: 8.8in;
+                    object-fit: contain; page-break-after: always; }}
 </style>
 </head>
 <body>
@@ -135,7 +141,7 @@ def get_natural_title(project_dir: Path, md_path: Path) -> str:
     state = project_dir / 'state' / 'project_state.json'
     if state.exists():
         try:
-            d = json.loads(state.read_text())
+            d = json.loads(state.read_text(encoding='utf-8'))
             t = d.get('project_title') or d.get('title')
             if t:
                 return t
@@ -143,7 +149,7 @@ def get_natural_title(project_dir: Path, md_path: Path) -> str:
             pass
     # Fallback: first H1 of the markdown
     if md_path.exists():
-        for line in md_path.read_text().split('\n')[:30]:
+        for line in md_path.read_text(encoding='utf-8').split('\n')[:30]:
             m = re.match(r'^#\s+(.+?)\s*(?:\{#.*?\})?\s*$', line)
             if m:
                 return m.group(1)
@@ -160,6 +166,27 @@ def safe_filename(title: str) -> str:
     return cleaned + '.pdf'
 
 
+def _pdf_renderer():
+    """Return a callable (html, pdf) -> argv, or None if nothing can render.
+
+    weasyprint is preferred but needs the GTK/Pango stack, which is a
+    system-level install and is commonly absent on Windows. tools/html_to_pdf.py
+    is the fallback: Playwright's Chromium, which also gives real footer page
+    numbers (Chromium ignores CSS paged-media counters).
+    """
+    if shutil.which('weasyprint'):
+        return lambda html, pdf: ['weasyprint', str(html), str(pdf)]
+    fallback = Path(__file__).resolve().parent / 'tools' / 'html_to_pdf.py'
+    if fallback.exists():
+        try:
+            import playwright  # noqa: F401
+        except ImportError:
+            return None
+        return lambda html, pdf: [sys.executable, str(fallback), str(html),
+                                  str(pdf), '--footer', '--margin', '1in']
+    return None
+
+
 def build_pdf(md_path: Path, title: str, output_path: Path) -> tuple[bool, str]:
     """Build a triple-spaced PDF from the given markdown file."""
     with tempfile.TemporaryDirectory() as tmpdir:
@@ -171,7 +198,10 @@ def build_pdf(md_path: Path, title: str, output_path: Path) -> tuple[bool, str]:
         try:
             result = subprocess.run(
                 ['pandoc', str(md_path),
-                 '--from', 'markdown-yaml_metadata_block',
+                 # -implicit_figures: otherwise pandoc wraps every image in a <figure>
+                 # and renders its alt text as a visible caption, so the
+                 # cover printed the word "Cover" underneath it.
+                 '--from', 'markdown-yaml_metadata_block-implicit_figures',
                  '--to', 'html5',
                  '--toc', '--toc-depth=3',
                  '-o', str(html_full),
@@ -185,7 +215,7 @@ def build_pdf(md_path: Path, title: str, output_path: Path) -> tuple[bool, str]:
             return False, 'pandoc timeout'
 
         # Extract body and toc from pandoc-generated HTML
-        full_html = html_full.read_text()
+        full_html = html_full.read_text(encoding='utf-8')
         body_match = re.search(r'<body[^>]*>(.*?)</body>', full_html, re.DOTALL)
         if not body_match:
             return False, 'pandoc html missing body'
@@ -196,21 +226,39 @@ def build_pdf(md_path: Path, title: str, output_path: Path) -> tuple[bool, str]:
         if toc_match:
             body_inner = body_inner.replace(toc_match.group(1), '')
 
-        # Wrap in our triple-spaced template
-        styled_html = HTML_TEMPLATE.format(title=title, toc=toc_html, body=body_inner)
-        styled_path = tmp / 'styled.html'
-        styled_path.write_text(styled_html)
+        # The cover must be the first page, ahead of the table of contents.
+        # Pandoc emits the TOC before the body, so hoist a leading cover image
+        # out of the body and render it above the TOC.
+        cover_match = re.search(
+            r'<(?:figure|p)[^>]*>\s*(<img[^>]*alt="Cover"[^>]*/?>)'
+            r'(?:\s*<figcaption.*?</figcaption>)?\s*</(?:figure|p)>',
+            body_inner, re.DOTALL | re.IGNORECASE)
+        if cover_match:
+            body_inner = body_inner.replace(cover_match.group(0), '', 1)
+            toc_html = cover_match.group(1) + '\n' + toc_html
 
-        # Run weasyprint
+        # Wrap in our triple-spaced template. This is written NEXT TO the source
+        # markdown, not into the temp dir: the compiled document references its
+        # artwork by relative path, so a styled.html anywhere else resolves none
+        # of the images — including the cover, which must be the first page.
+        styled_html = HTML_TEMPLATE.format(title=title, toc=toc_html, body=body_inner)
+        styled_path = md_path.parent / '.triple_spaced_tmp.html'
+        styled_path.write_text(styled_html, encoding='utf-8')
+
         try:
-            result = subprocess.run(
-                ['weasyprint', str(styled_path), str(output_path)],
-                capture_output=True, text=True, timeout=300
-            )
-            if result.returncode != 0:
-                return False, f'weasyprint failed: {result.stderr[:300]}'
-        except subprocess.TimeoutExpired:
-            return False, 'weasyprint timeout'
+            renderer = _pdf_renderer()
+            if renderer is None:
+                return False, ('no PDF renderer: install weasyprint, or Playwright '
+                               'with a Chromium build for tools/html_to_pdf.py')
+            try:
+                result = subprocess.run(renderer(styled_path, output_path),
+                                        capture_output=True, text=True, timeout=600)
+                if result.returncode != 0:
+                    return False, f'pdf render failed: {(result.stderr or result.stdout)[:300]}'
+            except subprocess.TimeoutExpired:
+                return False, 'pdf render timeout'
+        finally:
+            styled_path.unlink(missing_ok=True)
 
         if not output_path.exists() or output_path.stat().st_size == 0:
             return False, 'output file missing or empty'

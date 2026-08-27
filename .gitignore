@@ -21,3 +21,10 @@ projects/*/state/*.backup_*.json
 
 # ComfyOrg API key for tools/generate_ideogram.py — never commit
 .comfy_api_key
+
+# Compiled exports are build artifacts, rebuilt by /compile from the sources
+projects/*/output/*.docx
+projects/*/output/*.epub
+projects/*/output/*.pdf
+projects/*/output/art/
+projects/*/output/*.export.md

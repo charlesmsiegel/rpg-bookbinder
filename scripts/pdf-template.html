@@ -9,13 +9,21 @@
   margin: 0.88in 0.94in 1.00in 0.75in;
   @bottom-center { content: counter(page); font-family: "Georgia", "Book Antiqua", serif; font-size: 9pt; color: #1A1A1A; }
 }
-@page :first { @bottom-center { content: none; } margin-top: 3in; }
+/* No 3in drop on the first page: the cover image is the first element and
+   a tall image plus that margin overflowed onto page 2, leaving page 1
+   blank. */
+@page :first { @bottom-center { content: none; } }
 
 body {
   font-family: "Georgia", "Book Antiqua", serif;
   font-size: 11pt;
   color: #1A1A1A;
-  line-height: 3.0;
+  /* Reading copy: normal leading. The triple-spaced editorial copy is a
+     separate artifact built by build_triple_spaced.py, which sets 3.0 for
+     body text and 1.4 for headings. This template previously also carried
+     3.0, which made the reading PDF triple-spaced and reduced /compile's
+     "editing PDF should be ~3x the page count" check to a no-op. */
+  line-height: 1.35;
   text-align: justify;
   orphans: 3;
   widows: 3;
@@ -114,6 +122,12 @@ img { max-width: 100%; height: auto; }
 #TOC a { color: #37474F; font-family: "Book Antiqua", "Palatino Linotype", Palatino, serif; font-size: 12pt; }
 #TOC ul ul a { font-family: "Georgia", "Book Antiqua", serif; font-size: 11pt; color: #1A1A1A; }
 #TOC ul ul { padding-left: 0.2in; }
+
+/* Keep any single image inside one page so it cannot push the page that
+   should carry it onto the next one. */
+img { max-width: 100%; max-height: 8.9in; object-fit: contain; }
+img[alt="Cover"] { display: block; width: 100%; max-height: 9.2in;
+                    object-fit: contain; page-break-after: always; }
 </style>
 </head>
 <body>

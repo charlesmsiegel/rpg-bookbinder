@@ -28,5 +28,11 @@
     "agent": "art_director",
     "type": "decision",
     "message": "ART_COMPLETE. All 33 images present in content/art/, generated locally on Ideogram 4 through ComfyUI at no per-image cost. Four rendering passes: 18 usable from the first, then re-cuts for refusals and quality. Gender parity fixed — canon is Wren, Priya and Marisol she/her and Toby and Danny he/him, and the first pass had rendered every figure male because the captions asked for 'ungendered presentation'. Style pushed harder toward Lisa Frank. Cover remains the algorithmic 'Refraction'."
+  },
+  {
+    "timestamp": "2026-08-27T06:43:59.661562",
+    "agent": "project_architect",
+    "type": "decision",
+    "message": "COMPILATION_READY. 21,529 words compiled from 10 chapters with 33 images embedded (1 cover, 10 openers, 11 portraits, 11 content illustrations; 22 placed inline). Validation clean: 0 forbidden patterns, 0 broken links, 0 duplicate heading ids, 0 missing images, cover first in every format. Exports: markdown, DOCX, EPUB, PDF, plus a triple-spaced editing PDF. Five pre-existing defects in the export toolchain were fixed to get here."
   }
 ]
