@@ -22,5 +22,11 @@
     "agent": "consistency_checker",
     "type": "decision",
     "message": "Fourth review round resolved. The Formation restriction was propagated into references/prism/00-core-rules.md, which round three had left contradicting the corrected Chapter 4. Backing eligibility no longer resets each Number: honesty, once had, persists, which is what canon says and what the pregen paragraph assumes. The character sheet gained the two bracketed morphed-Shine boxes and its Sparkle track was corrected to the real starting maximum of 3, as was Chapter 10's Quick Reference. initialize_project now seeds one gate vocabulary so a finished project reports 7/7 rather than 7/12, and pass_quality_gate resolves the next gate inside the caller's vocabulary instead of across both."
+  },
+  {
+    "timestamp": "2026-08-27T04:26:26.617352",
+    "agent": "art_director",
+    "type": "decision",
+    "message": "ART_COMPLETE. All 33 images present in content/art/, generated locally on Ideogram 4 through ComfyUI at no per-image cost. Four rendering passes: 18 usable from the first, then re-cuts for refusals and quality. Gender parity fixed — canon is Wren, Priya and Marisol she/her and Toby and Danny he/him, and the first pass had rendered every figure male because the captions asked for 'ungendered presentation'. Style pushed harder toward Lisa Frank. Cover remains the algorithmic 'Refraction'."
   }
 ]

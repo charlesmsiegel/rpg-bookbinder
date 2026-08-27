@@ -449,12 +449,12 @@ Tone keywords: sugarpop, sincere, rainbow, loud, kind, unembarrassed.
 
 ```json
 {
-  "high_level_description": "Five colour-coded full-length silhouettes stand in a loose row against a plain white background: magenta, cyan, sunburst yellow, violet and mint green, each in a distinct stance. A roster page, flat and poster-like, almost a colour swatch.",
+  "high_level_description": "A roster poster for a magical-girl and sentai roleplaying game: five young heroes standing together in a row against a rainbow gradient, three young women and two young men, colour coded magenta, cyan, sunburst yellow, violet and mint green. Glossy airbrushed poster art, each hero in a confident pose.",
   "style_description": {
-    "aesthetics": "Flat poster-style airbrushed illustration, Lisa Frank palette, clean vector-like silhouettes against white, almost a colour swatch.",
-    "lighting": "Even flat studio light, no shadows.",
-    "photo": "Clean airbrushed illustration. No film grain, no halftone.",
-    "medium": "Airbrush illustration",
+    "aesthetics": "Full 1990s Lisa Frank airbrush poster art. Hyper-saturated rainbow gradients, iridescent holographic sheen, candy-bright neon, glossy chrome bevelled edges, scattered star-sparkles and lens flares, glitter drifting through the air, dreamy prismatic bloom. Joyful, sincere and unembarrassed. Never muted, never ironic, never grim.",
+    "lighting": "Prismatic rainbow glow with neon rim light and bright star-sparkle highlights, over deep magenta-into-violet gradients.",
+    "photo": "Glossy airbrushed poster illustration. No film grain, no halftone.",
+    "medium": "Airbrush illustration on poster stock",
     "color_palette": [
       "#FF2D95",
       "#00C8F0",
@@ -464,17 +464,17 @@ Tone keywords: sugarpop, sincere, rainbow, loud, kind, unembarrassed.
     ]
   },
   "compositional_deconstruction": {
-    "background": "Flat white, no depth, no shadow.",
+    "background": "A broad horizontal rainbow gradient sweeping magenta through cyan into mint, scattered with star-sparkles and drifting glitter.",
     "elements": [
       {
         "type": "obj",
         "bbox": [
-          60,
+          40,
           300,
-          964,
-          1240
+          990,
+          1290
         ],
-        "desc": "Five evenly spaced standing silhouettes, filled with flat saturated colour, no facial detail, each posed differently.",
+        "desc": "A row of five costumed heroes standing shoulder to shoulder across the frame: a magenta young woman in a long streaming coat, a cyan young man on skates holding a skateboard, a sunburst yellow young woman in a coat of brass clockwork, a violet young woman standing perfectly still, and a mint green young man with his hands in his pockets. Airbrushed in glossy rainbow with chrome edging.",
         "color_palette": [
           "#FF2D95",
           "#00C8F0",
@@ -546,12 +546,12 @@ Tone keywords: sugarpop, sincere, rainbow, loud, kind, unembarrassed.
 
 ```json
 {
-  "high_level_description": "A Showrunner's-eye view across a kitchen table: dice, a hand-drawn clock on paper, five character sheets, mugs, and spectrum light leaking in from off-frame. Warm, domestic and lived-in.",
+  "high_level_description": "A close three-quarter still life of a tabletop roleplaying game in progress: a heap of glossy iridescent rainbow dice catching the light, a chunky ceramic mug, and a pencil, all on a polished wooden surface. Shot close and low so the dice fill the frame. Glittering Lisa Frank airbrush.",
   "style_description": {
-    "aesthetics": "Hyper-saturated airbrushed rainbow illustration in a 1990s Lisa Frank poster idiom. Glossy chrome bevels, neon rim light, prismatic gradients, high-gloss trapper-keeper artwork. Sincere and unembarrassed, never ironic.",
-    "lighting": "Warm low lamplight and kitchen overheads, with spectrum light leaking in from off-frame.",
-    "photo": "Clean airbrushed illustration. No film grain, no halftone.",
-    "medium": "Airbrush illustration",
+    "aesthetics": "Full 1990s Lisa Frank airbrush poster art. Hyper-saturated rainbow gradients, iridescent holographic sheen, candy-bright neon, glossy chrome bevelled edges, scattered star-sparkles and lens flares, glitter drifting through the air, dreamy prismatic bloom. Joyful, sincere and unembarrassed. Never muted, never ironic, never grim.",
+    "lighting": "Prismatic rainbow glow with neon rim light and bright star-sparkle highlights, over deep magenta-into-violet gradients.",
+    "photo": "Glossy airbrushed poster illustration. No film grain, no halftone.",
+    "medium": "Airbrush illustration on poster stock",
     "color_palette": [
       "#FF2D95",
       "#00C8F0",
@@ -561,49 +561,22 @@ Tone keywords: sugarpop, sincere, rainbow, loud, kind, unembarrassed.
     ]
   },
   "compositional_deconstruction": {
-    "background": "A wooden kitchen table under a low warm pendant lamp, the rest of the room falling away into soft dark, coloured light entering from the left edge.",
+    "background": "A polished wooden tabletop filling the frame, falling away into soft rainbow bokeh and drifting glitter at the top edge.",
     "elements": [
       {
         "type": "obj",
         "bbox": [
           120,
-          700,
-          500,
-          1050
+          520,
+          920,
+          1180
         ],
-        "desc": "Five paper character sheets fanned out, handwritten, one with a corner folded over.",
+        "desc": "A generous heap of glossy six-sided dice in rainbow holographic finishes, chrome pips, scattered across polished wood with a ceramic mug behind them and a yellow pencil lying alongside.",
         "color_palette": [
-          "#F4EFE4",
-          "#2B2B2B"
-        ]
-      },
-      {
-        "type": "obj",
-        "bbox": [
-          540,
-          760,
-          760,
-          980
-        ],
-        "desc": "A hand-drawn circle divided into six segments on a scrap of paper, some segments crossed through in biro.",
-        "color_palette": [
-          "#F4EFE4",
-          "#1A1A1A",
-          "#FF2D95"
-        ]
-      },
-      {
-        "type": "obj",
-        "bbox": [
-          760,
-          620,
-          950,
-          900
-        ],
-        "desc": "Two mugs and a scatter of six-sided dice on the wood.",
-        "color_palette": [
-          "#FFFFFF",
-          "#00C8F0"
+          "#FF2D95",
+          "#00C8F0",
+          "#FFD400",
+          "#FFFFFF"
         ]
       }
     ]
@@ -620,12 +593,12 @@ Tone keywords: sugarpop, sincere, rainbow, loud, kind, unembarrassed.
 
 ```json
 {
-  "high_level_description": "Seen from the pavement: a bus the length of a whole street, three storeys of chrome and rust, headlights like two dead suns. It is always pulling away. It must read as leaving, never as charging.",
+  "high_level_description": "An enormous bus as long as a whole street and three storeys tall, chrome and rust, seen from the pavement as it draws away into the distance. Rendered in full Lisa Frank rainbow airbrush. It is always leaving.",
   "style_description": {
-    "aesthetics": "Hyper-saturated airbrushed rainbow illustration in a 1990s Lisa Frank poster idiom. Glossy chrome bevels, neon rim light, prismatic gradients, high-gloss trapper-keeper artwork. Sincere and unembarrassed, never ironic.",
-    "lighting": "Neon rim light and internal prismatic glow against deep violet night, with ordinary sodium streetlight wherever the everyday world shows through.",
-    "photo": "Clean airbrushed illustration. No film grain, no halftone.",
-    "medium": "Airbrush illustration",
+    "aesthetics": "Full 1990s Lisa Frank airbrush poster art. Hyper-saturated rainbow gradients, iridescent holographic sheen, candy-bright neon, glossy chrome bevelled edges, scattered star-sparkles and lens flares, glitter drifting through the air, dreamy prismatic bloom. Joyful, sincere and unembarrassed. Never muted, never ironic, never grim.",
+    "lighting": "Prismatic rainbow glow with neon rim light and bright star-sparkle highlights, over deep magenta-into-violet gradients.",
+    "photo": "Glossy airbrushed poster illustration. No film grain, no halftone.",
+    "medium": "Airbrush illustration on poster stock",
     "color_palette": [
       "#FF2D95",
       "#00C8F0",
@@ -635,17 +608,17 @@ Tone keywords: sugarpop, sincere, rainbow, loud, kind, unembarrassed.
     ]
   },
   "compositional_deconstruction": {
-    "background": "A spectrum-lit street at night stretching to an impossible vanishing point, the far end of the bus disappearing into gradient haze.",
+    "background": "A rainbow spectrum street at night stretching to a far vanishing point, glitter banked in the gutters, star-sparkles across a magenta and violet sky.",
     "elements": [
       {
         "type": "obj",
         "bbox": [
-          60,
-          400,
-          1024,
-          1150
+          40,
+          380,
+          990,
+          1180
         ],
-        "desc": "An enormous articulated bus in three-quarter rear view, receding, chrome panels streaked with rust, every window lit warm.",
+        "desc": "A colossal articulated bus seen from behind and to one side, drawing away down the street, iridescent chrome panels streaked with rust, every window lit warm gold, tail lights glowing red.",
         "color_palette": [
           "#C9D2DA",
           "#B5651D",
@@ -728,12 +701,12 @@ Tone keywords: sugarpop, sincere, rainbow, loud, kind, unembarrassed.
 
 ```json
 {
-  "high_level_description": "A character portrait of Wren Adeyemi, a hero of a magical-girl and sentai roleplaying game, rendered entirely in magenta and chrome. A coat trails behind them like a comet, throwing off sparks that do not go out where they land. Their hands are deliberately empty. They are moving fast and looking back over one shoulder.",
+  "high_level_description": "A glowing Lisa Frank style character portrait of Wren Adeyemi, a young Black woman, a hero of a magical-girl and sentai roleplaying game, rendered throughout in magenta and chrome. Her long coat streams behind her like a comet tail throwing off sparks that keep burning where they land. Her hands are deliberately empty. She is mid-stride, moving fast and looking back over one shoulder.",
   "style_description": {
-    "aesthetics": "Hyper-saturated airbrushed rainbow illustration in a 1990s Lisa Frank poster idiom. Glossy chrome bevels, neon rim light, prismatic gradients, high-gloss trapper-keeper artwork. Sincere and unembarrassed, never ironic.",
-    "lighting": "Neon rim light and internal prismatic glow against deep violet night, with ordinary sodium streetlight wherever the everyday world shows through.",
-    "photo": "Clean airbrushed illustration. No film grain, no halftone.",
-    "medium": "Airbrush illustration",
+    "aesthetics": "Full 1990s Lisa Frank airbrush poster art. Hyper-saturated rainbow gradients, iridescent holographic sheen, candy-bright neon, glossy chrome bevelled edges, scattered star-sparkles and lens flares, glitter drifting through the air, dreamy prismatic bloom. Joyful, sincere and unembarrassed. Never muted, never ironic, never grim.",
+    "lighting": "Prismatic rainbow glow with neon rim light and bright star-sparkle highlights, over deep magenta-into-violet gradients.",
+    "photo": "Glossy airbrushed poster illustration. No film grain, no halftone.",
+    "medium": "Airbrush illustration on poster stock",
     "color_palette": [
       "#FF2D95",
       "#FFFFFF",
@@ -741,17 +714,17 @@ Tone keywords: sugarpop, sincere, rainbow, loud, kind, unembarrassed.
     ]
   },
   "compositional_deconstruction": {
-    "background": "A soft gradient field in the character's own colour, deepening at the edges, with drifting glitter and faint prismatic flares.",
+    "background": "A rainbow gradient field in the character's own colour deepening at the edges, thick with drifting glitter, star-sparkles and soft prismatic lens flares.",
     "elements": [
       {
         "type": "obj",
         "bbox": [
-          180,
-          120,
-          850,
-          1000
+          150,
+          90,
+          880,
+          1010
         ],
-        "desc": "A full-length illustrated figure filling most of the frame, rendered in magenta and chrome. A coat trails behind them like a comet, throwing off sparks that do not go out where they land. Their hands are deliberately empty. They are moving fast and looking back over one shoulder.",
+        "desc": "A single full-length figure of a young Black woman filling most of the frame, airbrushed in magenta and chrome with glossy chrome edging and rainbow rim light. Her long coat streams behind her like a comet tail throwing off sparks that keep burning where they land. Her hands are deliberately empty. She is mid-stride, moving fast and looking back over one shoulder.",
         "color_palette": [
           "#FF2D95",
           "#FFFFFF",
@@ -773,12 +746,12 @@ Tone keywords: sugarpop, sincere, rainbow, loud, kind, unembarrassed.
 
 ```json
 {
-  "high_level_description": "A character portrait of Tobias 'Toby' Lark, a hero of a magical-girl and sentai roleplaying game, rendered entirely in cyan and holographic oil-slick shimmer. Skates leave a gradient hanging in the air behind them. They carry a battered skateboard covered in somebody else's stickers, caught mid-motion and grinning.",
+  "high_level_description": "A glowing Lisa Frank style character portrait of Tobias 'Toby' Lark, a young man, a hero of a magical-girl and sentai roleplaying game, rendered throughout in cyan and holographic oil-slick shimmer. He stands grinning with a battered skateboard under one arm, covered in somebody else's stickers, and his skates leave a rainbow gradient hanging in the air behind him. Head and shoulders and upper body fill the frame.",
   "style_description": {
-    "aesthetics": "Hyper-saturated airbrushed rainbow illustration in a 1990s Lisa Frank poster idiom. Glossy chrome bevels, neon rim light, prismatic gradients, high-gloss trapper-keeper artwork. Sincere and unembarrassed, never ironic.",
-    "lighting": "Neon rim light and internal prismatic glow against deep violet night, with ordinary sodium streetlight wherever the everyday world shows through.",
-    "photo": "Clean airbrushed illustration. No film grain, no halftone.",
-    "medium": "Airbrush illustration",
+    "aesthetics": "Full 1990s Lisa Frank airbrush poster art. Hyper-saturated rainbow gradients, iridescent holographic sheen, candy-bright neon, glossy chrome bevelled edges, scattered star-sparkles and lens flares, glitter drifting through the air, dreamy prismatic bloom. Joyful, sincere and unembarrassed. Never muted, never ironic, never grim.",
+    "lighting": "Prismatic rainbow glow with neon rim light and bright star-sparkle highlights, over deep magenta-into-violet gradients.",
+    "photo": "Glossy airbrushed poster illustration. No film grain, no halftone.",
+    "medium": "Airbrush illustration on poster stock",
     "color_palette": [
       "#00C8F0",
       "#B9F2FF",
@@ -786,17 +759,17 @@ Tone keywords: sugarpop, sincere, rainbow, loud, kind, unembarrassed.
     ]
   },
   "compositional_deconstruction": {
-    "background": "A soft gradient field in the character's own colour, deepening at the edges, with drifting glitter and faint prismatic flares.",
+    "background": "A rainbow gradient field in the character's own colour deepening at the edges, thick with drifting glitter, star-sparkles and soft prismatic lens flares.",
     "elements": [
       {
         "type": "obj",
         "bbox": [
-          180,
-          120,
-          850,
-          1000
+          150,
+          90,
+          880,
+          1010
         ],
-        "desc": "A full-length illustrated figure filling most of the frame, rendered in cyan and holographic oil-slick shimmer. Skates leave a gradient hanging in the air behind them. They carry a battered skateboard covered in somebody else's stickers, caught mid-motion and grinning.",
+        "desc": "A single full-length figure of a young man filling most of the frame, airbrushed in cyan and holographic oil-slick shimmer with glossy chrome edging and rainbow rim light. He stands grinning with a battered skateboard under one arm, covered in somebody else's stickers, and his skates leave a rainbow gradient hanging in the air behind him. Head and shoulders and upper body fill the frame.",
         "color_palette": [
           "#00C8F0",
           "#B9F2FF",
@@ -818,12 +791,12 @@ Tone keywords: sugarpop, sincere, rainbow, loud, kind, unembarrassed.
 
 ```json
 {
-  "high_level_description": "A character portrait of Priya Raghunathan, a hero of a magical-girl and sentai roleplaying game, rendered entirely in sunburst yellow and brass. Their coat is made of working clockwork, gears visibly turning at the shoulders and hem. They hold a wrench far too small to be useful, head tilted, examining something off-frame.",
+  "high_level_description": "A glowing Lisa Frank style character portrait of exactly one person: Priya Raghunathan, a single young South Asian woman, a hero of a magical-girl and sentai roleplaying game, rendered throughout in sunburst yellow and polished brass. One woman only, alone in the frame, one head and one pair of hands.",
   "style_description": {
-    "aesthetics": "Hyper-saturated airbrushed rainbow illustration in a 1990s Lisa Frank poster idiom. Glossy chrome bevels, neon rim light, prismatic gradients, high-gloss trapper-keeper artwork. Sincere and unembarrassed, never ironic.",
-    "lighting": "Neon rim light and internal prismatic glow against deep violet night, with ordinary sodium streetlight wherever the everyday world shows through.",
-    "photo": "Clean airbrushed illustration. No film grain, no halftone.",
-    "medium": "Airbrush illustration",
+    "aesthetics": "Full 1990s Lisa Frank airbrush poster art. Hyper-saturated rainbow gradients, iridescent holographic sheen, candy-bright neon, glossy chrome bevelled edges, scattered star-sparkles and lens flares, glitter drifting through the air, dreamy prismatic bloom. Joyful, sincere and unembarrassed. Never muted, never ironic, never grim.",
+    "lighting": "Prismatic rainbow glow with neon rim light and bright star-sparkle highlights, over deep magenta-into-violet gradients.",
+    "photo": "Glossy airbrushed poster illustration. No film grain, no halftone.",
+    "medium": "Airbrush illustration on poster stock",
     "color_palette": [
       "#FFD400",
       "#C89B3C",
@@ -831,17 +804,17 @@ Tone keywords: sugarpop, sincere, rainbow, loud, kind, unembarrassed.
     ]
   },
   "compositional_deconstruction": {
-    "background": "A soft gradient field in the character's own colour, deepening at the edges, with drifting glitter and faint prismatic flares.",
+    "background": "A sunburst yellow and brass rainbow gradient deepening at the edges, thick with drifting glitter, star-sparkles and soft prismatic lens flares.",
     "elements": [
       {
         "type": "obj",
         "bbox": [
-          180,
-          120,
-          850,
-          1000
+          210,
+          110,
+          830,
+          1010
         ],
-        "desc": "A full-length illustrated figure filling most of the frame, rendered in sunburst yellow and brass. Their coat is made of working clockwork, gears visibly turning at the shoulders and hem. They hold a wrench far too small to be useful, head tilted, examining something off-frame.",
+        "desc": "A single solitary young South Asian woman, one figure alone, shown from the waist up and centred in the frame. She wears a long coat made of working brass clockwork with gears turning at the shoulders, and holds up one tiny wrench, head tilted, studying it. Airbrushed in glossy sunburst yellow with chrome edging and rainbow rim light.",
         "color_palette": [
           "#FFD400",
           "#C89B3C",
@@ -863,12 +836,12 @@ Tone keywords: sugarpop, sincere, rainbow, loud, kind, unembarrassed.
 
 ```json
 {
-  "high_level_description": "A character portrait of Marisol Vega, a hero of a magical-girl and sentai roleplaying game, rendered entirely in violet and starfield. The starfield is not printed on them: it is actual depth, as though something enormous were showing through. They are completely still. A set of door keys is the only thing about them that would make a sound.",
+  "high_level_description": "A glowing Lisa Frank style character portrait of Marisol Vega, a young Latina woman, a hero of a magical-girl and sentai roleplaying game, rendered throughout in violet and deep starfield. The starfield is not printed on her: it is real depth, as though something enormous were showing through her coat. She is completely still, calm and centred, a ring of door keys hooked on one finger.",
   "style_description": {
-    "aesthetics": "Hyper-saturated airbrushed rainbow illustration in a 1990s Lisa Frank poster idiom. Glossy chrome bevels, neon rim light, prismatic gradients, high-gloss trapper-keeper artwork. Sincere and unembarrassed, never ironic.",
-    "lighting": "Neon rim light and internal prismatic glow against deep violet night, with ordinary sodium streetlight wherever the everyday world shows through.",
-    "photo": "Clean airbrushed illustration. No film grain, no halftone.",
-    "medium": "Airbrush illustration",
+    "aesthetics": "Full 1990s Lisa Frank airbrush poster art. Hyper-saturated rainbow gradients, iridescent holographic sheen, candy-bright neon, glossy chrome bevelled edges, scattered star-sparkles and lens flares, glitter drifting through the air, dreamy prismatic bloom. Joyful, sincere and unembarrassed. Never muted, never ironic, never grim.",
+    "lighting": "Prismatic rainbow glow with neon rim light and bright star-sparkle highlights, over deep magenta-into-violet gradients.",
+    "photo": "Glossy airbrushed poster illustration. No film grain, no halftone.",
+    "medium": "Airbrush illustration on poster stock",
     "color_palette": [
       "#2B0B4A",
       "#7B5CD6",
@@ -876,17 +849,17 @@ Tone keywords: sugarpop, sincere, rainbow, loud, kind, unembarrassed.
     ]
   },
   "compositional_deconstruction": {
-    "background": "A soft gradient field in the character's own colour, deepening at the edges, with drifting glitter and faint prismatic flares.",
+    "background": "A rainbow gradient field in the character's own colour deepening at the edges, thick with drifting glitter, star-sparkles and soft prismatic lens flares.",
     "elements": [
       {
         "type": "obj",
         "bbox": [
-          180,
-          120,
-          850,
-          1000
+          150,
+          90,
+          880,
+          1010
         ],
-        "desc": "A full-length illustrated figure filling most of the frame, rendered in violet and starfield. The starfield is not printed on them: it is actual depth, as though something enormous were showing through. They are completely still. A set of door keys is the only thing about them that would make a sound.",
+        "desc": "A single full-length figure of a young Latina woman filling most of the frame, airbrushed in violet and deep starfield with glossy chrome edging and rainbow rim light. The starfield is not printed on her: it is real depth, as though something enormous were showing through her coat. She is completely still, calm and centred, a ring of door keys hooked on one finger.",
         "color_palette": [
           "#2B0B4A",
           "#7B5CD6",
@@ -908,12 +881,12 @@ Tone keywords: sugarpop, sincere, rainbow, loud, kind, unembarrassed.
 
 ```json
 {
-  "high_level_description": "A character portrait of Danny Okonkwo-Byrne, a hero of a magical-girl and sentai roleplaying game, rendered entirely in mint green and pearl. A soft glow with no obvious source makes the air around them feel like a small room. Hands in pockets, sitting while everyone else stands.",
+  "high_level_description": "A glowing Lisa Frank style character portrait of Danny Okonkwo-Byrne, a young man, a hero of a magical-girl and sentai roleplaying game, rendered throughout in mint green and pearl. A soft glow with no obvious source surrounds him and makes the air feel like a small warm room. He sits easily with his hands in his pockets, relaxed, listening.",
   "style_description": {
-    "aesthetics": "Hyper-saturated airbrushed rainbow illustration in a 1990s Lisa Frank poster idiom. Glossy chrome bevels, neon rim light, prismatic gradients, high-gloss trapper-keeper artwork. Sincere and unembarrassed, never ironic.",
-    "lighting": "Neon rim light and internal prismatic glow against deep violet night, with ordinary sodium streetlight wherever the everyday world shows through.",
-    "photo": "Clean airbrushed illustration. No film grain, no halftone.",
-    "medium": "Airbrush illustration",
+    "aesthetics": "Full 1990s Lisa Frank airbrush poster art. Hyper-saturated rainbow gradients, iridescent holographic sheen, candy-bright neon, glossy chrome bevelled edges, scattered star-sparkles and lens flares, glitter drifting through the air, dreamy prismatic bloom. Joyful, sincere and unembarrassed. Never muted, never ironic, never grim.",
+    "lighting": "Prismatic rainbow glow with neon rim light and bright star-sparkle highlights, over deep magenta-into-violet gradients.",
+    "photo": "Glossy airbrushed poster illustration. No film grain, no halftone.",
+    "medium": "Airbrush illustration on poster stock",
     "color_palette": [
       "#7CE7C4",
       "#F2F0E6",
@@ -921,17 +894,17 @@ Tone keywords: sugarpop, sincere, rainbow, loud, kind, unembarrassed.
     ]
   },
   "compositional_deconstruction": {
-    "background": "A soft gradient field in the character's own colour, deepening at the edges, with drifting glitter and faint prismatic flares.",
+    "background": "A rainbow gradient field in the character's own colour deepening at the edges, thick with drifting glitter, star-sparkles and soft prismatic lens flares.",
     "elements": [
       {
         "type": "obj",
         "bbox": [
-          180,
-          120,
-          850,
-          1000
+          150,
+          90,
+          880,
+          1010
         ],
-        "desc": "A full-length illustrated figure filling most of the frame, rendered in mint green and pearl. A soft glow with no obvious source makes the air around them feel like a small room. Hands in pockets, sitting while everyone else stands.",
+        "desc": "A single full-length figure of a young man filling most of the frame, airbrushed in mint green and pearl with glossy chrome edging and rainbow rim light. A soft glow with no obvious source surrounds him and makes the air feel like a small warm room. He sits easily with his hands in his pockets, relaxed, listening.",
         "color_palette": [
           "#7CE7C4",
           "#F2F0E6",
@@ -1001,12 +974,12 @@ Tone keywords: sugarpop, sincere, rainbow, loud, kind, unembarrassed.
 
 ```json
 {
-  "high_level_description": "Library shelves grown so tall and so far apart that the aisles are canyons and the ceiling is only a rumour. Warm and completely silent. A returns slot sits high in one wall, just out of reach.",
+  "high_level_description": "Library shelves grown so tall and so far apart that the aisle between them is a canyon and the ceiling is only a rumour. Warm, silent and glittering, rendered in Lisa Frank rainbow airbrush. A returns slot sits high in one wall, far out of reach.",
   "style_description": {
-    "aesthetics": "Hyper-saturated airbrushed rainbow illustration in a 1990s Lisa Frank poster idiom. Glossy chrome bevels, neon rim light, prismatic gradients, high-gloss trapper-keeper artwork. Sincere and unembarrassed, never ironic.",
-    "lighting": "Neon rim light and internal prismatic glow against deep violet night, with ordinary sodium streetlight wherever the everyday world shows through.",
-    "photo": "Clean airbrushed illustration. No film grain, no halftone.",
-    "medium": "Airbrush illustration",
+    "aesthetics": "Full 1990s Lisa Frank airbrush poster art. Hyper-saturated rainbow gradients, iridescent holographic sheen, candy-bright neon, glossy chrome bevelled edges, scattered star-sparkles and lens flares, glitter drifting through the air, dreamy prismatic bloom. Joyful, sincere and unembarrassed. Never muted, never ironic, never grim.",
+    "lighting": "Prismatic rainbow glow with neon rim light and bright star-sparkle highlights, over deep magenta-into-violet gradients.",
+    "photo": "Glossy airbrushed poster illustration. No film grain, no halftone.",
+    "medium": "Airbrush illustration on poster stock",
     "color_palette": [
       "#FF2D95",
       "#00C8F0",
@@ -1016,21 +989,21 @@ Tone keywords: sugarpop, sincere, rainbow, loud, kind, unembarrassed.
     ]
   },
   "compositional_deconstruction": {
-    "background": "Towering stacks receding into warm gradient dark, dust and glitter hanging in shafts of coloured light.",
+    "background": "Towering stacks receding into warm rainbow gradient, dust and glitter hanging in shafts of prismatic light.",
     "elements": [
       {
         "type": "obj",
         "bbox": [
-          60,
+          40,
           0,
-          980,
+          990,
           1010
         ],
-        "desc": "Two ranks of library shelving rising far out of frame, the aisle between them narrowing into warm gradient dark, books receding to specks, a returns slot set high in one wall.",
+        "desc": "Two vast ranks of library shelving in iridescent brass and magenta, packed with glowing book spines, converging into glittering gradient dark.",
         "color_palette": [
           "#C89B3C",
           "#FF2D95",
-          "#2B0B4A"
+          "#7CE7C4"
         ]
       }
     ]
@@ -1048,12 +1021,12 @@ Tone keywords: sugarpop, sincere, rainbow, loud, kind, unembarrassed.
 
 ```json
 {
-  "high_level_description": "A chrome tide, mirror-bright and thickening, advancing at the speed of a minute hand. It swallows landmarks and reflects them back slightly wrong.",
+  "high_level_description": "A vast mirror-bright chrome surface seen from just above, filling the whole frame, with an iridescent oil-slick rainbow swimming across it. It reflects a row of rooftops and a footbridge, but the reflection is very slightly out of true. Glossy, saturated Lisa Frank airbrush.",
   "style_description": {
-    "aesthetics": "Hyper-saturated airbrushed rainbow illustration in a 1990s Lisa Frank poster idiom. Glossy chrome bevels, neon rim light, prismatic gradients, high-gloss trapper-keeper artwork. Sincere and unembarrassed, never ironic.",
-    "lighting": "Neon rim light and internal prismatic glow against deep violet night, with ordinary sodium streetlight wherever the everyday world shows through.",
-    "photo": "Clean airbrushed illustration. No film grain, no halftone.",
-    "medium": "Airbrush illustration",
+    "aesthetics": "Full 1990s Lisa Frank airbrush poster art. Hyper-saturated rainbow gradients, iridescent holographic sheen, candy-bright neon, glossy chrome bevelled edges, scattered star-sparkles and lens flares, glitter drifting through the air, dreamy prismatic bloom. Joyful, sincere and unembarrassed. Never muted, never ironic, never grim.",
+    "lighting": "Prismatic rainbow glow with neon rim light and bright star-sparkle highlights, over deep magenta-into-violet gradients.",
+    "photo": "Glossy airbrushed poster illustration. No film grain, no halftone.",
+    "medium": "Airbrush illustration on poster stock",
     "color_palette": [
       "#FF2D95",
       "#00C8F0",
@@ -1063,21 +1036,22 @@ Tone keywords: sugarpop, sincere, rainbow, loud, kind, unembarrassed.
     ]
   },
   "compositional_deconstruction": {
-    "background": "A riverside at dusk in saturated colour, the far bank already under the advancing mirror surface.",
+    "background": "The mirrored chrome surface fills the frame edge to edge, star-sparkles caught on it, a thin band of magenta and violet sky at the very top.",
     "elements": [
       {
         "type": "obj",
         "bbox": [
           0,
-          420,
+          120,
           1024,
           1010
         ],
-        "desc": "A mirror-bright chrome tide filling the lower half of the frame, its edge advancing almost imperceptibly, reflecting the landmarks it has already covered back slightly wrong.",
+        "desc": "A huge sheet of mirror-bright liquid chrome with holographic oil-slick rainbow bands rippling across its surface, holding a soft reflection of rooftops and a footbridge that does not quite line up.",
         "color_palette": [
           "#C9D2DA",
           "#00C8F0",
-          "#2B0B4A"
+          "#FF2D95",
+          "#FFD400"
         ]
       }
     ]
@@ -1095,12 +1069,12 @@ Tone keywords: sugarpop, sincere, rainbow, loud, kind, unembarrassed.
 
 ```json
 {
-  "high_level_description": "A very comfortable room that keeps adding doors, every one of which leads back into the same room. Deep chairs, good light, a blanket exactly warm enough. Nothing here is threatening and that is the problem.",
+  "high_level_description": "One extremely comfortable armchair with a folded blanket over its arm, floating alone in a warm rainbow void, ringed by six free-standing doorframes that all open back onto the very same armchair. Cosy, glowing and endless. Lisa Frank airbrush poster art.",
   "style_description": {
-    "aesthetics": "Hyper-saturated airbrushed rainbow illustration in a 1990s Lisa Frank poster idiom. Glossy chrome bevels, neon rim light, prismatic gradients, high-gloss trapper-keeper artwork. Sincere and unembarrassed, never ironic.",
-    "lighting": "Warm low lamplight and kitchen overheads, with spectrum light leaking in from off-frame.",
-    "photo": "Clean airbrushed illustration. No film grain, no halftone.",
-    "medium": "Airbrush illustration",
+    "aesthetics": "Full 1990s Lisa Frank airbrush poster art. Hyper-saturated rainbow gradients, iridescent holographic sheen, candy-bright neon, glossy chrome bevelled edges, scattered star-sparkles and lens flares, glitter drifting through the air, dreamy prismatic bloom. Joyful, sincere and unembarrassed. Never muted, never ironic, never grim.",
+    "lighting": "Prismatic rainbow glow with neon rim light and bright star-sparkle highlights, over deep magenta-into-violet gradients.",
+    "photo": "Glossy airbrushed poster illustration. No film grain, no halftone.",
+    "medium": "Airbrush illustration on poster stock",
     "color_palette": [
       "#FF2D95",
       "#00C8F0",
@@ -1110,21 +1084,35 @@ Tone keywords: sugarpop, sincere, rainbow, loud, kind, unembarrassed.
     ]
   },
   "compositional_deconstruction": {
-    "background": "A softly lit sitting room in warm saturated colour, more doorways in the walls than the geometry allows, each opening onto the same room again.",
+    "background": "A warm golden and magenta rainbow gradient void with star-sparkles and drifting glitter, no walls and no floor.",
     "elements": [
+      {
+        "type": "obj",
+        "bbox": [
+          260,
+          380,
+          780,
+          900
+        ],
+        "desc": "A deep, plush, very inviting armchair in iridescent fabric with a folded rainbow blanket over one arm, glowing softly.",
+        "color_palette": [
+          "#FFD400",
+          "#FF2D95",
+          "#7CE7C4"
+        ]
+      },
       {
         "type": "obj",
         "bbox": [
           60,
           120,
           980,
-          1000
+          1010
         ],
-        "desc": "A softly lit sitting room with deep armchairs and a folded blanket, and more doorways set into its walls than the geometry allows, each opening onto the same room again.",
+        "desc": "Six free-standing doorframes arranged in a ring around the armchair, each one framing a small identical copy of the very same armchair.",
         "color_palette": [
-          "#FFD400",
-          "#FF2D95",
-          "#7CE7C4"
+          "#00C8F0",
+          "#FFD400"
         ]
       }
     ]
@@ -1188,12 +1176,12 @@ Tone keywords: sugarpop, sincere, rainbow, loud, kind, unembarrassed.
 
 ```json
 {
-  "high_level_description": "A figure that is almost exactly one of the heroes: same silhouette, same colour, slightly better made. It stands patiently with one hand out, offering to help. It is kind, and that is what is wrong with it.",
+  "high_level_description": "Two nearly identical magical-girl heroes stand side by side in rainbow airbrush: the same silhouette, the same magenta colour, but the one on the right is a little brighter and a little more perfect, and she is holding out one hand to help. Kind, patient and quietly wrong.",
   "style_description": {
-    "aesthetics": "Hyper-saturated airbrushed rainbow illustration in a 1990s Lisa Frank poster idiom. Glossy chrome bevels, neon rim light, prismatic gradients, high-gloss trapper-keeper artwork. Sincere and unembarrassed, never ironic.",
-    "lighting": "Neon rim light and internal prismatic glow against deep violet night, with ordinary sodium streetlight wherever the everyday world shows through.",
-    "photo": "Clean airbrushed illustration. No film grain, no halftone.",
-    "medium": "Airbrush illustration",
+    "aesthetics": "Full 1990s Lisa Frank airbrush poster art. Hyper-saturated rainbow gradients, iridescent holographic sheen, candy-bright neon, glossy chrome bevelled edges, scattered star-sparkles and lens flares, glitter drifting through the air, dreamy prismatic bloom. Joyful, sincere and unembarrassed. Never muted, never ironic, never grim.",
+    "lighting": "Prismatic rainbow glow with neon rim light and bright star-sparkle highlights, over deep magenta-into-violet gradients.",
+    "photo": "Glossy airbrushed poster illustration. No film grain, no halftone.",
+    "medium": "Airbrush illustration on poster stock",
     "color_palette": [
       "#FF2D95",
       "#00C8F0",
@@ -1203,21 +1191,35 @@ Tone keywords: sugarpop, sincere, rainbow, loud, kind, unembarrassed.
     ]
   },
   "compositional_deconstruction": {
-    "background": "A gradient field in magenta and chrome, a second fainter silhouette ghosted just behind the figure like an alignment error.",
+    "background": "A magenta and chrome gradient field with star-sparkles and drifting glitter.",
     "elements": [
       {
         "type": "obj",
         "bbox": [
-          240,
-          130,
-          820,
-          1000
+          90,
+          140,
+          520,
+          1010
         ],
-        "desc": "A standing illustrated figure with one hand extended in offer, patient and kind, and a second fainter silhouette ghosted a few degrees behind it like an alignment error.",
+        "desc": "The first hero, ordinary and slightly tired, standing with her arms at her sides.",
         "color_palette": [
           "#FF2D95",
-          "#C9D2DA",
-          "#FFFFFF"
+          "#C9D2DA"
+        ]
+      },
+      {
+        "type": "obj",
+        "bbox": [
+          500,
+          120,
+          940,
+          1010
+        ],
+        "desc": "Her near-double, identical but glossier and brighter, offering one hand with a patient, kindly expression.",
+        "color_palette": [
+          "#FF2D95",
+          "#FFFFFF",
+          "#FFD400"
         ]
       }
     ]
@@ -1280,12 +1282,12 @@ Tone keywords: sugarpop, sincere, rainbow, loud, kind, unembarrassed.
 
 ```json
 {
-  "high_level_description": "A single figure in ordinary clothes seen from behind, facing the spectrum version of themselves, which stands in front of them like a reflection that has turned round to look back.",
+  "high_level_description": "A young woman in ordinary clothes stands in her bedroom looking into a tall chrome-framed mirror. What the mirror shows is not ordinary: it is the same woman transformed into a rainbow hero, glowing and glittering, calmly looking back out at her. Airbrushed Lisa Frank poster art.",
   "style_description": {
-    "aesthetics": "Hyper-saturated airbrushed rainbow illustration in a 1990s Lisa Frank poster idiom. Glossy chrome bevels, neon rim light, prismatic gradients, high-gloss trapper-keeper artwork. Sincere and unembarrassed, never ironic.",
-    "lighting": "Neon rim light and internal prismatic glow against deep violet night, with ordinary sodium streetlight wherever the everyday world shows through.",
-    "photo": "Clean airbrushed illustration. No film grain, no halftone.",
-    "medium": "Airbrush illustration",
+    "aesthetics": "Full 1990s Lisa Frank airbrush poster art. Hyper-saturated rainbow gradients, iridescent holographic sheen, candy-bright neon, glossy chrome bevelled edges, scattered star-sparkles and lens flares, glitter drifting through the air, dreamy prismatic bloom. Joyful, sincere and unembarrassed. Never muted, never ironic, never grim.",
+    "lighting": "Prismatic rainbow glow with neon rim light and bright star-sparkle highlights, over deep magenta-into-violet gradients.",
+    "photo": "Glossy airbrushed poster illustration. No film grain, no halftone.",
+    "medium": "Airbrush illustration on poster stock",
     "color_palette": [
       "#FF2D95",
       "#00C8F0",
@@ -1295,31 +1297,17 @@ Tone keywords: sugarpop, sincere, rainbow, loud, kind, unembarrassed.
     ]
   },
   "compositional_deconstruction": {
-    "background": "A plain interior wall behind the ordinary figure dissolving into gradient spectrum around the transformed one.",
+    "background": "A plain bedroom wall on the near side of the frame, opening into rainbow gradient and star-sparkles inside the mirror.",
     "elements": [
       {
         "type": "obj",
         "bbox": [
-          180,
-          500,
-          590,
-          1500
-        ],
-        "desc": "The everyday figure from behind: jeans, an ordinary jacket, unremarkable.",
-        "color_palette": [
-          "#6B6459",
-          "#3A3A3A"
-        ]
-      },
-      {
-        "type": "obj",
-        "bbox": [
-          200,
+          90,
           300,
-          600,
-          1400
+          700,
+          1480
         ],
-        "desc": "The same person, facing us, transformed: coat and silhouette blazing in spectrum, expression calm.",
+        "desc": "A tall chrome-framed mirror standing against the wall, with an ordinary young woman in jeans and a jacket seen from behind in front of it, and her reflection inside the glass rendered as a glowing rainbow hero in a spectrum coat.",
         "color_palette": [
           "#FF2D95",
           "#00C8F0",
@@ -1342,12 +1330,12 @@ Tone keywords: sugarpop, sincere, rainbow, loud, kind, unembarrassed.
 
 ```json
 {
-  "high_level_description": "Five figures shout the same word at the same instant, shot from ground level so they loom. Colour erupts from all five simultaneously. It should feel loud.",
+  "high_level_description": "Five magical-girl and sentai heroes, three young women and two young men, call out their transformation word together at the same moment, seen from ground level so they tower over the viewer. Rainbow colour blooms outward from all five at once in wide airbrushed bands. Joyful and spectacular. They wear glossy colour-coded hero costumes.",
   "style_description": {
-    "aesthetics": "Hyper-saturated airbrushed rainbow illustration in a 1990s Lisa Frank poster idiom. Glossy chrome bevels, neon rim light, prismatic gradients, high-gloss trapper-keeper artwork. Sincere and unembarrassed, never ironic.",
-    "lighting": "Neon rim light and internal prismatic glow against deep violet night, with ordinary sodium streetlight wherever the everyday world shows through.",
-    "photo": "Clean airbrushed illustration. No film grain, no halftone.",
-    "medium": "Airbrush illustration",
+    "aesthetics": "Full 1990s Lisa Frank airbrush poster art. Hyper-saturated rainbow gradients, iridescent holographic sheen, candy-bright neon, glossy chrome bevelled edges, scattered star-sparkles and lens flares, glitter drifting through the air, dreamy prismatic bloom. Joyful, sincere and unembarrassed. Never muted, never ironic, never grim.",
+    "lighting": "Prismatic rainbow glow with neon rim light and bright star-sparkle highlights, over deep magenta-into-violet gradients.",
+    "photo": "Glossy airbrushed poster illustration. No film grain, no halftone.",
+    "medium": "Airbrush illustration on poster stock",
     "color_palette": [
       "#FF2D95",
       "#00C8F0",
@@ -1357,23 +1345,38 @@ Tone keywords: sugarpop, sincere, rainbow, loud, kind, unembarrassed.
     ]
   },
   "compositional_deconstruction": {
-    "background": "A low camera on wet tarmac, five figures against a night sky already detonating into spectrum.",
+    "background": "A night sky already opening into rainbow spectrum above wet tarmac, star-sparkles and glitter carried outward on the light.",
     "elements": [
       {
         "type": "obj",
         "bbox": [
-          40,
-          120,
-          1496,
-          900
+          30,
+          150,
+          1500,
+          950
         ],
-        "desc": "Five figures in a rank, heads back, mouths open on the same syllable, each detonating in a different colour.",
+        "desc": "A row of five costumed heroes seen from below, heads lifted and mouths open on the same word, three young women and two young men, each glowing in one colour: magenta, cyan, sunburst yellow, violet and mint green, rainbow light blooming out around them.",
         "color_palette": [
           "#FF2D95",
           "#00C8F0",
           "#FFD400",
           "#2B0B4A",
           "#7CE7C4"
+        ]
+      },
+      {
+        "type": "obj",
+        "bbox": [
+          0,
+          900,
+          1536,
+          1024
+        ],
+        "desc": "The wet tarmac of the road in the immediate foreground, holding long rainbow reflections of the five figures above.",
+        "color_palette": [
+          "#2B0B4A",
+          "#FF2D95",
+          "#00C8F0"
         ]
       }
     ]
@@ -1390,12 +1393,12 @@ Tone keywords: sugarpop, sincere, rainbow, loud, kind, unembarrassed.
 
 ```json
 {
-  "high_level_description": "One enormous fused figure, visibly made of five colours braided together, standing in a street far too small for it. Chrome and gradient. It should not fit comfortably inside the frame.",
+  "high_level_description": "One colossal fused hero standing in a narrow street far too small for it, its surface visibly braided from five different colours of light. Chrome and rainbow gradient, glittering, cropped by the top of the frame.",
   "style_description": {
-    "aesthetics": "Hyper-saturated airbrushed rainbow illustration in a 1990s Lisa Frank poster idiom. Glossy chrome bevels, neon rim light, prismatic gradients, high-gloss trapper-keeper artwork. Sincere and unembarrassed, never ironic.",
-    "lighting": "Neon rim light and internal prismatic glow against deep violet night, with ordinary sodium streetlight wherever the everyday world shows through.",
-    "photo": "Clean airbrushed illustration. No film grain, no halftone.",
-    "medium": "Airbrush illustration",
+    "aesthetics": "Full 1990s Lisa Frank airbrush poster art. Hyper-saturated rainbow gradients, iridescent holographic sheen, candy-bright neon, glossy chrome bevelled edges, scattered star-sparkles and lens flares, glitter drifting through the air, dreamy prismatic bloom. Joyful, sincere and unembarrassed. Never muted, never ironic, never grim.",
+    "lighting": "Prismatic rainbow glow with neon rim light and bright star-sparkle highlights, over deep magenta-into-violet gradients.",
+    "photo": "Glossy airbrushed poster illustration. No film grain, no halftone.",
+    "medium": "Airbrush illustration on poster stock",
     "color_palette": [
       "#FF2D95",
       "#00C8F0",
@@ -1405,23 +1408,37 @@ Tone keywords: sugarpop, sincere, rainbow, loud, kind, unembarrassed.
     ]
   },
   "compositional_deconstruction": {
-    "background": "A narrow terraced street at night in saturated colour, rooftops well below the figure's shoulders.",
+    "background": "A narrow terraced street at night drenched in rainbow spectrum, rooftops far below the figure's shoulders, glitter falling like warm snow.",
     "elements": [
       {
         "type": "obj",
         "bbox": [
-          40,
+          30,
           0,
-          728,
-          1500
+          740,
+          1480
         ],
-        "desc": "A single colossal humanoid form whose surface is five distinct colours plaited together, cropped by the top edge of the frame.",
+        "desc": "A single enormous humanoid figure whose armour is five colours plaited together in glossy airbrushed bands, chrome bevelled, its head and shoulders cut off by the top edge.",
         "color_palette": [
           "#FF2D95",
           "#00C8F0",
           "#FFD400",
           "#2B0B4A",
           "#7CE7C4"
+        ]
+      },
+      {
+        "type": "obj",
+        "bbox": [
+          40,
+          1200,
+          730,
+          1520
+        ],
+        "desc": "The ordinary street below: parked cars and wheelie bins, tiny by comparison, lit rainbow by the figure above.",
+        "color_palette": [
+          "#00C8F0",
+          "#FF2D95"
         ]
       }
     ]
@@ -1438,12 +1455,12 @@ Tone keywords: sugarpop, sincere, rainbow, loud, kind, unembarrassed.
 
 ```json
 {
-  "high_level_description": "One completely grey figure stands in the middle of a hyper-saturated spectrum street. All colour has drained out of that one person. Everything around them is still blazing. This is the most emotionally important image in the book.",
+  "high_level_description": "An adult woman in ordinary everyday clothes, drawn entirely in soft pearl greys and silver, stands at the centre of a street blazing with rainbow spectrum colour. She is upright, calm and composed. The picture is about the contrast between her quiet silver and the candy-bright world around her.",
   "style_description": {
-    "aesthetics": "Hyper-saturated airbrushed rainbow illustration in a 1990s Lisa Frank poster idiom. Glossy chrome bevels, neon rim light, prismatic gradients, high-gloss trapper-keeper artwork. Sincere and unembarrassed, never ironic.",
-    "lighting": "Neon rim light and internal prismatic glow against deep violet night, with ordinary sodium streetlight wherever the everyday world shows through.",
-    "photo": "Clean airbrushed illustration. No film grain, no halftone.",
-    "medium": "Airbrush illustration",
+    "aesthetics": "Full 1990s Lisa Frank airbrush poster art. Hyper-saturated rainbow gradients, iridescent holographic sheen, candy-bright neon, glossy chrome bevelled edges, scattered star-sparkles and lens flares, glitter drifting through the air, dreamy prismatic bloom. Joyful, sincere and unembarrassed. Never muted, never ironic, never grim.",
+    "lighting": "Prismatic rainbow glow with neon rim light and bright star-sparkle highlights, over deep magenta-into-violet gradients.",
+    "photo": "Glossy airbrushed poster illustration. No film grain, no halftone.",
+    "medium": "Airbrush illustration on poster stock",
     "color_palette": [
       "#FF2D95",
       "#00C8F0",
@@ -1453,20 +1470,21 @@ Tone keywords: sugarpop, sincere, rainbow, loud, kind, unembarrassed.
     ]
   },
   "compositional_deconstruction": {
-    "background": "A spectrum street at full saturation, glitter in the gutters, gradient sky, entirely undimmed.",
+    "background": "A hyper-saturated rainbow street at night, iridescent shopfronts, glitter banked in the gutters, star-sparkles everywhere, entirely undimmed.",
     "elements": [
       {
         "type": "obj",
         "bbox": [
-          230,
-          500,
-          560,
-          1400
+          220,
+          480,
+          570,
+          1420
         ],
-        "desc": "A standing human figure rendered in flat desaturated grey, upright and present, not collapsed, surrounded by colour that does not touch them.",
+        "desc": "A grown woman in jeans, boots and a warm winter coat, rendered entirely in soft pearl grey and silver airbrush, standing squarely with her hands at her sides, fully and warmly dressed, surrounded by colour that does not touch her.",
         "color_palette": [
-          "#8A8A8A",
-          "#B4B4B4"
+          "#B4B4B4",
+          "#E6E6E6",
+          "#8A8A8A"
         ]
       }
     ]
@@ -1546,12 +1564,12 @@ Tone keywords: sugarpop, sincere, rainbow, loud, kind, unembarrassed.
 
 ```json
 {
-  "high_level_description": "A launderette on a street corner rendered in nine colours with chrome bevelled lettering, glitter banked in the gutters like warm snow. A snow leopard is asleep on the roof and reacts to nothing.",
+  "high_level_description": "A corner launderette rendered in nine iridescent colours with glossy chrome bevelled trim, glitter banked in the gutters like warm snow. A friendly rainbow-spotted snow leopard is asleep on the flat roof, completely at ease and reacting to nothing. Pure Lisa Frank.",
   "style_description": {
-    "aesthetics": "Hyper-saturated airbrushed rainbow illustration in a 1990s Lisa Frank poster idiom. Glossy chrome bevels, neon rim light, prismatic gradients, high-gloss trapper-keeper artwork. Sincere and unembarrassed, never ironic.",
-    "lighting": "Neon rim light and internal prismatic glow against deep violet night, with ordinary sodium streetlight wherever the everyday world shows through.",
-    "photo": "Clean airbrushed illustration. No film grain, no halftone.",
-    "medium": "Airbrush illustration",
+    "aesthetics": "Full 1990s Lisa Frank airbrush poster art. Hyper-saturated rainbow gradients, iridescent holographic sheen, candy-bright neon, glossy chrome bevelled edges, scattered star-sparkles and lens flares, glitter drifting through the air, dreamy prismatic bloom. Joyful, sincere and unembarrassed. Never muted, never ironic, never grim.",
+    "lighting": "Prismatic rainbow glow with neon rim light and bright star-sparkle highlights, over deep magenta-into-violet gradients.",
+    "photo": "Glossy airbrushed poster illustration. No film grain, no halftone.",
+    "medium": "Airbrush illustration on poster stock",
     "color_palette": [
       "#FF2D95",
       "#00C8F0",
@@ -1561,21 +1579,36 @@ Tone keywords: sugarpop, sincere, rainbow, loud, kind, unembarrassed.
     ]
   },
   "compositional_deconstruction": {
-    "background": "A corner shopfront at dusk in full saturation, gradient sky behind, ordinary bollards and drainpipes still perfectly recognisable.",
+    "background": "A suburban corner shopfront at dusk under a magenta-into-cyan gradient sky, ordinary bollards and drainpipes still perfectly recognisable beneath the rainbow treatment, star-sparkles throughout.",
     "elements": [
       {
         "type": "obj",
         "bbox": [
-          760,
-          180,
-          1180,
-          480
+          120,
+          380,
+          1050,
+          950
         ],
-        "desc": "A large snow leopard asleep on the flat roof of the launderette, curled up, entirely unbothered.",
+        "desc": "An ordinary corner launderette shopfront, airbrushed in glossy rainbow with chrome trim and glowing windows.",
+        "color_palette": [
+          "#00C8F0",
+          "#FF2D95",
+          "#FFD400"
+        ]
+      },
+      {
+        "type": "obj",
+        "bbox": [
+          700,
+          150,
+          1180,
+          430
+        ],
+        "desc": "A large snow leopard with iridescent rainbow rosettes curled up asleep on the flat roof, peaceful and friendly.",
         "color_palette": [
           "#FFFFFF",
           "#B9F2FF",
-          "#2B0B4A"
+          "#FF2D95"
         ]
       }
     ]
@@ -1592,12 +1625,12 @@ Tone keywords: sugarpop, sincere, rainbow, loud, kind, unembarrassed.
 
 ```json
 {
-  "high_level_description": "Dolphins move through the air above a ring road as though it were a reef. The traffic below is entirely unbothered. Joyful, not menacing.",
+  "high_level_description": "A pod of iridescent rainbow dolphins gliding through open air high above a ring road, as though the sky were a coral reef, trailing glitter and star-sparkles behind them. The traffic far below carries on as normal. Joyful and dreamlike, classic Lisa Frank airbrush.",
   "style_description": {
-    "aesthetics": "Hyper-saturated airbrushed rainbow illustration in a 1990s Lisa Frank poster idiom. Glossy chrome bevels, neon rim light, prismatic gradients, high-gloss trapper-keeper artwork. Sincere and unembarrassed, never ironic.",
-    "lighting": "Neon rim light and internal prismatic glow against deep violet night, with ordinary sodium streetlight wherever the everyday world shows through.",
-    "photo": "Clean airbrushed illustration. No film grain, no halftone.",
-    "medium": "Airbrush illustration",
+    "aesthetics": "Full 1990s Lisa Frank airbrush poster art. Hyper-saturated rainbow gradients, iridescent holographic sheen, candy-bright neon, glossy chrome bevelled edges, scattered star-sparkles and lens flares, glitter drifting through the air, dreamy prismatic bloom. Joyful, sincere and unembarrassed. Never muted, never ironic, never grim.",
+    "lighting": "Prismatic rainbow glow with neon rim light and bright star-sparkle highlights, over deep magenta-into-violet gradients.",
+    "photo": "Glossy airbrushed poster illustration. No film grain, no halftone.",
+    "medium": "Airbrush illustration on poster stock",
     "color_palette": [
       "#FF2D95",
       "#00C8F0",
@@ -1607,17 +1640,17 @@ Tone keywords: sugarpop, sincere, rainbow, loud, kind, unembarrassed.
     ]
   },
   "compositional_deconstruction": {
-    "background": "A wide gradient sky from cyan into magenta above a dual carriageway at dusk, streetlights just coming on.",
+    "background": "A vast gradient sky from cyan through magenta above a dual carriageway at dusk, streetlights just coming on, glitter drifting across the frame.",
     "elements": [
       {
         "type": "obj",
         "bbox": [
-          200,
-          120,
-          1300,
+          180,
+          100,
+          1340,
           700
         ],
-        "desc": "Three or four dolphins arcing through open air at rooftop height, iridescent, trailing glitter.",
+        "desc": "Four dolphins arcing gracefully through the air at rooftop height, their skin a glossy holographic rainbow, sparkling wakes trailing behind them.",
         "color_palette": [
           "#00C8F0",
           "#B9F2FF",
@@ -1663,7 +1696,7 @@ Tone keywords: sugarpop, sincere, rainbow, loud, kind, unembarrassed.
           650,
           700
         ],
-        "desc": "Five paper character sheets spread around the table, handwritten.",
+        "desc": "Five sheets of blank unmarked paper fanned across the table, plain and empty.",
         "color_palette": [
           "#F4EFE4",
           "#2B2B2B"
@@ -1677,7 +1710,7 @@ Tone keywords: sugarpop, sincere, rainbow, loud, kind, unembarrassed.
           520,
           980
         ],
-        "desc": "A hand-drawn circle in biro divided into six segments, three struck through.",
+        "desc": "A circle drawn on a scrap of paper and divided into six plain wedges, three of them shaded solid.",
         "color_palette": [
           "#F4EFE4",
           "#1A1A1A"
@@ -1710,12 +1743,12 @@ Tone keywords: sugarpop, sincere, rainbow, loud, kind, unembarrassed.
 
 ```json
 {
-  "high_level_description": "Three shapes of very different sizes shown in flat silhouette against a gradient: a small one at knee height, a street-sized one, and one that runs up past the top edge of the frame. A scale comparison.",
+  "high_level_description": "A scale comparison: three monster silhouettes of very different sizes standing on a simple ground line against a rainbow gradient. A small one the size of a parked car, a middle one as long as a street, and a huge one cut off by the top of the frame. Clean, bold and poster-like.",
   "style_description": {
-    "aesthetics": "Hyper-saturated airbrushed rainbow illustration in a 1990s Lisa Frank poster idiom. Glossy chrome bevels, neon rim light, prismatic gradients, high-gloss trapper-keeper artwork. Sincere and unembarrassed, never ironic.",
-    "lighting": "Neon rim light and internal prismatic glow against deep violet night, with ordinary sodium streetlight wherever the everyday world shows through.",
-    "photo": "Clean airbrushed illustration. No film grain, no halftone.",
-    "medium": "Airbrush illustration",
+    "aesthetics": "Full 1990s Lisa Frank airbrush poster art. Hyper-saturated rainbow gradients, iridescent holographic sheen, candy-bright neon, glossy chrome bevelled edges, scattered star-sparkles and lens flares, glitter drifting through the air, dreamy prismatic bloom. Joyful, sincere and unembarrassed. Never muted, never ironic, never grim.",
+    "lighting": "Prismatic rainbow glow with neon rim light and bright star-sparkle highlights, over deep magenta-into-violet gradients.",
+    "photo": "Glossy airbrushed poster illustration. No film grain, no halftone.",
+    "medium": "Airbrush illustration on poster stock",
     "color_palette": [
       "#FF2D95",
       "#00C8F0",
@@ -1725,17 +1758,17 @@ Tone keywords: sugarpop, sincere, rainbow, loud, kind, unembarrassed.
     ]
   },
   "compositional_deconstruction": {
-    "background": "A clean gradient field from magenta through violet, no ground detail beyond a simple horizon line.",
+    "background": "A smooth rainbow gradient from magenta through violet into cyan, with star-sparkles and a single simple horizon line.",
     "elements": [
       {
         "type": "obj",
         "bbox": [
-          80,
+          60,
           620,
           380,
           900
         ],
-        "desc": "The smallest silhouette, roughly the size of a parked car.",
+        "desc": "The smallest creature silhouette, roughly the size of a parked car, filled with deep violet.",
         "color_palette": [
           "#2B0B4A"
         ]
@@ -1743,12 +1776,12 @@ Tone keywords: sugarpop, sincere, rainbow, loud, kind, unembarrassed.
       {
         "type": "obj",
         "bbox": [
-          440,
-          300,
-          940,
+          430,
+          320,
+          950,
           900
         ],
-        "desc": "The middle silhouette, as long as a street.",
+        "desc": "The middle creature silhouette, as long as a street, filled with deep violet.",
         "color_palette": [
           "#2B0B4A"
         ]
@@ -1761,7 +1794,7 @@ Tone keywords: sugarpop, sincere, rainbow, loud, kind, unembarrassed.
           1500,
           900
         ],
-        "desc": "The largest silhouette, cropped by the top edge, its full height not visible.",
+        "desc": "The largest creature silhouette, so tall it is cropped by the top edge of the frame, filled with deep violet.",
         "color_palette": [
           "#2B0B4A"
         ]

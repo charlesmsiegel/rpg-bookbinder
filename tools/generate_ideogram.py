@@ -243,24 +243,30 @@ class Comfy:
         """True if the file is Ideogram's "Image blocked by safety filter" card.
 
         The refusal is a *valid PNG*, so a plain success check writes it to disk
-        and reports ok. The card is flat mid-grey with a line of text: measured
-        stddev ~9 and mean HSV saturation ~3, against ~42-79 and ~93-106 for real
-        renders. This is a heuristic, and it would also flag a deliberately
-        greyscale illustration — no entry in this book's manifest is one.
+        and reports ok. The card is a near-flat field with one line of text, so
+        edge density is the sharpest signal: measured 1.9-2.8 for cards against
+        10-44 for real renders, with colour and contrast varying too much to
+        rely on (cards have appeared mid-grey, near-black and saturated violet).
+
+        This is a heuristic. It would also flag a genuinely flat illustration —
+        no entry in this book's manifest is one — and it does NOT catch the
+        second failure mode, where the model draws the refusal text into an
+        otherwise detailed picture. Those still need a human to look.
         """
         try:
-            from PIL import Image, ImageStat
+            from PIL import Image, ImageFilter, ImageStat
         except ImportError:
             return False
         try:
             with Image.open(path) as im:
                 rgb = im.convert("RGB")
-                sat = im.convert("HSV").split()[1]
                 spread = max(ImageStat.Stat(rgb).stddev)
-                colour = ImageStat.Stat(sat).mean[0]
+                small = rgb.resize((512, max(1, int(512 * rgb.height / rgb.width))))
+                edges = ImageStat.Stat(
+                    small.convert("L").filter(ImageFilter.FIND_EDGES)).mean[0]
         except Exception:  # noqa: BLE001 - a broken file is a separate failure
             return False
-        return colour < 15 and spread < 20
+        return edges < 6.0 or spread < 18.0
 
     @staticmethod
     def _explain(status: dict) -> str:
@@ -289,6 +295,9 @@ def main() -> int:
                     help="generate just this filename; repeatable")
     ap.add_argument("--limit", type=int, default=None)
     ap.add_argument("--seed", type=int, default=20260826)
+    ap.add_argument("--retries", type=int, default=2,
+                    help="on a safety refusal, retry this many times with a "
+                         "different seed; borderline captions often clear")
     ap.add_argument("--out-dir", default=None,
                     help="write elsewhere than content/art (for comparisons)")
     ap.add_argument("--timeout", type=int, default=900)
@@ -350,11 +359,21 @@ def main() -> int:
         name = e["filename"]
         print(f"[{i}/{len(pending)}] {name:<34} {e['width']}x{e['height']}  ",
               end="", flush=True)
-        wf = (api_workflow(e["prompt"], e["size_key"], args.seed, args.preset)
-              if args.api else
-              local_workflow(e["prompt"], e["width"], e["height"], args.seed, args.preset))
         t0 = time.time()
-        good, detail = comfy.run(wf, out_dir / name, args.timeout)
+        # A refusal is not always deterministic: a caption near the model's
+        # safety boundary can clear on a different seed. A caption well over it
+        # will not, so the retries are few and the seeds are derived, not random.
+        for attempt in range(args.retries + 1):
+            seed = args.seed + attempt * 104729
+            wf = (api_workflow(e["prompt"], e["size_key"], seed, args.preset)
+                  if args.api else
+                  local_workflow(e["prompt"], e["width"], e["height"], seed,
+                                 args.preset))
+            good, detail = comfy.run(wf, out_dir / name, args.timeout)
+            if good or "refused" not in detail:
+                break
+            if attempt < args.retries:
+                print("refused, reseeding... ", end="", flush=True)
         print(f"{'ok' if good else 'FAILED'}  {detail}  ({time.time() - t0:.0f}s)")
         (ok if good else failed).append(name)
         if not good and len(failed) >= 3 and not ok:

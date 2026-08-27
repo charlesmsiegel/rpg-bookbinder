@@ -69,7 +69,7 @@
     "final_draft": true,
     "compilation": false
   },
-  "last_updated": "2026-08-26T23:03:54.250598",
+  "last_updated": "2026-08-27T04:26:26.583952",
   "project_title": "PRISM",
   "writing_style": {
     "source": "picked",
@@ -279,24 +279,37 @@
       "npc_portrait_basis": "5 pregenerated Stars (Ch6) + 6 Glooms with stat blocks (Ch9); Ch7's four sketch Glooms have no stat blocks and are excluded"
     },
     "result": {
-      "mode": "prompt_manifest",
-      "reason": "active generator ideogram-v4 has backend comfyui; /art-direction's mode probe (mcp__art__get_models) is a1111-only and returns a refusal for any other backend, so the command always falls back to manifest mode. No image models are available in this environment. The cover is the documented exception that crosses modes and was produced algorithmically.",
+      "mode": "generation",
+      "reason": "/art-direction cannot reach Generation Mode for a comfyui profile because its probe is a1111-only, so rendering is done by tools/generate_ideogram.py against the same manifest.",
       "planned_count": 33,
       "produced_count": 33,
-      "output_path": "development/art_prompts.md",
+      "output_path": "content/art/",
       "prompts_authored": 33,
-      "images_produced": 1,
-      "cover_image_path": "content/art/cover.png"
+      "images_produced": 33,
+      "cover_image_path": "content/art/cover.png",
+      "backend": "local ComfyUI, ideogram4_fp8_scaled weights, no hosted API and no per-image cost"
     },
     "cover": {
-      "status": "generated_algorithmic",
+      "status": "algorithmic_kept",
       "path": "content/art/cover.png",
       "dimensions": "1600x2400",
       "method": "p5.js generative sketch 'Refraction', rendered headlessly via Chromium",
       "sketch": "development/cover_sketch/refraction.js",
       "philosophy": "development/concepts/cover_philosophy.md",
       "seed": 20260826,
-      "note": "Standalone placeholder, not a render of the art_prompts.md cover prompt. That figurative prompt stays reserved for a later Ideogram v4 run."
+      "note": "An Ideogram 4 render of the figurative cover prompt exists but has not been adopted; cover.png is still the generative 'Refraction' sketch."
+    },
+    "prompt_format": {
+      "schema": "Ideogram 4 structured JSON captions",
+      "findings": [
+        "Prose prompts are refused: the model validates against its caption schema.",
+        "A JSON caption with no compositional_deconstruction.elements is refused whatever the subject.",
+        "Human groups must be described in ONE element; five separate figure elements were refused twice while a single element covering five figures renders.",
+        "Loaded words matter: 'headlights like two dead suns' was refused twice, the same bus without it renders.",
+        "Wide interior room scenes were refused; the same subject as a close still life renders.",
+        "Refusals are sometimes seed-dependent near the boundary, so the tool retries with derived seeds.",
+        "Saying 'ungendered presentation' made the model render every figure male; genders are now stated explicitly."
+      ]
     }
   },
   "validation": {
