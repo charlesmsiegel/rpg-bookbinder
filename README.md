@@ -17,14 +17,44 @@ The pipeline works. It has been run end to end across multiple game systems and
 has produced usable supplements — outlined, drafted three times, reviewed,
 art-directed, and compiled out to DOCX, EPUB, and PDF.
 
-None of that output is in this repository, and none of it can be. A finished
-supplement is written against the reference books it was given, so it carries
-third-party content this project has no right to redistribute. The absence of
-example output here is the rule in [License & IP](#license--ip) applied to
-itself: `references/` is gitignored, and what comes out of the far end inherits
-the licence of what went in.
+Most of that output cannot be in this repository. A supplement written against
+somebody else's reference books carries third-party content this project has no
+right to redistribute, and that is the rule in [License & IP](#license--ip)
+applied to itself: `references/` is gitignored, and what comes out of the far
+end inherits the licence of what went in.
 
-That is worth saying plainly, because a repository with no sample output and a
+One book escapes that, because it was written against nothing but itself.
+
+### PRISM — a complete worked example
+
+[`projects/prism/`](projects/prism) is an original tabletop RPG built end to end
+by this pipeline and shipped whole: a sugarpop-fantasy core rulebook about people
+who transform, alone and together, to push back a spreading dullness called the
+Gloom. Ten chapters, 21,365 words, 33 illustrations. It cites no published game,
+so its own canon lives in `references/prism/` in the open and the compiled book
+is MIT like everything else here.
+
+What is checked in is not just the finished text but the whole paper trail, which
+is the part worth reading if you are deciding whether the pipeline does anything
+(paths relative to `projects/prism/`):
+
+- Three drafts of every chapter side by side — `draft_01`, `draft_02`,
+  `final_draft` — so each revision is diffable.
+- `development/review_feedback/` — 21 numbered architect comments, each marked
+  resolved or declined with a reason.
+- `development/outlines/` — the NPC registry, heading-ID registry, and forbidden
+  patterns the validation sweeps actually grep against.
+- `development/art_prompts.md` — all 33 image captions, and
+  `content/art/` — all 33 rendered images.
+- `output/compiled_supplement.md` — the assembled book. DOCX, EPUB and PDF are
+  gitignored build artifacts; `/compile` regenerates them.
+
+The design spec and implementation plan are under `docs/superpowers/`, including
+the review rounds that changed the game's mathematics — Power of Friendship was
+inflating the dice pool until a review caught it, and the fix is recorded rather
+than quietly folded in.
+
+That is worth shipping plainly, because a repository with no sample output and a
 repository that has never been run look identical from outside.
 
 State lives in per-project JSON files rather than in a shared prompt, which is
@@ -52,7 +82,7 @@ game — the rules text, the voice, the look — is a slot you fill in.
 | Book templates | `styles/templates/` | Structural blueprints per kind of book (chapter lists, word-count targets, required elements). |
 | Layout theme | `styles/layout/<name>.md` + `<name>.theme.json` + `layout.docx_theme` | Human-readable layout spec plus a machine-readable DOCX theme (colors, fonts, rule styles). |
 | Image-generator profiles | `styles/art/<gen>.md` rules file (+ ComfyUI workflow for `comfyui` backends) + an `art.generators` entry | One profile per image generator; `art.active_generator` picks the default. |
-| *(optional)* `algorithmic-art` skill | Your Claude Code skill set | If installed, the art director can render a procedural p5.js cover instead of a diffusion-model one. Without it, covers fall back to `tools/generate_covers.py` or stay as an entry in the prompt manifest. |
+| *(optional)* `algorithmic-art` skill | Your Claude Code skill set | If installed, the art director can render a procedural p5.js cover instead of a diffusion-model one. Without it, covers fall back to `tools/generate_covers.py` or stay as an entry in the prompt manifest. PRISM's cover took this route — see `projects/prism/development/cover_sketch/`, which traces rays through a dispersion model rather than prompting for a picture of one. |
 | Config | `config/system.json` | Single source of truth for all of the above plus terminology, citation patterns, and mechanics formulas. See `config/README.md` for the full field reference. |
 
 Every field in `config/system.json` has a built-in neutral default — a missing
@@ -73,6 +103,10 @@ change.
   + `npm install` (DOCX export, via the `docx` package),
   [pandoc](https://pandoc.org/) (EPUB/PDF), [weasyprint](https://weasyprint.org/)
   (PDF), `python-docx`, `Pillow`, `numpy` (algorithmic cover generation).
+  WeasyPrint needs the GTK/Pango stack, which is a system-level install and is
+  commonly absent on Windows; where it is missing, `tools/html_to_pdf.py` prints
+  the same HTML through Playwright's Chromium instead, which also supplies footer
+  page numbers that Chromium's CSS paged-media support cannot.
 - **Optional local image generation** via
   [AUTOMATIC1111](https://github.com/AUTOMATIC1111/stable-diffusion-webui)
   (`a1111` backend) or [ComfyUI](https://github.com/comfyanonymous/ComfyUI)
@@ -82,6 +116,28 @@ change.
   run by hand. ComfyUI workflows are exported via **"Save (API Format)"** and
   must contain the literal tokens `{PROMPT}`, `{NEGATIVE}`, `{WIDTH}`,
   `{HEIGHT}`, `{SEED}`; see `styles/art/example.workflow.json`.
+
+  PRISM's 33 illustrations came from **Ideogram 4** running locally in ComfyUI on
+  the `ideogram4_fp8_scaled` weights — no hosted API, no per-image cost. Not
+  through the token-substitution route above, though: `/art-direction` only
+  reaches generation mode for an `a1111` backend, because its probe is a1111-only,
+  so a `comfyui` profile always lands in prompt-manifest mode.
+  `tools/generate_ideogram.py` is the other half — it reads that manifest back and
+  builds the graph in code (Qwen3-VL text encoder, `Ideogram4Scheduler`,
+  asymmetric CFG across a second unconditional UNET), mirroring ComfyUI's own
+  bundled `image_ideogram4_t2i` template. It will also drive the hosted
+  `IdeogramV4` partner node behind `--api`, which despite the name is a cloud call
+  billed to a ComfyOrg account. Two things about the model are worth knowing
+  before pointing it at a manifest, because both fail silently:
+
+  - It is trained on **structured JSON captions** and validates against that
+    schema. A prose prompt comes back as the model's own *"Image blocked by
+    safety filter"* card, and so does a JSON caption with no
+    `compositional_deconstruction.elements`, whatever the subject.
+  - That refusal is **a valid PNG**, so a naive success check writes it to disk
+    and reports success. The tool measures edge density to catch it, and says in
+    its own docstring what it still cannot catch — the model sometimes paints
+    the refusal text into an otherwise real picture.
 
 ## Quickstart
 
